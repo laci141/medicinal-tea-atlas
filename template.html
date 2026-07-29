@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0b1020">
+<meta name="description" id="metaDesc" content="Gyógy-, fűszer-, gyümölcs- és gombateák: hatás, elkészítés és a mögöttük álló klinikai vizsgálatok, forráslinkekkel.">
+<title>Teák – klinikai kártyák</title>
+<style>
+  :root{
+    --ink:#e8eef7; --muted:#aab6c9; --side:300px; --topbar:58px;
+    --safe-t:env(safe-area-inset-top,0px); --safe-l:env(safe-area-inset-left,0px);
+    --safe-r:env(safe-area-inset-right,0px); --safe-b:env(safe-area-inset-bottom,0px);
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  html,body{margin:0;padding:0;}
+  body{min-height:100vh;min-height:100dvh;background:#0b1020;color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;line-height:1.5;overflow-x:hidden;}
+  body::before{content:"";position:fixed;inset:0;z-index:-1;
+    background:
+      radial-gradient(620px 440px at 12% 18%, rgba(34,197,94,.34), transparent 60%),
+      radial-gradient(720px 520px at 88% 26%, rgba(245,158,11,.30), transparent 60%),
+      radial-gradient(640px 620px at 50% 92%, rgba(168,85,247,.26), transparent 60%),
+      radial-gradient(520px 420px at 78% 82%, rgba(56,189,248,.22), transparent 60%),
+      #0b1020;}
+
+  /* ---------- glass-panel (Laci alap üveg-stílusa) ---------- */
+  .glass{background:linear-gradient(160deg, rgba(255,255,255,.07), rgba(255,255,255,.045));
+    border:1px solid rgba(255,255,255,.10);border-radius:20px;
+    backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);
+    box-shadow:0 18px 50px -18px rgba(0,0,0,.75);color:var(--ink);}
+
+  button,input{font-family:inherit;}
+  a{color:#7dd3fc;}
+
+  /* ---------- felső sáv ---------- */
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:90;height:calc(var(--topbar) + var(--safe-t));
+    padding:var(--safe-t) calc(12px + var(--safe-r)) 0 calc(12px + var(--safe-l));
+    display:flex;align-items:center;gap:10px;border-radius:0;border-width:0 0 1px;}
+  .menu-toggle{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:8px 13px;
+    border-radius:12px;cursor:pointer;font-size:14px;font-weight:600;color:var(--ink);
+    background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);flex:0 0 auto;}
+  .menu-toggle:active{background:rgba(255,255,255,.14);}
+  .brand{flex:1;min-width:0;font-size:15px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .langs{display:flex;gap:4px;flex:0 0 auto;padding:3px;border-radius:12px;
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);}
+  .lang{min-width:38px;min-height:34px;padding:6px 8px;border-radius:9px;cursor:pointer;
+    font-size:12.5px;font-weight:700;letter-spacing:.4px;color:var(--muted);
+    background:transparent;border:1px solid transparent;transition:background .15s,color .15s;}
+  .lang:hover{color:var(--ink);background:rgba(255,255,255,.08);}
+  .lang.active{color:#052e1a;background:linear-gradient(180deg,#5eead4,#34d399);border-color:transparent;}
+
+  /* ---------- oldalsáv ---------- */
+  .sidebar{position:fixed;top:calc(var(--topbar) + var(--safe-t));left:0;
+    height:calc(100vh - var(--topbar) - var(--safe-t));height:calc(100dvh - var(--topbar) - var(--safe-t));
+    width:var(--side);z-index:75;border-radius:0 20px 0 0;padding:14px 12px calc(12px + var(--safe-b));
+    display:flex;flex-direction:column;transition:transform .32s cubic-bezier(.2,.8,.2,1);overflow:hidden;}
+  body.menu-closed .sidebar{transform:translateX(-110%);}
+  .side-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:4px;padding:2px 4px;}
+  .side-head h2{margin:0;font-size:17px;}
+  .collapse{width:38px;height:38px;border-radius:11px;cursor:pointer;font-size:20px;line-height:1;
+    border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--ink);flex:0 0 auto;}
+  .side-sub{font-size:12px;color:var(--muted);padding:0 4px 8px;}
+  .search-wrap{padding:0 4px 8px;}
+  #search{width:100%;min-height:42px;padding:10px 12px;border-radius:11px;border:1px solid rgba(255,255,255,.14);
+    background:rgba(255,255,255,.06);color:var(--ink);font-size:16px;outline:none;}
+  #search:focus{border-color:rgba(52,211,153,.55);}
+  #search::placeholder{color:var(--muted);}
+  nav{overflow-y:auto;overflow-x:hidden;flex:1;padding-right:3px;-webkit-overflow-scrolling:touch;}
+  .group-label{font-size:11px;letter-spacing:.9px;text-transform:uppercase;color:var(--muted);margin:14px 8px 6px;}
+  .m-item{display:flex;align-items:center;gap:10px;width:100%;text-align:left;min-height:44px;padding:9px 10px;
+    border-radius:12px;cursor:pointer;margin-bottom:3px;background:transparent;border:1px solid transparent;
+    color:var(--ink);font-size:14.5px;transition:background .15s ease,border-color .15s ease;}
+  .m-item:hover{background:rgba(255,255,255,.06);}
+  .m-item.active{background:rgba(52,211,153,.14);border-color:rgba(52,211,153,.4);}
+  .m-item .em{font-size:18px;width:22px;text-align:center;flex:0 0 auto;}
+  .m-item .nm{flex:1;min-width:0;}
+  .m-item .st{width:9px;height:9px;border-radius:50%;flex:0 0 auto;}
+  .st.clin{background:#34d399;box-shadow:0 0 8px rgba(52,211,153,.7);}
+  .st.trad{background:#fbbf24;box-shadow:0 0 8px rgba(251,191,36,.6);}
+  .no-hit{font-size:13px;color:var(--muted);padding:10px 8px;display:none;}
+  .side-print{margin-top:8px;width:100%;min-height:44px;font-size:13px;font-weight:600;color:var(--ink);
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:11px;padding:11px;cursor:pointer;}
+  .side-print:hover{background:rgba(255,255,255,.1);}
+
+  .backdrop{position:fixed;inset:0;background:rgba(6,9,18,.55);z-index:70;opacity:0;pointer-events:none;transition:opacity .3s;}
+  @media(max-width:900px){ body:not(.menu-closed) .backdrop{opacity:1;pointer-events:auto;} }
+
+  /* ---------- fő tartalom ---------- */
+  .main{margin-left:var(--side);
+    padding:calc(var(--topbar) + var(--safe-t) + 18px) calc(20px + var(--safe-r)) calc(50px + var(--safe-b)) calc(20px + var(--safe-l));
+    transition:margin .32s cubic-bezier(.2,.8,.2,1);}
+  body.menu-closed .main{margin-left:0;}
+  @media(max-width:900px){ .main{margin-left:0;} }
+
+  .head{max-width:1080px;margin:0 auto 18px;padding:22px 20px;text-align:center;}
+  .head h1{margin:0 0 6px;font-size:clamp(20px,4.4vw,29px);line-height:1.25;}
+  .head p{margin:0;color:var(--muted);font-size:14.5px;}
+  .head .hint{margin-top:12px;font-size:13px;color:var(--muted);}
+  .head .hint b{color:var(--ink);}
+
+  .goals{max-width:1080px;margin:0 auto 16px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;}
+  .chip{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:8px 13px;border-radius:999px;
+    cursor:pointer;font-size:13.5px;color:var(--ink);background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.12);transition:background .15s,border-color .15s;}
+  .chip:hover{background:rgba(255,255,255,.1);}
+  .chip.active{background:rgba(52,211,153,.16);border-color:rgba(52,211,153,.5);}
+
+  .grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:18px;align-items:stretch;}
+
+  /* ---------- kártya (automatikus magasság: mindkét oldal ugyanabban a rácscellában) ---------- */
+  .card{perspective:1400px;cursor:pointer;}
+  .inner{position:relative;display:grid;width:100%;height:100%;
+    transition:transform .55s cubic-bezier(.2,.7,.2,1);transform-style:preserve-3d;}
+  .card.flipped .inner{transform:rotateY(180deg);}
+  .face{grid-area:1/1;-webkit-backface-visibility:hidden;backface-visibility:hidden;
+    padding:20px 18px;display:flex;flex-direction:column;min-width:0;}
+  .face.back{transform:rotateY(180deg);}
+  .accent{position:absolute;top:0;left:0;right:0;height:4px;border-radius:20px 20px 0 0;}
+  .emoji{font-size:38px;line-height:1;margin-bottom:8px;}
+  .name{font-size:19.5px;font-weight:700;margin:0;overflow-wrap:anywhere;}
+  .lat{font-style:italic;color:var(--muted);font-size:13px;margin:2px 0 12px;overflow-wrap:anywhere;}
+  .role{font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px;overflow-wrap:anywhere;}
+  .hatas{font-size:14.5px;color:var(--ink);}
+  .ev-badge{display:inline-flex;align-items:center;gap:5px;align-self:flex-start;margin-top:12px;
+    font-size:11.5px;font-weight:600;padding:4px 9px;border-radius:999px;}
+  .ev-badge.clin{color:#5eead4;background:rgba(52,211,153,.12);border:1px solid rgba(52,211,153,.38);}
+  .ev-badge.trad{color:#fcd34d;background:rgba(251,191,36,.12);border:1px solid rgba(251,191,36,.38);}
+  .flip-tag{margin-top:auto;padding-top:12px;font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:6px;}
+
+  .back-title{font-size:17.5px;font-weight:700;overflow-wrap:anywhere;}
+  .back-sub{font-size:12.5px;color:var(--muted);margin:2px 0 0;}
+  .back-actions{display:flex;flex-direction:column;gap:10px;margin-top:16px;}
+  .btn-prep,.btn-clin,.btn-trad{width:100%;min-height:46px;font-size:14px;font-weight:600;border-radius:12px;padding:12px;cursor:pointer;}
+  .btn-prep{color:#3b2c05;background:linear-gradient(180deg,#fcd34d,#fbbf24);border:none;box-shadow:0 8px 20px -8px rgba(251,191,36,.6);}
+  .btn-clin{color:#052e1a;background:linear-gradient(180deg,#5eead4,#34d399);border:none;box-shadow:0 8px 20px -8px rgba(52,211,153,.7);}
+  .btn-trad{color:#fde68a;background:rgba(251,191,36,.12);border:1px solid rgba(251,191,36,.4);}
+  .btn-back{margin-top:auto;width:100%;min-height:42px;font-size:12.5px;color:var(--muted);background:transparent;
+    border:1px solid rgba(255,255,255,.14);border-radius:11px;padding:10px;cursor:pointer;}
+
+  .focus{max-width:440px;margin:0 auto;}
+  .focus .emoji{font-size:50px;}
+  .focus .name{font-size:25px;}
+
+  /* ---------- modal ---------- */
+  .overlay{position:fixed;inset:0;z-index:100;background:rgba(6,9,18,.6);
+    -webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);display:flex;align-items:center;justify-content:center;
+    padding:calc(14px + var(--safe-t)) calc(14px + var(--safe-r)) calc(14px + var(--safe-b)) calc(14px + var(--safe-l));
+    opacity:0;pointer-events:none;transition:opacity .28s ease;}
+  .overlay.open{opacity:1;pointer-events:auto;}
+  .modal{max-width:580px;width:100%;max-height:100%;overflow-y:auto;-webkit-overflow-scrolling:touch;
+    padding:24px 22px;position:relative;transform:scale(.9) translateY(12px);opacity:0;
+    transition:transform .32s cubic-bezier(.2,.8,.2,1), opacity .3s ease;overscroll-behavior:contain;}
+  .overlay.open .modal{transform:scale(1) translateY(0);opacity:1;}
+  .modal .m-emoji{font-size:32px;line-height:1;}
+  .modal h2{margin:6px 44px 2px 0;font-size:21px;overflow-wrap:anywhere;}
+  .modal .m-lat{font-style:italic;color:var(--muted);font-size:13px;margin-bottom:4px;}
+  .m-kicker{display:inline-block;font-size:11.5px;letter-spacing:.9px;text-transform:uppercase;border-radius:999px;
+    padding:5px 12px;margin:10px 0 14px;border:1px solid transparent;}
+  .m-kicker.clin{color:#34d399;border-color:rgba(52,211,153,.4);background:rgba(52,211,153,.10);}
+  .m-kicker.prep,.m-kicker.trad{color:#fbbf24;border-color:rgba(251,191,36,.4);background:rgba(251,191,36,.10);}
+  .modal p{font-size:15px;color:#eef3fb;margin:0 0 12px;}
+  .modal .warn{font-size:14px;color:#fecaca;background:rgba(239,68,68,.10);border:1px solid rgba(239,68,68,.35);
+    border-radius:12px;padding:12px 14px;margin-bottom:14px;}
+  .close{position:absolute;top:12px;right:12px;width:40px;height:40px;border-radius:50%;
+    border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.10);color:var(--ink);
+    font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+
+  /* ---------- vizsgálat-linkek ---------- */
+  .studies{margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);}
+  .st-title{font-size:13.5px;font-weight:700;color:#5eead4;display:flex;align-items:center;gap:7px;margin-bottom:4px;}
+  .st-note{font-size:12px;color:var(--muted);margin:0 0 12px;line-height:1.45;}
+  .st-item{padding:12px 13px;margin-bottom:10px;border-radius:12px;
+    background:rgba(52,211,153,.06);border:1px solid rgba(52,211,153,.24);}
+  .st-item.search{background:rgba(56,189,248,.06);border-color:rgba(56,189,248,.26);}
+  .st-row{display:flex;flex-wrap:wrap;gap:7px;margin-top:9px;}
+  .st-link{display:inline-flex;align-items:center;min-height:38px;padding:8px 12px;
+    border-radius:999px;text-decoration:none;font-size:12.5px;font-weight:600;color:#5eead4;white-space:nowrap;
+    background:rgba(52,211,153,.10);border:1px solid rgba(52,211,153,.34);transition:background .15s,border-color .15s;}
+  .st-link:hover{background:rgba(52,211,153,.2);border-color:rgba(52,211,153,.6);}
+  .st-link.doi{color:#fcd34d;background:rgba(251,191,36,.10);border-color:rgba(251,191,36,.34);}
+  .st-link.doi:hover{background:rgba(251,191,36,.2);}
+  .st-link.oa{color:#7dd3fc;background:rgba(56,189,248,.10);border-color:rgba(56,189,248,.34);}
+  .st-link.oa:hover{background:rgba(56,189,248,.2);}
+  .st-top{display:flex;flex-wrap:wrap;align-items:center;gap:6px;}
+  .st-badge{font-size:10.5px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;
+    padding:3px 8px;border-radius:999px;color:#052e1a;background:#5eead4;}
+  .st-badge.alt{color:#0b1020;background:#7dd3fc;}
+  .src-item .src-links a.alt{color:#7dd3fc;background:rgba(56,189,248,.08);border-color:rgba(56,189,248,.3);}
+  .src-item .src-links a.doi{color:#fcd34d;background:rgba(251,191,36,.08);border-color:rgba(251,191,36,.3);}
+  .st-year{font-size:11.5px;color:var(--muted);}
+  .st-lbl{font-size:13.5px;line-height:1.4;overflow-wrap:anywhere;}
+  .st-src{font-size:11.5px;color:#7dd3fc;overflow-wrap:anywhere;}
+  .st-empty{font-size:13px;color:var(--muted);}
+
+  /* ---------- források oldal ---------- */
+  .disclaimer{max-width:1080px;margin:26px auto 0;font-size:12.5px;color:var(--muted);text-align:center;padding:16px 18px;}
+  .src-note{max-width:1080px;margin:0 auto 16px;font-size:13px;color:var(--muted);text-align:center;}
+  .src-list{max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:10px;}
+  .src-item{padding:14px 15px;font-size:13.5px;}
+  .src-item b{display:block;margin-bottom:3px;}
+  .src-item .r{color:var(--muted);display:block;}
+  .src-item .src-links{display:flex;flex-wrap:wrap;gap:7px;margin-top:9px;}
+  .src-item .src-links a{display:inline-flex;align-items:center;gap:5px;min-height:36px;padding:7px 11px;
+    border-radius:999px;font-size:12px;text-decoration:none;color:#5eead4;
+    background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.3);}
+  .src-item .src-links a:hover{background:rgba(52,211,153,.16);}
+
+  /* ---------- nyomtatás ---------- */
+  #printArea{display:none;}
+  @media print{
+    body::before{display:none;}
+    .topbar,.sidebar,.menu-toggle,.main,.overlay,.backdrop{display:none!important;}
+    #printArea{display:block!important;color:#000;padding:0 6mm;}
+    #printArea h1{font-size:20px;margin:0 0 10px;}
+    #printArea .p-tea{page-break-inside:avoid;border-bottom:1px solid #ccc;padding:8px 0;}
+    #printArea h2{font-size:15px;margin:6px 0 2px;}
+    #printArea .p-lat{font-style:italic;color:#444;font-size:12px;margin-bottom:4px;}
+    #printArea p{font-size:12px;margin:4px 0;color:#000;line-height:1.45;}
+    #printArea a{color:#0645ad;text-decoration:none;}
+  }
+
+  @media(prefers-reduced-motion:reduce){
+    *{transition-duration:.01ms!important;animation-duration:.01ms!important;}
+  }
+
+  /* ---------- mobil finomhangolás ---------- */
+  @media(max-width:600px){
+    :root{--side:min(86vw,320px);--topbar:54px;}
+    .glass{border-radius:16px;backdrop-filter:blur(11px);-webkit-backdrop-filter:blur(11px);
+      box-shadow:0 12px 32px -14px rgba(0,0,0,.7);}
+    .topbar{border-radius:0;}
+    .brand{display:none;}
+    .menu-toggle{padding:8px 11px;font-size:13.5px;}
+    .lang{min-width:34px;padding:6px 6px;font-size:12px;}
+    .main{padding-left:calc(14px + var(--safe-l));padding-right:calc(14px + var(--safe-r));
+      padding-top:calc(var(--topbar) + var(--safe-t) + 14px);}
+    .head{padding:18px 15px;}
+    .head .hint{font-size:12.5px;}
+    .face{padding:18px 16px;}
+    .grid{gap:14px;grid-template-columns:1fr;}
+    .goals{gap:7px;}
+    .chip{font-size:13px;padding:8px 11px;}
+    .modal{padding:20px 16px;max-height:100%;}
+    .modal h2{font-size:19.5px;}
+    .modal p{font-size:14.5px;}
+    .src-list{gap:9px;}
+  }
+  @media(min-width:601px) and (max-width:900px){
+    .grid{grid-template-columns:repeat(auto-fill,minmax(240px,1fr));}
+  }
+</style>
+</head>
+<body class="menu-closed">
+
+<header class="topbar glass">
+  <button class="menu-toggle" id="menuToggle" aria-controls="sidebar" aria-expanded="false"><span aria-hidden="true">☰</span> <span id="menuToggleTxt">Menü</span></button>
+  <div class="brand" id="brandTxt">🍵 Teák – klinikai kártyák</div>
+  <div class="langs" id="langs" role="group" aria-label="Nyelv"></div>
+</header>
+
+<div class="backdrop" id="backdrop"></div>
+
+<aside class="sidebar glass" id="sidebar">
+  <div class="side-head"><h2 id="sideTitle">🍵 Teák</h2><button class="collapse" id="collapseBtn" aria-label="Menü bezárása">×</button></div>
+  <div class="side-sub" id="sideSub"></div>
+  <div class="search-wrap"><input id="search" type="search" placeholder="Keresés…" autocomplete="off" enterkeyhint="search"></div>
+  <nav id="menu"></nav>
+  <div class="no-hit" id="noHit"></div>
+  <button class="side-print" id="printBtn"></button>
+</aside>
+
+<main class="main">
+  <div id="mainContent"></div>
+  <div class="disclaimer glass" id="disclaimer"></div>
+</main>
+
+<div id="printArea"></div>
+
+<div class="overlay" id="overlay">
+  <div class="modal glass" role="dialog" aria-modal="true" aria-labelledby="mName">
+    <button class="close" id="closeBtn" aria-label="Bezárás">×</button>
+    <div class="m-emoji" id="mEmoji"></div>
+    <h2 id="mName"></h2>
+    <div class="m-lat" id="mLat"></div>
+    <div class="m-kicker clin" id="mKicker"></div>
+    <div id="mBody"></div>
+  </div>
+</div>
+
+<script id="appdata" type="application/json">__APPDATA__</script>
+<script>
+(function(){
+"use strict";
+
+var DATA = JSON.parse(document.getElementById('appdata').textContent);
+var TEAS = DATA.teas, SOURCES = DATA.sources, TR = DATA.tr, SRC_TR = DATA.sourcesTr, UI = DATA.ui, LINKS = DATA.links;
+var LANGS = [{k:'hu',n:'HU'},{k:'ro',n:'RO'},{k:'en',n:'EN'},{k:'de',n:'DE'}];
+
+function pickLang(){
+  var q = (location.hash||'').replace('#','').toLowerCase();
+  if(q && UI[q]) return q;
+  try{ var s = localStorage.getItem('teaLang'); if(s && UI[s]) return s; }catch(e){}
+  var n = (navigator.language||'hu').slice(0,2).toLowerCase();
+  return UI[n] ? n : 'hu';
+}
+var LANG = pickLang();
+function T(){ return UI[LANG]; }
+
+/* mező a jelenlegi nyelven, magyar tartalom az alap */
+function f(i, key){
+  var tr = TR[i] && TR[i][LANG];
+  if(tr && tr[key] != null && tr[key] !== '') return tr[key];
+  return TEAS[i][key];
+}
+function srcOf(i, key){
+  var a = SRC_TR[LANG];
+  if(a && a[i] && a[i][key]) return a[i][key];
+  return SOURCES[i][key];
+}
+function linksOf(i){ return (LINKS && LINKS[i]) || []; }
+function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+var tagMap = DATA.tagMap;
+TEAS.forEach(function(t,i){ t.tags = tagMap[i] || []; });
+
+var goalDefs = [
+  {key:null,  emoji:'🗂️'},
+  {key:'sleepcalm', emoji:'😴', match:['sleep','calm']},
+  {key:'digestion', emoji:'🍽️', match:['digestion']},
+  {key:'cold',      emoji:'🤧', match:['cold','respiratory']},
+  {key:'cardio',    emoji:'🫀', match:['cardio']},
+  {key:'pain',      emoji:'💪', match:['pain']},
+  {key:'mood',      emoji:'🧠', match:['mood','cognition']},
+  {key:'women',     emoji:'🌸', match:['women']},
+  {key:'immune',    emoji:'🍊', match:['immune']},
+  {key:'glucose',   emoji:'🩸', match:['glucose']}
+];
+var groups = [
+  { g:0, items:[{special:'all', emoji:'🗂️'},{special:'sources', emoji:'📚'}] },
+  { g:1, idx:[1,2,3] },
+  { g:2, idx:[8,13,6,28,29,30] },
+  { g:3, idx:[0,4,5,7,9,10,15,20,21,23,24,25,32,33,11,12] },
+  { g:4, idx:[14,16,22,26,31] },
+  { g:5, idx:[17,18,19] },
+  { g:6, idx:[27] }
+];
+
+var menu = document.getElementById('menu');
+var mainContent = document.getElementById('mainContent');
+var overlay = document.getElementById('overlay');
+var noHit = document.getElementById('noHit');
+var search = document.getElementById('search');
+var selected = 'all';
+var goalKey = null;
+var lastModal = null;
+var lastFocus = null;
+
+/* ---------------- nyelvváltó ---------------- */
+var langsBox = document.getElementById('langs');
+LANGS.forEach(function(L){
+  var b = document.createElement('button');
+  b.className = 'lang'; b.type = 'button'; b.dataset.lang = L.k; b.textContent = L.n;
+  b.setAttribute('aria-label', L.n);
+  b.addEventListener('click', function(){ setLang(L.k); });
+  langsBox.appendChild(b);
+});
+function markLang(){
+  langsBox.querySelectorAll('.lang').forEach(function(b){
+    var on = b.dataset.lang === LANG;
+    b.classList.toggle('active', on);
+    b.setAttribute('aria-pressed', on ? 'true' : 'false');
+  });
+}
+function setLang(k){
+  if(!UI[k] || k === LANG) return;
+  LANG = k;
+  try{ localStorage.setItem('teaLang', k); }catch(e){}
+  if(history.replaceState) history.replaceState(null,'','#'+k); else location.hash = k;
+  applyLang();
+}
+window.addEventListener('hashchange', function(){
+  var h = (location.hash||'').replace('#','').toLowerCase();
+  if(h && UI[h] && h !== LANG){ LANG = h; try{localStorage.setItem('teaLang',h);}catch(e){} applyLang(); }
+});
+
+/* ---------------- statikus szövegek ---------------- */
+function applyStatic(){
+  var t = T();
+  document.documentElement.lang = t.htmlLang;
+  document.title = t.docTitle;
+  document.getElementById('metaDesc').setAttribute('content', t.metaDesc);
+  document.getElementById('menuToggleTxt').textContent = t.menu;
+  document.getElementById('brandTxt').textContent = '🍵 ' + t.headTitle;
+  document.getElementById('sideTitle').textContent = '🍵 ' + t.sideTitle;
+  document.getElementById('sideSub').textContent = t.sideSub;
+  search.placeholder = '🔍 ' + t.searchPh;
+  noHit.textContent = t.noHit;
+  document.getElementById('printBtn').textContent = '🖨️ ' + t.printBtn;
+  document.getElementById('collapseBtn').setAttribute('aria-label', t.closeMenu);
+  document.getElementById('closeBtn').setAttribute('aria-label', t.close);
+  document.getElementById('disclaimer').textContent = t.disclaimer;
+  langsBox.setAttribute('aria-label', t.langLabel);
+  markLang();
+}
+
+/* ---------------- oldalsáv menü ---------------- */
+function buildMenu(){
+  var t = T();
+  menu.innerHTML = '';
+  var gl = document.createElement('div'); gl.className = 'group-label'; gl.textContent = t.byGoal; menu.appendChild(gl);
+  goalDefs.forEach(function(g, gi){
+    var b = document.createElement('button'); b.type = 'button';
+    b.className = 'm-item goal-item'; b.dataset.goal = g.key || '';
+    b.innerHTML = '<span class="em">' + g.emoji + '</span><span class="nm">' + esc(g.key ? t.goals[gi] : t.clearFilter) + '</span>';
+    b.addEventListener('click', function(){
+      goalKey = g.key || null; select('all'); if(isMobile()) closeMenu();
+    });
+    menu.appendChild(b);
+  });
+  groups.forEach(function(gr){
+    var lbl = document.createElement('div'); lbl.className = 'group-label'; lbl.textContent = t.groups[gr.g]; menu.appendChild(lbl);
+    if(gr.items){
+      gr.items.forEach(function(it){
+        var b = document.createElement('button'); b.type = 'button'; b.className = 'm-item'; b.dataset.key = it.special;
+        var nm = it.special === 'all' ? t.allTeas : t.sourcesNav;
+        b.innerHTML = '<span class="em">' + it.emoji + '</span><span class="nm">' + esc(nm) + '</span>';
+        b.addEventListener('click', function(){ select(it.special); if(isMobile()) closeMenu(); });
+        menu.appendChild(b);
+      });
+    } else {
+      gr.idx.forEach(function(i){
+        var b = document.createElement('button'); b.type = 'button'; b.className = 'm-item'; b.dataset.key = String(i);
+        var dot = '<span class="st ' + (TEAS[i].traditional ? 'trad' : 'clin') + '"></span>';
+        b.innerHTML = '<span class="em">' + TEAS[i].emoji + '</span><span class="nm">' + esc(f(i,'name')) + '</span>' + dot;
+        b.addEventListener('click', function(){ select(i); if(isMobile()) closeMenu(); });
+        menu.appendChild(b);
+      });
+    }
+  });
+  markActive();
+  applySearch();
+}
+function markActive(){
+  menu.querySelectorAll('.m-item').forEach(function(b){
+    b.classList.toggle('active', b.dataset.key !== undefined && b.dataset.key === String(selected));
+  });
+  menu.querySelectorAll('.goal-item').forEach(function(b){
+    b.classList.toggle('active', (b.dataset.goal || '') === (goalKey || ''));
+  });
+}
+
+/* ---------------- kártyák ---------------- */
+function cardHTML(i){
+  var t = T(), tea = TEAS[i], trad = !!tea.traditional;
+  var n = linksOf(i).length;
+  var badge = '<span class="ev-badge ' + (trad ? 'trad' : 'clin') + '">' + (trad ? '🌱 ' : '🔬 ') +
+              esc(trad ? t.badgeTrad : t.badgeClin) + (n ? ' · ' + n : '') + '</span>';
+  var infoBtn = trad
+    ? '<button type="button" class="btn-trad" data-i="' + i + '">🌱 ' + esc(t.btnTrad) + '</button>'
+    : '<button type="button" class="btn-clin" data-i="' + i + '">🔬 ' + esc(t.btnClin) + '</button>';
+  return '<div class="card" data-i="' + i + '" role="button" tabindex="0" aria-label="' + esc(f(i,'name')) + '">' +
+    '<div class="inner">' +
+      '<div class="face front glass">' +
+        '<div class="accent" style="background:' + tea.accent + '"></div>' +
+        '<div class="emoji">' + tea.emoji + '</div>' +
+        '<div class="role">' + esc(f(i,'role')) + '</div>' +
+        '<h3 class="name">' + esc(f(i,'name')) + '</h3>' +
+        '<div class="lat">' + esc(tea.lat) + '</div>' +
+        '<div class="hatas">' + esc(f(i,'hatas')) + '</div>' +
+        badge +
+        '<div class="flip-tag">↻ ' + esc(t.flipHint) + '</div>' +
+      '</div>' +
+      '<div class="face back glass">' +
+        '<div class="accent" style="background:' + tea.accent + '"></div>' +
+        '<div class="back-title">' + tea.emoji + ' ' + esc(f(i,'name')) + '</div>' +
+        '<div class="back-sub">' + esc(t.chooseDetail) + '</div>' +
+        '<div class="back-actions">' +
+          '<button type="button" class="btn-prep" data-i="' + i + '">🫖 ' + esc(t.btnPrep) + '</button>' +
+          infoBtn +
+        '</div>' +
+        '<button type="button" class="btn-back">← ' + esc(t.btnBack) + '</button>' +
+      '</div>' +
+    '</div></div>';
+}
+
+function render(){
+  var t = T();
+  if(selected === 'all'){
+    var active = null;
+    for(var j = 0; j < goalDefs.length; j++){ if((goalDefs[j].key || null) === goalKey) active = goalDefs[j]; }
+    var chips = goalDefs.map(function(g, gi){
+      return '<button type="button" class="chip ' + (((g.key || null) === goalKey) ? 'active' : '') + '" data-goal="' +
+        (g.key || '') + '">' + g.emoji + ' ' + esc(t.goals[gi]) + '</button>';
+    }).join('');
+    var idxs = [];
+    TEAS.forEach(function(tea, i){
+      if(!goalKey || (active && active.match && (tea.tags || []).some(function(x){ return active.match.indexOf(x) >= 0; }))) idxs.push(i);
+    });
+    mainContent.innerHTML =
+      '<div class="head glass">' +
+        '<h1>🍵 ' + esc(t.headTitle) + '</h1>' +
+        '<p>' + esc(t.headSub) + '</p>' +
+        '<div class="hint">' + t.headHint + '</div>' +
+      '</div>' +
+      '<div class="goals">' + chips + '</div>' +
+      '<div class="grid">' + idxs.map(cardHTML).join('') + '</div>';
+  } else if(selected === 'sources'){
+    renderSources();
+  } else {
+    var i2 = selected;
+    mainContent.innerHTML =
+      '<div class="head glass"><h1>' + TEAS[i2].emoji + ' ' + esc(f(i2,'name')) + '</h1><p><i>' + esc(TEAS[i2].lat) + '</i></p></div>' +
+      '<div class="focus">' + cardHTML(i2) + '</div>';
+  }
+  markActive();
+}
+
+function renderSources(){
+  var t = T();
+  var items = SOURCES.map(function(s, i){
+    var ls = linksOf(i).map(function(l){
+      var s1 = '<a href="https://pubmed.ncbi.nlm.nih.gov/' + esc(l.pmid) + '/" target="_blank" rel="noopener noreferrer">🔬 PubMed ' + esc(l.pmid) + ' ↗</a>';
+      if(l.doi) s1 += '<a class="doi" href="https://doi.org/' + esc(l.doi) + '" target="_blank" rel="noopener noreferrer">📄 DOI ↗</a>';
+      s1 += '<a class="alt" href="https://api.openalex.org/works/pmid:' + esc(l.pmid) + '" target="_blank" rel="noopener noreferrer">🌐 OpenAlex ↗</a>';
+      return s1;
+    }).join('');
+    ls += '<a class="alt" href="' + esc(searchURL(i)) + '" target="_blank" rel="noopener noreferrer">🔎 ' + esc(t.searchBadge) + ' – PubMed ↗</a>';
+    return '<div class="src-item glass"><b>' + esc(srcOf(i,'n')) + '</b><span class="r">' + esc(srcOf(i,'r')) + '</span>' +
+           '<div class="src-links">' + ls + '</div></div>';
+  }).join('');
+  mainContent.innerHTML =
+    '<div class="head glass"><h1>📚 ' + esc(t.srcTitle) + '</h1><p>' + esc(t.srcSub) + '</p></div>' +
+    '<div class="src-note">' + esc(t.srcNote) + '</div>' +
+    '<div class="src-list">' + items + '</div>';
+}
+
+function select(key){
+  selected = key;
+  markActive();
+  render();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ---------------- események a tartalomban ---------------- */
+mainContent.addEventListener('click', function(e){
+  var chip = e.target.closest('.chip');
+  if(chip){ goalKey = chip.dataset.goal || null; render(); return; }
+  var prep = e.target.closest('.btn-prep');
+  if(prep){ e.stopPropagation(); openModal(+prep.dataset.i, 'prep'); return; }
+  var clin = e.target.closest('.btn-clin');
+  if(clin){ e.stopPropagation(); openModal(+clin.dataset.i, 'clinical'); return; }
+  var trad = e.target.closest('.btn-trad');
+  if(trad){ e.stopPropagation(); openModal(+trad.dataset.i, 'trad'); return; }
+  var back = e.target.closest('.btn-back');
+  if(back){ e.stopPropagation(); var c0 = back.closest('.card'); if(c0) c0.classList.remove('flipped'); return; }
+  var card = e.target.closest('.card');
+  if(card) card.classList.toggle('flipped');
+});
+mainContent.addEventListener('keydown', function(e){
+  if(e.key !== 'Enter' && e.key !== ' ') return;
+  var card = e.target.closest('.card');
+  if(card && e.target === card){ e.preventDefault(); card.classList.toggle('flipped'); }
+});
+
+/* ---------------- modal ---------------- */
+function searchURL(i){
+  return 'https://pubmed.ncbi.nlm.nih.gov/?term=' + encodeURIComponent(TEAS[i].q || TEAS[i].lat);
+}
+function oaSearchURL(i){
+  return 'https://api.openalex.org/works?search=' + encodeURIComponent(TEAS[i].qname || TEAS[i].lat) +
+         '&filter=type:article&per-page=25';
+}
+function searchLinkHTML(i){
+  var t = T();
+  return '<div class="st-item search">' +
+    '<div class="st-top"><span class="st-badge alt">🔎 ' + esc(t.searchBadge) + '</span></div>' +
+    '<div class="st-lbl">' + esc(t.searchAll) + ' – <i>' + esc(TEAS[i].qname || TEAS[i].lat) + '</i></div>' +
+    '<div class="st-row">' +
+      '<a class="st-link" href="' + esc(searchURL(i)) + '" target="_blank" rel="noopener noreferrer">🔬 PubMed ↗</a>' +
+      '<a class="st-link oa" href="' + esc(oaSearchURL(i)) + '" target="_blank" rel="noopener noreferrer">🌐 OpenAlex ↗</a>' +
+    '</div></div>';
+}
+function studiesHTML(i){
+  var t = T(), ls = linksOf(i);
+  var html = '<div class="studies"><div class="st-title">🔬 ' + esc(t.studiesTitle) + '</div>';
+  if(!ls.length) html += '<p class="st-empty">' + esc(t.noStudy) + '</p>';
+  html += ls.map(function(l){
+    var lbl = l['label_' + LANG] || l.label_en || l.title || '';
+    var chips = '<a class="st-link" href="https://pubmed.ncbi.nlm.nih.gov/' + esc(l.pmid) + '/" target="_blank" rel="noopener noreferrer">🔬 PubMed ' + esc(l.pmid) + ' ↗</a>';
+    if(l.doi) chips += '<a class="st-link doi" href="https://doi.org/' + esc(l.doi) + '" target="_blank" rel="noopener noreferrer">📄 DOI ↗</a>';
+    chips += '<a class="st-link oa" href="https://api.openalex.org/works/pmid:' + esc(l.pmid) + '" target="_blank" rel="noopener noreferrer">🌐 OpenAlex ↗</a>';
+    return '<div class="st-item">' +
+      '<div class="st-top"><span class="st-badge">' + esc(l.type || 'study') + '</span>' +
+      (l.year ? '<span class="st-year">' + esc(l.year) + (l.journal ? ' · ' + esc(l.journal) : '') + '</span>' : '') + '</div>' +
+      '<div class="st-lbl">' + esc(lbl) + '</div>' +
+      '<div class="st-row">' + chips + '</div></div>';
+  }).join('');
+  html += searchLinkHTML(i);
+  return html + '<p class="st-note">' + esc(t.studiesNote) + '</p></div>';
+}
+
+function openModal(i, mode){
+  var t = T();
+  lastModal = { i: i, mode: mode };
+  lastFocus = document.activeElement;
+  document.getElementById('mEmoji').textContent = TEAS[i].emoji;
+  document.getElementById('mName').textContent = f(i,'name');
+  document.getElementById('mLat').textContent = TEAS[i].lat;
+  var kicker = document.getElementById('mKicker');
+  var body = document.getElementById('mBody');
+  if(mode === 'prep'){
+    kicker.className = 'm-kicker prep'; kicker.textContent = '🫖 ' + t.kickPrep;
+    body.innerHTML = '<p>' + esc(f(i,'prep')).replace(/\n/g, '<br>') + '</p>' + studiesHTML(i);
+  } else if(mode === 'trad'){
+    kicker.className = 'm-kicker trad'; kicker.textContent = '🌱 ' + t.kickTrad;
+    body.innerHTML = '<p>' + esc(f(i,'tradText')) + '</p>' + studiesHTML(i);
+  } else {
+    kicker.className = 'm-kicker clin'; kicker.textContent = '🔬 ' + t.kickClin;
+    var w = f(i,'warn');
+    body.innerHTML = '<p>' + esc(f(i,'clinical')) + '</p>' + (w ? '<div class="warn">' + esc(w) + '</div>' : '') + studiesHTML(i);
+  }
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('closeBtn').focus();
+  document.querySelector('.modal').scrollTop = 0;
+}
+function closeModal(){
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+  lastModal = null;
+  if(lastFocus && lastFocus.focus) lastFocus.focus();
+}
+document.getElementById('closeBtn').addEventListener('click', closeModal);
+overlay.addEventListener('click', function(e){ if(e.target === overlay) closeModal(); });
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape'){ if(overlay.classList.contains('open')) closeModal(); else if(!document.body.classList.contains('menu-closed') && isMobile()) closeMenu(); }
+});
+
+/* ---------------- keresés ---------------- */
+function applySearch(){
+  var q = search.value.trim().toLowerCase();
+  var nodes = [].slice.call(menu.children);
+  var anyHit = false;
+  nodes.forEach(function(n){
+    if(n.classList.contains('m-item')){
+      var nm = n.querySelector('.nm').textContent.toLowerCase();
+      var show = !q || nm.indexOf(q) >= 0;
+      n.style.display = show ? '' : 'none';
+      if(show && q) anyHit = true;
+    }
+  });
+  nodes.forEach(function(n, idx){
+    if(n.classList.contains('group-label')){
+      var visible = false;
+      for(var j = idx + 1; j < nodes.length; j++){
+        if(nodes[j].classList.contains('group-label')) break;
+        if(nodes[j].classList.contains('m-item') && nodes[j].style.display !== 'none'){ visible = true; break; }
+      }
+      n.style.display = visible ? '' : 'none';
+    }
+  });
+  noHit.style.display = (q && !anyHit) ? 'block' : 'none';
+}
+search.addEventListener('input', applySearch);
+
+/* ---------------- menü nyit/zár ---------------- */
+var menuToggle = document.getElementById('menuToggle');
+function isMobile(){ return window.innerWidth <= 900; }
+function syncToggle(){ menuToggle.setAttribute('aria-expanded', document.body.classList.contains('menu-closed') ? 'false' : 'true'); }
+function closeMenu(){ document.body.classList.add('menu-closed'); syncToggle(); }
+menuToggle.addEventListener('click', function(){ document.body.classList.toggle('menu-closed'); syncToggle(); });
+document.getElementById('collapseBtn').addEventListener('click', closeMenu);
+document.getElementById('backdrop').addEventListener('click', closeMenu);
+if(!isMobile()) document.body.classList.remove('menu-closed');
+syncToggle();
+
+/* ---------------- nyomtatható nézet ---------------- */
+function buildPrint(){
+  var t = T();
+  var html = '<h1>🍵 ' + esc(t.printTitle) + '</h1>';
+  TEAS.forEach(function(tea, i){
+    html += '<div class="p-tea"><h2>' + tea.emoji + ' ' + esc(f(i,'name')) + '</h2>' +
+      '<div class="p-lat">' + esc(tea.lat) + '</div>' +
+      '<p><b>' + esc(t.pEffect) + ':</b> ' + esc(f(i,'hatas')) + '</p>' +
+      '<p><b>' + esc(t.pPrep) + ':</b> ' + esc(f(i,'prep')).replace(/\n/g, ' ') + '</p>';
+    if(tea.traditional) html += '<p><b>' + esc(t.pTrad) + ':</b> ' + esc(f(i,'tradText')) + '</p>';
+    else html += '<p><b>' + esc(t.pClin) + ':</b> ' + esc(f(i,'clinical')) + '</p>';
+    var w = f(i,'warn');
+    if(w) html += '<p><b>' + esc(t.pWarn) + ':</b> ' + esc(w) + '</p>';
+    var ls = linksOf(i);
+    html += '<p><b>' + esc(t.pStudies) + ':</b> ' + ls.map(function(l){
+      return esc(l['label_' + LANG] || l.label_en || '') + ' – PubMed https://pubmed.ncbi.nlm.nih.gov/' + esc(l.pmid) + '/' +
+             (l.doi ? ' · DOI https://doi.org/' + esc(l.doi) : '');
+    }).concat([esc(t.searchAll) + ' – ' + esc(searchURL(i))]).join(' · ') + '</p>';
+    html += '</div>';
+  });
+  html += '<h1 style="margin-top:18px;">📚 ' + esc(t.printSources) + '</h1>';
+  SOURCES.forEach(function(s, i){
+    html += '<p style="font-size:11px;margin:3px 0;"><b>' + esc(srcOf(i,'n')) + ':</b> ' + esc(srcOf(i,'r')) + '</p>';
+  });
+  html += '<p style="margin-top:16px;font-size:11px;color:#555;">' + esc(t.printFoot) + '</p>';
+  document.getElementById('printArea').innerHTML = html;
+}
+document.getElementById('printBtn').addEventListener('click', function(){ buildPrint(); window.print(); });
+
+/* ---------------- nyelv alkalmazása ---------------- */
+function applyLang(){
+  applyStatic();
+  buildMenu();
+  render();
+  buildPrint();
+  if(lastModal) openModal(lastModal.i, lastModal.mode);
+}
+
+applyLang();
+})();
+</script>
+</body>
+</html>

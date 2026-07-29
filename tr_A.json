@@ -1,0 +1,209 @@
+{
+  "0": {
+    "ro": {
+      "name": "Mentă",
+      "role": "Digestie · SII",
+      "hatas": "Digestie, balonare, crampe în SII, dureri de cap.",
+      "prep": "1–2 lingurițe de frunze uscate la o ceașcă. Apă proaspăt fiartă (~100 °C), infuzare 5–7 minute acoperit. Cea mai aromată proaspătă.",
+      "clinical": "Cea mai bine cercetată formă a mentei este uleiul de mentă cu eliberare enterică (enterosolubil). Conform unei metaanalize a 12 studii randomizate (835 de pacienți), uleiul a ameliorat mai eficient decât placebo simptomele globale ale sindromului de intestin iritabil (SII) (raport de risc 2,39) și durerea abdominală (RR 1,78). O metaanaliză actualizată din 2022 a confirmat că este superior placebo, dar reacțiile adverse (de ex. refluxul) sunt mai frecvente, iar calitatea dovezilor este scăzută. Efectul ceaiului este mai blând decât cel al capsulelor concentrate."
+    },
+    "en": {
+      "name": "Peppermint",
+      "role": "Digestion · IBS",
+      "hatas": "Digestion, bloating, IBS cramps, headache.",
+      "prep": "1–2 teaspoons of dried leaf per cup. Freshly boiled (~100 °C) water, steep covered for 5–7 minutes. Most aromatic when fresh.",
+      "clinical": "The best-researched form of peppermint is enteric-coated (enterosoluble) peppermint oil. According to a meta-analysis of 12 randomized trials (835 patients), the oil improved global symptoms of irritable bowel syndrome (IBS) more effectively than placebo (risk ratio 2.39) and abdominal pain (RR 1.78). An updated 2022 meta-analysis confirmed that it is superior to placebo, but adverse effects (e.g. reflux) are more common and the quality of evidence is low. The effect of the tea is milder than that of concentrated capsules."
+    },
+    "de": {
+      "name": "Pfefferminze",
+      "role": "Verdauung · Reizdarm",
+      "hatas": "Verdauung, Blähungen, Reizdarm-Krämpfe, Kopfschmerzen.",
+      "prep": "1–2 Teelöffel getrocknete Blätter pro Tasse. Frisch aufgekochtes (~100 °C) Wasser, 5–7 Minuten zugedeckt ziehen lassen. Am aromatischsten frisch.",
+      "clinical": "Die am besten erforschte Form der Pfefferminze ist magensaftresistentes (enterolösliches) Pfefferminzöl. Laut einer Metaanalyse von 12 randomisierten Studien (835 Patienten) verbesserte das Öl die globalen Symptome des Reizdarmsyndroms (RDS) wirksamer als Placebo (Risikoverhältnis 2,39) sowie die Bauchschmerzen (RR 1,78). Eine aktualisierte Metaanalyse von 2022 bestätigte die Überlegenheit gegenüber Placebo, jedoch sind Nebenwirkungen (z. B. Reflux) häufiger und die Qualität der Evidenz ist niedrig. Die Wirkung des Tees ist milder als die konzentrierter Kapseln."
+    }
+  },
+  "1": {
+    "ro": {
+      "name": "Ceai verde",
+      "role": "Inimă · metabolism",
+      "hatas": "Sistem cardiovascular, glicemie, greutate corporală, vigilență.",
+      "prep": "1 linguriță de frunze / ceașcă, apă la 70–80 °C (NU clocotită!), 2–3 minute. Apa prea fierbinte îl face amar.",
+      "clinical": "Conform metaanalizelor de studii RCT, ceaiul verde și catechinele sale (EGCG) pot ameliora tensiunea arterială (mai ales la valori inițiale mai ridicate) și colesterolul LDL, pot reduce moderat circumferința taliei și pot îmbunătăți glicemia/HbA1c. În studiile de cohortă mari, consumul regulat a fost asociat cu o mortalitate cardiovasculară și generală mai scăzută (relația cauză-efect nu este dovedită). IMPORTANT: ceaiul preparat este sigur; extractul/capsula concentrat(ă) peste ~800 mg EGCG pe zi poate provoca creșterea enzimelor hepatice – de luat cu masa, nu pe stomacul gol."
+    },
+    "en": {
+      "name": "Green tea",
+      "role": "Heart · metabolism",
+      "hatas": "Cardiovascular system, blood sugar, body weight, alertness.",
+      "prep": "1 teaspoon of leaf / cup, water at 70–80 °C (NOT boiling!), 2–3 minutes. Water that is too hot makes it bitter.",
+      "clinical": "According to meta-analyses of RCTs, green tea and its catechins (EGCG) may improve blood pressure (especially at higher baseline values) and LDL cholesterol, moderately reduce waist circumference, and improve blood sugar/HbA1c. In large cohort studies, regular consumption was associated with lower cardiovascular and all-cause mortality (causation not proven). IMPORTANT: brewed tea is safe; concentrated extract/capsules above ~800 mg EGCG per day can cause elevated liver enzymes – take with food, not on an empty stomach."
+    },
+    "de": {
+      "name": "Grüner Tee",
+      "role": "Herz · Stoffwechsel",
+      "hatas": "Herz-Kreislauf-System, Blutzucker, Körpergewicht, Wachheit.",
+      "prep": "1 Teelöffel Blätter / Tasse, Wasser bei 70–80 °C (NICHT kochend!), 2–3 Minuten. Zu heißes Wasser macht ihn bitter.",
+      "clinical": "Laut Metaanalysen von RCT-Studien können grüner Tee und seine Katechine (EGCG) den Blutdruck (vor allem bei höheren Ausgangswerten) und das LDL-Cholesterin verbessern, den Taillenumfang mäßig verringern und den Blutzucker/HbA1c verbessern. In großen Kohortenstudien war der regelmäßige Konsum mit einer niedrigeren kardiovaskulären und Gesamtsterblichkeit verbunden (Kausalität nicht bewiesen). WICHTIG: Der aufgebrühte Tee ist sicher; konzentrierter Extrakt/Kapseln über ~800 mg EGCG pro Tag können einen Anstieg der Leberenzyme verursachen – mit dem Essen, nicht auf nüchternen Magen einnehmen."
+    }
+  },
+  "2": {
+    "ro": {
+      "name": "Matcha",
+      "role": "Concentrare · cogniție",
+      "hatas": "Vigilență, concentrare, focalizare calmă (L-teanină + cofeină).",
+      "prep": "1–2 g (½–1 linguriță) de pudră se amestecă cu apă la ~80 °C până la spumare (nu infuzare) – consumi întreaga frunză, de aceea este mai concentrat.",
+      "clinical": "Într-un studiu japonez randomizat, dublu-orb, controlat cu placebo, de 12 luni (99 de vârstnici cu declin cognitiv ușor), 2 g de matcha pe zi a îmbunătățit scorul de „acuitate socială” (recunoașterea expresiilor faciale) față de placebo, dar nu și cogniția globală și celelalte funcții. Studiile anterioare au fost scurte (aproximativ 12 săptămâni) și cu eșantioane mici – efectul cerebral este promițător, dar până acum modest."
+    },
+    "en": {
+      "name": "Matcha",
+      "role": "Focus · cognition",
+      "hatas": "Alertness, concentration, calm focus (L-theanine + caffeine).",
+      "prep": "1–2 g (½–1 tsp) of powder whisked with ~80 °C water until frothy (not steeped) – you consume the whole leaf, so it is more concentrated.",
+      "clinical": "In a 12-month randomized, double-blind, placebo-controlled Japanese study (99 elderly people with mild cognitive decline), 2 g of matcha per day improved the \"social acuity\" (facial expression recognition) score compared to placebo, but not global cognition or the other functions. Earlier studies were short (about 12 weeks) and small in sample size – the effect on the brain is promising but so far modest."
+    },
+    "de": {
+      "name": "Matcha",
+      "role": "Fokus · Kognition",
+      "hatas": "Wachheit, Konzentration, ruhiger Fokus (L-Theanin + Koffein).",
+      "prep": "1–2 g (½–1 TL) Pulver mit ~80 °C warmem Wasser schaumig schlagen (kein Ziehenlassen) – du konsumierst das ganze Blatt, daher ist er konzentrierter.",
+      "clinical": "In einer 12-monatigen randomisierten, doppelblinden, placebokontrollierten japanischen Studie (99 ältere Menschen mit leichtem kognitivem Abbau) verbesserte 2 g Matcha pro Tag den Wert der „sozialen Wahrnehmungsschärfe“ (Erkennen von Gesichtsausdrücken) gegenüber Placebo, jedoch nicht die globale Kognition und die übrigen Funktionen. Die früheren Studien waren kurz (etwa 12 Wochen) und hatten kleine Stichproben – die Wirkung auf das Gehirn ist vielversprechend, bisher aber bescheiden."
+    }
+  },
+  "3": {
+    "ro": {
+      "name": "Rooibos",
+      "role": "Antioxidant · fără cofeină",
+      "hatas": "Antioxidant, profil lipidic, fără cofeină.",
+      "prep": "1–2 lingurițe de rooibos uscat / ceașcă, ~100 °C, 5–10 minute (nu devine amar nici dacă se infuzează mai mult). Fără cofeină.",
+      "clinical": "În cel mai frecvent citat studiu pe oameni (40 de persoane cu risc cardiovascular), 6 cești pe zi de rooibos tradițional timp de 6 săptămâni au îmbunătățit profilul lipidic (scăderea LDL și a trigliceridelor) și au redus peroxidarea lipidică. Dovezile sunt încurajatoare, dar se bazează pe puține studii pe oameni și pe eșantioane mici – majoritatea datelor provin din experimente pe animale. Avantaj: în mod natural fără cofeină."
+    },
+    "en": {
+      "name": "Rooibos",
+      "role": "Antioxidant · caffeine-free",
+      "hatas": "Antioxidant, lipid profile, caffeine-free.",
+      "prep": "1–2 teaspoons of dried rooibos / cup, ~100 °C, 5–10 minutes (it does not become bitter even with longer steeping). Caffeine-free.",
+      "clinical": "In the most frequently cited human study (40 people with cardiovascular risk), 6 cups per day of traditional rooibos for 6 weeks improved the lipid profile (reduction of LDL and triglycerides) and reduced lipid peroxidation. The evidence is encouraging but is based on few human studies and small sample sizes – most of the data comes from animal experiments. Advantage: naturally caffeine-free."
+    },
+    "de": {
+      "name": "Rooibos",
+      "role": "Antioxidans · koffeinfrei",
+      "hatas": "Antioxidans, Lipidprofil, koffeinfrei.",
+      "prep": "1–2 Teelöffel getrockneter Rooibos / Tasse, ~100 °C, 5–10 Minuten (wird auch bei längerem Ziehen nicht bitter). Koffeinfrei.",
+      "clinical": "In der am häufigsten zitierten Humanstudie (40 Personen mit kardiovaskulärem Risiko) verbesserten 6 Tassen traditioneller Rooibos pro Tag über 6 Wochen das Lipidprofil (Senkung von LDL und Triglyceriden) und reduzierten die Lipidperoxidation. Die Evidenz ist ermutigend, beruht aber auf wenigen Humanstudien und kleinen Stichproben – der Großteil der Daten stammt aus Tierversuchen. Vorteil: von Natur aus koffeinfrei."
+    }
+  },
+  "4": {
+    "ro": {
+      "name": "Salvie",
+      "role": "Gât · menopauză",
+      "hatas": "Inflamația gâtului, bufeuri de menopauză, memorie, transpirație.",
+      "prep": "1 linguriță de frunze uscate / ceașcă, ~100 °C, 5–10 minute acoperit. Pentru gargară, un decoct mai concentrat și răcit.",
+      "clinical": "În studii randomizate, dublu-orb, preparatele pe bază de salvie au redus semnificativ frecvența și intensitatea bufeurilor la menopauză – într-un studiu controlat cu placebo, scorul bufeurilor a scăzut cu aproximativ 55%. Conform unui studiu randomizat, controlat cu placebo, este eficientă și sigură (în gargară) în faringita acută. Studii mai mici au arătat și un efect favorabil asupra memoriei și dispoziției, cu inhibarea acetilcolinesterazei."
+    },
+    "en": {
+      "name": "Sage",
+      "role": "Throat · menopause",
+      "hatas": "Sore throat, menopausal hot flashes, memory, sweating.",
+      "prep": "1 teaspoon of dried leaf / cup, ~100 °C, 5–10 minutes covered. For gargling, a stronger, cooled decoction.",
+      "clinical": "In randomized, double-blind studies, sage preparations significantly reduced the frequency and intensity of hot flashes in menopause – in a placebo-controlled study, the hot flash score decreased by about 55%. According to a randomized, placebo-controlled study, it is effective and safe (as a gargle) in acute pharyngitis. Smaller studies also showed a favorable effect on memory and mood, with acetylcholinesterase-inhibiting action."
+    },
+    "de": {
+      "name": "Salbei",
+      "role": "Hals · Wechseljahre",
+      "hatas": "Halsentzündung, Hitzewallungen in den Wechseljahren, Gedächtnis, Schwitzen.",
+      "prep": "1 Teelöffel getrocknete Blätter / Tasse, ~100 °C, 5–10 Minuten zugedeckt. Zum Gurgeln ein stärkerer, abgekühlter Aufguss.",
+      "clinical": "In randomisierten, doppelblinden Studien reduzierten Salbeipräparate die Häufigkeit und Intensität der Hitzewallungen in den Wechseljahren deutlich – in einer placebokontrollierten Studie sank der Hitzewallungs-Score um etwa 55%. Laut einer randomisierten, placebokontrollierten Studie ist er (als Gurgellösung) wirksam und sicher bei akuter Rachenentzündung. Kleinere Studien zeigten auch eine günstige Wirkung auf Gedächtnis und Stimmung mit acetylcholinesterasehemmender Wirkung."
+    }
+  },
+  "5": {
+    "ro": {
+      "name": "Soc",
+      "role": "Răceală · imunitate",
+      "hatas": "Răceală, gripă, simptome ale căilor respiratorii superioare.",
+      "prep": "Ceai din flori de soc: 1–2 lingurițe de flori uscate / ceașcă, ~100 °C, 10 minute. Fructele ÎNTOTDEAUNA fierte/sub formă de sirop – crude sunt ușor toxice!",
+      "clinical": "În studii randomizate, extractul standardizat de fructe de soc a scurtat durata simptomelor de răceală/gripă. Într-un studiu pe 312 pasageri de avion, socul a fost asociat cu o durată mai scurtă a răcelii și cu simptome mai ușoare. În studii mai mici a scurtat durata gripei cu aproximativ 3–4 zile, iar o metaanaliză a constatat o reducere semnificativă a simptomelor căilor respiratorii superioare. IMPORTANT: rezultatele nu sunt uniforme – un studiu din 2020 nu a găsit niciun beneficiu. Fructele crude, frunzele și scoarța sunt toxice fără tratament termic."
+    },
+    "en": {
+      "name": "Elderberry",
+      "role": "Cold · immunity",
+      "hatas": "Cold, flu, upper respiratory symptoms.",
+      "prep": "Elderflower tea: 1–2 tsp of dried flowers / cup, ~100 °C, 10 minutes. The berries ALWAYS cooked/as syrup – raw they are slightly toxic!",
+      "clinical": "In randomized trials, standardized elderberry extract shortened the duration of cold/flu symptoms. In a study of 312 air travelers, elderberry was associated with a shorter cold duration and milder symptoms. In smaller studies it shortened the duration of flu by about 3–4 days, and a meta-analysis found a significant reduction in upper respiratory symptoms. IMPORTANT: the results are not consistent – a 2020 study found no benefit. Raw berries, leaves and bark are toxic without heat treatment."
+    },
+    "de": {
+      "name": "Holunder",
+      "role": "Erkältung · Immunsystem",
+      "hatas": "Erkältung, Grippe, Symptome der oberen Atemwege.",
+      "prep": "Holunderblütentee: 1–2 TL getrocknete Blüten / Tasse, ~100 °C, 10 Minuten. Die Beeren IMMER gekocht/als Sirup – roh sind sie leicht giftig!",
+      "clinical": "In randomisierten Studien verkürzte der standardisierte Holunderbeerenextrakt die Dauer der Erkältungs-/Grippesymptome. In einer Studie mit 312 Flugreisenden ging Holunder mit einer kürzeren Erkältungsdauer und milderen Symptomen einher. In kleineren Studien verkürzte er die Grippedauer um etwa 3–4 Tage, und eine Metaanalyse fand eine signifikante Verringerung der Symptome der oberen Atemwege. WICHTIG: Die Ergebnisse sind nicht einheitlich – eine Studie von 2020 fand keinen Nutzen. Rohe Beeren, Blätter und Rinde sind ohne Hitzebehandlung giftig."
+    }
+  },
+  "6": {
+    "ro": {
+      "name": "Rozmarin",
+      "role": "Memorie · dispoziție",
+      "hatas": "Memorie, concentrare, dispoziție, somn, digestie.",
+      "prep": "1 linguriță uscat (sau 1 vârf de ramură proaspătă) / ceașcă, ~100 °C, 5–10 minute acoperit.",
+      "clinical": "Într-un studiu randomizat, dublu-orb, pe 68 de persoane, 2×500 mg de rozmarin pe zi timp de o lună a îmbunătățit memoria, a redus anxietatea și depresia și a îmbunătățit calitatea somnului la studenți. La vârstnici, un studiu a constatat un efect dependent de doză, bidirecțional: doza mică (750 mg) a îmbunătățit, iar doza foarte mare (6000 mg) a înrăutățit viteza memoriei. Efectul ceaiului este mai blând decât cel al extractului concentrat."
+    },
+    "en": {
+      "name": "Rosemary",
+      "role": "Memory · mood",
+      "hatas": "Memory, concentration, mood, sleep, digestion.",
+      "prep": "1 teaspoon dried (or 1 fresh sprig tip) / cup, ~100 °C, 5–10 minutes covered.",
+      "clinical": "In a double-blind randomized study of 68 people, 2×500 mg of rosemary per day for one month improved memory, reduced anxiety and depression, and improved sleep quality in university students. In the elderly, one study found a dose-dependent, bidirectional effect: the low dose (750 mg) improved, while the very high dose (6000 mg) worsened memory speed. The effect of the tea is milder than that of the concentrated extract."
+    },
+    "de": {
+      "name": "Rosmarin",
+      "role": "Gedächtnis · Stimmung",
+      "hatas": "Gedächtnis, Konzentration, Stimmung, Schlaf, Verdauung.",
+      "prep": "1 Teelöffel getrocknet (oder 1 frische Zweigspitze) / Tasse, ~100 °C, 5–10 Minuten zugedeckt.",
+      "clinical": "In einer doppelblinden randomisierten Studie mit 68 Personen verbesserte 2×500 mg Rosmarin pro Tag über einen Monat das Gedächtnis, verringerte Angst und Depression und verbesserte die Schlafqualität bei Studierenden. Bei älteren Menschen fand eine Studie einen dosisabhängigen, zweiseitigen Effekt: Die niedrige Dosis (750 mg) verbesserte, die sehr hohe Dosis (6000 mg) verschlechterte die Gedächtnisgeschwindigkeit. Die Wirkung des Tees ist milder als die des konzentrierten Extrakts."
+    }
+  },
+  "7": {
+    "ro": {
+      "name": "Chimen",
+      "role": "Balonare · dispepsie",
+      "hatas": "Balonare, digestie cu crampe, dispepsie funcțională.",
+      "prep": "1 linguriță de semințe proaspăt zdrobite / ceașcă, ~100 °C, 10–15 minute acoperit (zdrobirea semințelor ajută extragerea principiului activ).",
+      "clinical": "Cele mai solide dovezi se referă la combinația fixă de ulei de chimen + ulei de mentă în dispepsia funcțională. Conform unei metaanalize a 5 studii randomizate (578 de participanți), combinația a ameliorat semnificativ mai mult decât placebo simptomele globale ale dispepsiei (aproximativ 56% ameliorare). Pentru ceaiul de semințe de chimen în sine există mai puține date umane riguroase – rezultatul clinic este valabil mai ales pentru combinația de uleiuri concentrate."
+    },
+    "en": {
+      "name": "Caraway",
+      "role": "Bloating · dyspepsia",
+      "hatas": "Bloating, cramping digestion, functional dyspepsia.",
+      "prep": "1 teaspoon of freshly crushed seeds / cup, ~100 °C, 10–15 minutes covered (crushing the seeds helps release the active compounds).",
+      "clinical": "The strongest evidence concerns the fixed combination of caraway + peppermint oil in functional dyspepsia. According to a meta-analysis of 5 randomized trials (578 participants), the combination improved the global symptoms of dyspepsia significantly more than placebo (about 56% improvement). For caraway seed tea on its own there is less rigorous human data – the clinical result applies mainly to the concentrated oil combination."
+    },
+    "de": {
+      "name": "Kümmel",
+      "role": "Blähungen · Dyspepsie",
+      "hatas": "Blähungen, krampfartige Verdauung, funktionelle Dyspepsie.",
+      "prep": "1 Teelöffel frisch zerstoßene Samen / Tasse, ~100 °C, 10–15 Minuten zugedeckt (das Zerstoßen der Samen fördert das Herauslösen des Wirkstoffs).",
+      "clinical": "Die stärkste Evidenz betrifft die feste Kombination aus Kümmel- + Pfefferminzöl bei funktioneller Dyspepsie. Laut einer Metaanalyse von 5 randomisierten Studien (578 Teilnehmer) verbesserte die Kombination die globalen Symptome der Dyspepsie signifikant stärker als Placebo (etwa 56% Besserung). Für Kümmelsamentee allein gibt es weniger strenge Humandaten – das klinische Ergebnis gilt vor allem für die konzentrierte Ölkombination."
+    }
+  },
+  "8": {
+    "ro": {
+      "name": "Mușețel",
+      "role": "Anxietate · somn",
+      "hatas": "Anxietate, somn, digestie, inflamație, piele (spălare).",
+      "prep": "1–2 lingurițe de flori uscate / ceașcă, ~100 °C, 5–10 minute acoperit. În regiune (România, Bazinul Carpatic) este una dintre cele mai importante plante medicinale.",
+      "clinical": "Într-un studiu randomizat, dublu-orb, extractul de mușețel (1500 mg pe zi) a redus semnificativ simptomele anxietății generalizate (GAD) în 8 săptămâni, comparativ cu placebo. Într-un studiu pe termen lung (38 de săptămâni), continuarea tratamentului cu mușețel a menținut un nivel mai scăzut de anxietate (diferența în timpul până la recădere nu a atins însă semnificația). Conform metaanalizelor, mușețelul poate ameliora atât anxietatea, cât și calitatea somnului."
+    },
+    "en": {
+      "name": "Chamomile",
+      "role": "Anxiety · sleep",
+      "hatas": "Anxiety, sleep, digestion, inflammation, skin (rinse).",
+      "prep": "1–2 teaspoons of dried flowers / cup, ~100 °C, 5–10 minutes covered. In the region (Romania, Carpathian Basin) it is one of the most important medicinal herbs.",
+      "clinical": "In a randomized, double-blind study, chamomile extract (1500 mg per day) significantly reduced the symptoms of generalized anxiety disorder (GAD) over 8 weeks compared to placebo. In a long-term (38-week) study, continued chamomile treatment maintained a lower level of anxiety (although the difference in time to relapse did not reach significance). According to meta-analyses, chamomile may improve both anxiety and sleep quality."
+    },
+    "de": {
+      "name": "Kamille",
+      "role": "Angst · Schlaf",
+      "hatas": "Angst, Schlaf, Verdauung, Entzündung, Haut (Spülung).",
+      "prep": "1–2 Teelöffel getrocknete Blüten / Tasse, ~100 °C, 5–10 Minuten zugedeckt. In der Region (Rumänien, Karpatenbecken) ist sie eine der wichtigsten Heilpflanzen.",
+      "clinical": "In einer randomisierten, doppelblinden Studie reduzierte der Kamillenextrakt (1500 mg pro Tag) die Symptome der generalisierten Angststörung (GAD) über 8 Wochen signifikant gegenüber Placebo. In einer Langzeitstudie (38 Wochen) hielt die fortgesetzte Kamillenbehandlung ein niedrigeres Angstniveau aufrecht (der Unterschied in der Zeit bis zum Rückfall erreichte jedoch keine Signifikanz). Laut Metaanalysen kann Kamille sowohl die Angst als auch die Schlafqualität verbessern."
+    }
+  }
+}

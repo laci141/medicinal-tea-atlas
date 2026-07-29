@@ -1,0 +1,218 @@
+{
+  "9": {
+    "ro": {
+      "name": "Cimbru",
+      "role": "Tuse · căi respiratorii",
+      "hatas": "Tuse, bronșită, simptome ale căilor respiratorii superioare, gât.",
+      "prep": "1–2 lingurițe de plantă uscată la o cană, apă la ~100 °C, infuzare acoperită 10 minute. Răspândit în Transilvania/România, plantă medicinală importantă pentru căile respiratorii.",
+      "clinical": "Cimbrul – adesea combinat cu iederă sau cu ciuboțica-cucului – a fost studiat ca expectorant și antitusiv. În studii randomizate, preparatele care conțin cimbru au redus severitatea/simptomele bronșitei acute și ale tusei și sunt în general bine tolerate. Pentru ceaiul de cimbru administrat singur există mai puține date riguroase, dar la simptomele respiratorii aici dovezile clinice și tradiționale sunt cele mai puternice."
+    },
+    "en": {
+      "name": "Thyme",
+      "role": "Cough · airways",
+      "hatas": "Cough, bronchitis, upper respiratory symptoms, throat.",
+      "prep": "1–2 teaspoons of dried herb per cup, water at ~100 °C, steep covered for 10 minutes. Widespread in Transylvania/Romania, an important respiratory medicinal herb.",
+      "clinical": "Thyme – often combined with ivy or cowslip (primrose) – has been studied as an expectorant and cough suppressant. In randomized trials, thyme-containing preparations reduced the severity/symptoms of acute bronchitis and cough, and are generally well tolerated. There are fewer rigorous data on thyme tea alone, but for respiratory symptoms the clinical and traditional evidence is strongest here."
+    },
+    "de": {
+      "name": "Thymian",
+      "role": "Husten · Atemwege",
+      "hatas": "Husten, Bronchitis, Symptome der oberen Atemwege, Hals.",
+      "prep": "1–2 Teelöffel getrocknetes Kraut pro Tasse, Wasser mit ~100 °C, 10 Minuten abgedeckt ziehen lassen. In Siebenbürgen/Rumänien weit verbreitet, wichtige Atemwegs-Heilpflanze.",
+      "clinical": "Thymian – oft mit Efeu oder Schlüsselblume kombiniert – wurde als Expektorans und Hustenstiller untersucht. In randomisierten Studien verringerten thymianhaltige Präparate die Schwere/Symptome der akuten Bronchitis und des Hustens und sind im Allgemeinen gut verträglich. Zu Thymiantee allein gibt es weniger belastbare Daten, doch bei Atemwegssymptomen ist die klinische und traditionelle Evidenz hier am stärksten."
+    }
+  },
+  "10": {
+    "ro": {
+      "name": "Sunătoare",
+      "role": "Dispoziție · depresie",
+      "hatas": "Depresie ușoară–moderată, dispoziție deprimată. Plantă medicinală importantă regional.",
+      "prep": "1–2 lingurițe de lăstari înfloriți uscați la o cană, apă la ~100 °C, infuzare acoperită 8–10 minute.",
+      "clinical": "Extractul de sunătoare este una dintre cele mai bine studiate plante medicinale în depresie. Conform unei sinteze Cochrane (29 de studii), extractele sunt mai eficiente decât placebo, la fel de eficiente ca antidepresivele standard și au mai puține efecte secundare – efectul este clar în special în depresia ușoară–moderată, iar în depresia severă este mai variabil.",
+      "warn": "⚠️ AVERTISMENT SERIOS: sunătoarea slăbește efectul multor medicamente (de ex. contraceptive, anticoagulante, unele antidepresive, imunosupresoare). În cazul administrării de medicamente, numai după consultarea medicului!"
+    },
+    "en": {
+      "name": "St. John's wort",
+      "role": "Mood · depression",
+      "hatas": "Mild to moderate depression, low mood. A regionally important medicinal herb.",
+      "prep": "1–2 teaspoons of dried flowering tops per cup, water at ~100 °C, steep covered for 8–10 minutes.",
+      "clinical": "St. John's wort extract is one of the best-studied medicinal herbs in depression. According to a Cochrane review (29 trials), the extracts are more effective than placebo, similarly effective to standard antidepressants, and have fewer side effects – the effect is clearest particularly in mild to moderate depression, while in severe depression it is more mixed.",
+      "warn": "⚠️ SERIOUS WARNING: St. John's wort weakens the effect of many medications (e.g. contraceptives, anticoagulants, certain antidepressants, immunosuppressants). While taking medication, only after consulting a doctor!"
+    },
+    "de": {
+      "name": "Johanniskraut",
+      "role": "Stimmung · Depression",
+      "hatas": "Leichte bis mittelschwere Depression, gedrückte Stimmung. Regional wichtige Heilpflanze.",
+      "prep": "1–2 Teelöffel getrocknete blühende Triebe pro Tasse, Wasser mit ~100 °C, 8–10 Minuten abgedeckt ziehen lassen.",
+      "clinical": "Johanniskraut-Extrakt ist eine der am besten untersuchten Heilpflanzen bei Depression. Laut einer Cochrane-Übersicht (29 Studien) sind die Extrakte wirksamer als Placebo, ähnlich wirksam wie Standard-Antidepressiva und haben weniger Nebenwirkungen – die Wirkung ist vor allem bei leichter bis mittelschwerer Depression eindeutig, bei schwerer Depression uneinheitlicher.",
+      "warn": "⚠️ ERNSTE WARNUNG: Johanniskraut schwächt die Wirkung zahlreicher Medikamente (z. B. Verhütungsmittel, Blutgerinnungshemmer, einige Antidepressiva, Immunsuppressiva). Bei gleichzeitiger Medikamenteneinnahme nur nach Rücksprache mit dem Arzt!"
+    }
+  },
+  "11": {
+    "ro": {
+      "name": "Tei",
+      "role": "Răceală · calmare",
+      "hatas": "Răceală, transpirație (la febră), calmare, tulburări ușoare de somn.",
+      "prep": "1–2 lingurițe de flori de tei uscate la o cană, apă la ~100 °C, infuzare acoperită 10 minute.",
+      "tradText": "Floarea de tei este folosită în mod tradițional pentru răceală, pentru stimularea transpirației și pentru calmare ușoară; monografiile europene de plante medicinale o recunosc ca plantă de uz tradițional. Există însă abia câteva studii clinice randomizate mari și de bună calitate – dovezile se bazează în principal pe utilizarea tradițională și pe date de laborator."
+    },
+    "en": {
+      "name": "Linden",
+      "role": "Cold · calming",
+      "hatas": "Cold, sweating (with fever), calming, mild sleep disturbances.",
+      "prep": "1–2 teaspoons of dried linden flowers per cup, water at ~100 °C, steep covered for 10 minutes.",
+      "tradText": "Linden flower is traditionally used for colds, to promote sweating and for mild calming; European herbal monographs recognize it as a plant of traditional use. However, there are hardly any large, good-quality randomized clinical trials – the evidence is based mainly on traditional use and laboratory data."
+    },
+    "de": {
+      "name": "Linde",
+      "role": "Erkältung · Beruhigung",
+      "hatas": "Erkältung, Schwitzen (bei Fieber), Beruhigung, leichte Schlafstörungen.",
+      "prep": "1–2 Teelöffel getrocknete Lindenblüten pro Tasse, Wasser mit ~100 °C, 10 Minuten abgedeckt ziehen lassen.",
+      "tradText": "Die Lindenblüte wird traditionell bei Erkältung, zum Schwitzen (schweißtreibend) und zur leichten Beruhigung verwendet; europäische Pflanzenmonographien erkennen sie als Pflanze der traditionellen Anwendung an. Große, hochwertige randomisierte klinische Studien gibt es jedoch kaum – die Evidenz beruht überwiegend auf traditioneller Anwendung und Labordaten."
+    }
+  },
+  "12": {
+    "ro": {
+      "name": "Cozi de vișine",
+      "role": "Diuretic · căi urinare",
+      "hatas": "Efect diuretic, afecțiuni urinare și articulare (uz popular).",
+      "prep": "Un pumn de cozi de vișine uscate în ~0,5 l de apă, fierbere 5–10 minute (decoct), apoi strecurare.",
+      "tradText": "Cozile (pedunculii) de vișine sunt folosite în medicina populară ca diuretic, pentru afecțiuni urinare și articulare. Pentru ceaiul preparat din cozi practic nu există niciun studiu clinic la om. (Notă: efectele sucului de vișine – nu ale cozilor – asupra sistemului cardio-metabolic și asupra somnului au fost studiate separat, cu rezultate favorabile.)"
+    },
+    "en": {
+      "name": "Sour cherry stems",
+      "role": "Diuretic · urinary tract",
+      "hatas": "Diuretic effect, urinary and joint complaints (folk use).",
+      "prep": "A handful of dried sour cherry stems in ~0.5 l of water, boil for 5–10 minutes (decoction), then strain.",
+      "tradText": "Sour cherry stems (stalks) are used in folk medicine as a diuretic and for urinary and joint complaints. There are practically no human clinical trials on tea made from the stems. (Note: the cardio-metabolic and sleep effects of cherry juice – not the stems – have been studied separately, with favorable results.)"
+    },
+    "de": {
+      "name": "Sauerkirschstiele",
+      "role": "Harntreibend · Harnwege",
+      "hatas": "Harntreibende Wirkung, Harnwegs- und Gelenkbeschwerden (Volksheilkunde).",
+      "prep": "Eine Handvoll getrocknete Sauerkirschstiele in ~0,5 l Wasser, 5–10 Minuten kochen (Dekokt), dann abseihen.",
+      "tradText": "Die Sauerkirschstiele (Stiele) werden in der Volksheilkunde als Harntreibendes Mittel sowie bei Harnwegs- und Gelenkbeschwerden verwendet. Zu dem aus den Stielen zubereiteten Tee gibt es praktisch keine klinischen Studien am Menschen. (Anmerkung: Die kardiometabolischen und schlafbezogenen Wirkungen des Kirschsafts – nicht der Stiele – wurden gesondert untersucht, mit günstigen Ergebnissen.)"
+    }
+  },
+  "13": {
+    "ro": {
+      "name": "Roiniță",
+      "role": "Calmare · somn",
+      "hatas": "Anxietate, stres, somn, dispoziție, digestie.",
+      "prep": "1–2 lingurițe de frunze uscate la o cană, apă la ~100 °C, infuzare acoperită 5–10 minute. Excelentă și proaspătă.",
+      "clinical": "Conform unei metaanalize, roinița a îmbunătățit semnificativ scorurile de anxietate și depresie față de placebo (diferență medie standardizată de aproximativ −0,98). În studii randomizate (de ex. după operație pe cord) a redus anxietatea și a îmbunătățit calitatea somnului; studii mici au arătat efecte favorabile și asupra dispoziției și performanței cognitive, printr-un mecanism mediat de sistemul GABA. Pentru tulburările de somn a fost adesea studiată în combinație cu valeriană (odolean)."
+    },
+    "en": {
+      "name": "Lemon balm",
+      "role": "Calming · sleep",
+      "hatas": "Anxiety, stress, sleep, mood, digestion.",
+      "prep": "1–2 teaspoons of dried leaf per cup, water at ~100 °C, steep covered for 5–10 minutes. Excellent fresh as well.",
+      "clinical": "According to a meta-analysis, lemon balm significantly improved anxiety and depression scores compared with placebo (standardized mean difference about −0.98). In randomized trials (e.g. after cardiac surgery) it reduced anxiety and improved sleep quality; small trials also showed favorable effects on mood and cognitive performance, acting through the GABA system. For sleep disturbances it has often been studied in combination with valerian."
+    },
+    "de": {
+      "name": "Zitronenmelisse",
+      "role": "Beruhigung · Schlaf",
+      "hatas": "Angst, Stress, Schlaf, Stimmung, Verdauung.",
+      "prep": "1–2 Teelöffel getrocknete Blätter pro Tasse, Wasser mit ~100 °C, 5–10 Minuten abgedeckt ziehen lassen. Auch frisch hervorragend.",
+      "clinical": "Laut einer Metaanalyse verbesserte die Zitronenmelisse die Angst- und Depressionswerte signifikant gegenüber Placebo (standardisierte Mittelwertdifferenz etwa −0,98). In randomisierten Studien (z. B. nach Herzoperationen) verringerte sie die Angst und verbesserte die Schlafqualität; kleine Studien zeigten auch günstige Wirkungen auf Stimmung und kognitive Leistung über das GABA-System. Bei Schlafstörungen wurde sie häufig in Kombination mit Baldrian untersucht."
+    }
+  },
+  "14": {
+    "ro": {
+      "name": "Măceșe",
+      "role": "Articulații · vitamina C",
+      "hatas": "Durere articulară (artroză), vitamina C, imunitate.",
+      "prep": "1–2 lingurițe de măceșe uscate și sfărâmate la o cană, apă la ~100 °C, infuzare acoperită 10–15 minute (o infuzare mai lungă extrage mai multă vitamina C).",
+      "clinical": "Conform metaanalizei a 3 studii randomizate (287 de pacienți, ~3 luni), pulberea de măceșe a redus mai bine decât placebo durerea din artroza (osteoartrita) șoldului și genunchiului (mărimea efectului 0,37), iar răspunsul terapeutic a fost de aproximativ două ori mai probabil (NNT ≈ 6). Studiile au fost sponsorizate de producător și cu eșantioane mici – ar fi nevoie de un studiu independent și amplu pentru confirmare. În plus, măceșele sunt deosebit de bogate în vitamina C."
+    },
+    "en": {
+      "name": "Rosehip",
+      "role": "Joints · vitamin C",
+      "hatas": "Joint (osteoarthritis) pain, vitamin C, immunity.",
+      "prep": "1–2 teaspoons of dried, crushed rosehip per cup, water at ~100 °C, steep covered for 10–15 minutes (longer steeping extracts more vitamin C).",
+      "clinical": "According to a meta-analysis of 3 randomized trials (287 patients, ~3 months), rosehip powder reduced hip and knee osteoarthritis pain better than placebo (effect size 0.37), and a therapeutic response was about twice as likely (NNT ≈ 6). The trials were manufacturer-sponsored and small – an independent, large trial would be needed for confirmation. Rosehip is also exceptionally rich in vitamin C."
+    },
+    "de": {
+      "name": "Hagebutte",
+      "role": "Gelenke · Vitamin C",
+      "hatas": "Gelenkschmerzen (Arthrose), Vitamin C, Immunsystem.",
+      "prep": "1–2 Teelöffel getrocknete, zerkleinerte Hagebutten pro Tasse, Wasser mit ~100 °C, 10–15 Minuten abgedeckt ziehen lassen (längeres Ziehen löst mehr Vitamin C heraus).",
+      "clinical": "Laut einer Metaanalyse von 3 randomisierten Studien (287 Patienten, ~3 Monate) verringerte Hagebuttenpulver die Schmerzen bei Hüft- und Kniearthrose (Osteoarthrose) besser als Placebo (Effektstärke 0,37), und ein therapeutisches Ansprechen war etwa doppelt so wahrscheinlich (NNT ≈ 6). Die Studien waren herstellerfinanziert und klein – zur Bestätigung wäre eine unabhängige, große Studie nötig. Zudem ist die Hagebutte außergewöhnlich reich an Vitamin C."
+    }
+  },
+  "15": {
+    "ro": {
+      "name": "Coada-șoricelului",
+      "role": "Digestie · răni",
+      "hatas": "Tulburări digestive, apetit, crampe ușoare, răni, menstruație (uz popular).",
+      "prep": "1–2 lingurițe de plantă înflorită uscată la o cană, apă la ~100 °C, infuzare acoperită 10 minute.",
+      "tradText": "Coada-șoricelului este folosită în medicina populară pentru tulburări digestive, lipsa poftei de mâncare, crampe ușoare, răni și tulburări menstruale; monografiile europene o recunosc ca plantă de uz tradițional. Există însă abia câteva studii randomizate la om, mari și de bună calitate – dovezile se bazează în principal pe utilizarea tradițională și pe date de laborator."
+    },
+    "en": {
+      "name": "Yarrow",
+      "role": "Digestion · wounds",
+      "hatas": "Digestive complaints, appetite, mild cramps, wounds, menstruation (folk use).",
+      "prep": "1–2 teaspoons of dried flowering herb per cup, water at ~100 °C, steep covered for 10 minutes.",
+      "tradText": "Yarrow is used in folk medicine for digestive complaints, loss of appetite, mild cramps, wounds and menstrual complaints; European monographs recognize it as a plant of traditional use. However, there are hardly any large, good-quality randomized human trials – the evidence is based mainly on traditional use and laboratory data."
+    },
+    "de": {
+      "name": "Schafgarbe",
+      "role": "Verdauung · Wunden",
+      "hatas": "Verdauungsbeschwerden, Appetit, leichte Krämpfe, Wunden, Menstruation (Volksheilkunde).",
+      "prep": "1–2 Teelöffel getrocknetes blühendes Kraut pro Tasse, Wasser mit ~100 °C, 10 Minuten abgedeckt ziehen lassen.",
+      "tradText": "Die Schafgarbe wird in der Volksheilkunde bei Verdauungsbeschwerden, Appetitlosigkeit, leichten Krämpfen, Wunden und Menstruationsbeschwerden verwendet; europäische Monographien erkennen sie als Pflanze der traditionellen Anwendung an. Große, hochwertige randomisierte Studien am Menschen gibt es jedoch kaum – die Evidenz beruht überwiegend auf traditioneller Anwendung und Labordaten."
+    }
+  },
+  "16": {
+    "ro": {
+      "name": "Hibiscus",
+      "role": "Tensiune arterială · fără cofeină",
+      "hatas": "Scăderea tensiunii arteriale, antioxidant, acrișor, fără cofeină.",
+      "prep": "1–2 lingurițe de flori uscate (caliciul florii) la o cană, apă la ~100 °C, 5–10 minute. Delicios și rece (ca ceai cu gheață).",
+      "clinical": "Conform metaanalizei a 17 studii randomizate, ceaiul/extractul de hibiscus a scăzut tensiunea arterială sistolică mai bine decât placebo (în medie cu aproximativ −7 mmHg), iar efectul este cel mai mare la persoanele cu tensiune arterială mai ridicată. În unele studii a avut efect favorabil și asupra profilului lipidic și a glicemiei. Plăcut acrișor și fără cofeină.",
+      "warn": "⚠️ Alături de un medicament hipotensor poate amplifica efectul (tensiune prea scăzută). În cazul administrării de medicamente, este recomandată consultarea medicului."
+    },
+    "en": {
+      "name": "Hibiscus",
+      "role": "Blood pressure · caffeine-free",
+      "hatas": "Blood pressure lowering, antioxidant, tart, caffeine-free.",
+      "prep": "1–2 teaspoons of dried flowers (the flower's calyx) per cup, water at ~100 °C, 5–10 minutes. Also delicious cold (as iced tea).",
+      "clinical": "According to a meta-analysis of 17 randomized trials, hibiscus tea/extract lowered systolic blood pressure better than placebo (on average by about −7 mmHg), and the effect is greatest in people with higher blood pressure. In some trials it also had a favorable effect on the lipid profile and blood glucose. Pleasantly tart and caffeine-free.",
+      "warn": "⚠️ Alongside a blood-pressure-lowering medication it may amplify the effect (blood pressure too low). If taking medication, it is advisable to consult a doctor."
+    },
+    "de": {
+      "name": "Hibiskus",
+      "role": "Blutdruck · koffeinfrei",
+      "hatas": "Blutdrucksenkung, Antioxidans, säuerlich, koffeinfrei.",
+      "prep": "1–2 Teelöffel getrocknete Blüten (Kelchblätter der Blüte) pro Tasse, Wasser mit ~100 °C, 5–10 Minuten. Auch kalt (als Eistee) köstlich.",
+      "clinical": "Laut einer Metaanalyse von 17 randomisierten Studien senkte Hibiskustee/-extrakt den systolischen Blutdruck besser als Placebo (im Durchschnitt um etwa −7 mmHg), und die Wirkung ist bei Menschen mit höherem Blutdruck am größten. In einigen Studien wirkte er sich auch günstig auf das Lipidprofil und den Blutzucker aus. Angenehm säuerlich und koffeinfrei.",
+      "warn": "⚠️ Zusammen mit einem blutdrucksenkenden Medikament kann er die Wirkung verstärken (zu niedriger Blutdruck). Bei Medikamenteneinnahme ist eine Rücksprache mit dem Arzt ratsam."
+    }
+  },
+  "17": {
+    "ro": {
+      "name": "Ginseng",
+      "role": "Oboseală · glicemie",
+      "hatas": "Oboseală, energie, glicemie, memorie (adaptogen).",
+      "prep": "1 linguriță de rădăcină uscată, feliată la o cană, apă la ~90 °C, infuzare 5–10 minute sau fierbere scurtă. Recomandat dimineața/înainte de prânz.",
+      "clinical": "Panax ginseng este unul dintre cei mai studiați adaptogeni. Pentru oboseală, conform unei sinteze sistematice (8 RCT), a fost mai bun decât placebo pe scalele de oboseală și în efectul clinic. Pentru glicemie, conform metaanalizei a 16 RCT, a scăzut ușor glicemia à jeun. Studii mici au arătat semne favorabile și asupra memoriei/dispoziției și a disfuncției erectile. Datele privind tensiunea arterială sunt variabile.",
+      "warn": "⚠️ Poate fi stimulant (insomnie, neliniște) și interacționează, de exemplu, cu anticoagulantele și cu medicamentele pentru diabet. În caz de hipertensiune sau de administrare de medicamente, numai după consultarea medicului."
+    },
+    "en": {
+      "name": "Ginseng",
+      "role": "Fatigue · blood glucose",
+      "hatas": "Fatigue, energy, blood glucose, memory (adaptogen).",
+      "prep": "1 teaspoon of dried, sliced root per cup, water at ~90 °C, steep 5–10 minutes or briefly boil. Recommended in the morning/forenoon.",
+      "clinical": "Panax ginseng is one of the most studied adaptogens. For fatigue, according to a systematic review (8 RCTs), it was better than placebo on fatigue scales and in clinical effect. For blood glucose, according to a meta-analysis of 16 RCTs, it slightly reduced fasting blood glucose. Small trials also showed favorable signs for memory/mood and erectile dysfunction. Data on blood pressure are mixed.",
+      "warn": "⚠️ It may be stimulating (insomnia, restlessness) and interacts, for example, with anticoagulants and diabetes medications. In case of high blood pressure or medication use, only after consulting a doctor."
+    },
+    "de": {
+      "name": "Ginseng",
+      "role": "Müdigkeit · Blutzucker",
+      "hatas": "Müdigkeit, Energie, Blutzucker, Gedächtnis (Adaptogen).",
+      "prep": "1 Teelöffel getrocknete, geschnittene Wurzel pro Tasse, Wasser mit ~90 °C, 5–10 Minuten ziehen lassen oder kurz kochen. Empfohlen morgens/vormittags.",
+      "clinical": "Panax Ginseng ist eines der am besten untersuchten Adaptogene. Bei Müdigkeit war er laut einer systematischen Übersicht (8 RCT) besser als Placebo auf den Müdigkeitsskalen und in der klinischen Wirkung. Beim Blutzucker senkte er laut einer Metaanalyse von 16 RCT den Nüchternblutzucker geringfügig. Kleine Studien zeigten auch günstige Anzeichen für Gedächtnis/Stimmung und erektile Dysfunktion. Die Daten zum Blutdruck sind uneinheitlich.",
+      "warn": "⚠️ Er kann stimulierend wirken (Schlaflosigkeit, Unruhe) und interagiert z. B. mit Blutgerinnungshemmern und Diabetesmedikamenten. Bei Bluthochdruck oder Medikamenteneinnahme nur nach Rücksprache mit dem Arzt."
+    }
+  }
+}

@@ -1,0 +1,882 @@
+{
+ "0": [
+  {
+   "pmid": "30654773",
+   "year": "2019",
+   "type": "meta-analysis",
+   "title": "The impact of peppermint oil on the irritable bowel syndrome: a meta-analysis of the pooled clinical data.",
+   "journal": "BMC Complementary and Alternative Medicine",
+   "label_hu": "Metaanalízis, 12 RCT, 835 beteg – borsmentaolaj IBS-ben",
+   "label_en": "Meta-analysis, 12 RCTs, 835 patients – peppermint oil in IBS",
+   "label_ro": "Metaanaliză, 12 studii randomizate, 835 pacienți – ulei de mentă în SII",
+   "label_de": "Metaanalyse, 12 RCTs, 835 Patienten – Pfefferminzöl bei Reizdarm",
+   "doi": "10.1186/s12906-018-2409-0"
+  },
+  {
+   "pmid": "35942669",
+   "year": "2022",
+   "type": "meta-analysis",
+   "title": "Systematic review and meta-analysis: efficacy of peppermint oil in irritable bowel syndrome.",
+   "journal": "Alimentary Pharmacology & Therapeutics",
+   "label_hu": "Frissített metaanalízis (2022), 10 RCT, 1030 beteg – IBS",
+   "label_en": "Updated 2022 meta-analysis, 10 RCTs, 1030 patients – IBS",
+   "label_ro": "Metaanaliză actualizată 2022, 10 studii, 1030 pacienți – SII",
+   "label_de": "Aktualisierte Metaanalyse 2022, 10 RCTs, 1030 Patienten – Reizdarm",
+   "doi": "10.1111/apt.17179"
+  }
+ ],
+ "1": [
+  {
+   "pmid": "24861099",
+   "year": "2014",
+   "type": "meta-analysis",
+   "title": "Green tea catechins and blood pressure: a systematic review and meta-analysis of randomised controlled trials.",
+   "journal": "European Journal of Nutrition",
+   "label_hu": "Metaanalízis, 13 RCT – zöldtea-katechinek, vérnyomás és LDL",
+   "label_en": "Meta-analysis, 13 RCTs – green tea catechins, blood pressure and LDL",
+   "label_ro": "Metaanaliză, 13 studii randomizate – catechine, tensiune și LDL",
+   "label_de": "Metaanalyse, 13 RCTs – Grüntee-Catechine, Blutdruck und LDL",
+   "doi": "10.1007/s00394-014-0720-1"
+  },
+  {
+   "pmid": "23803878",
+   "year": "2013",
+   "type": "meta-analysis",
+   "title": "Effect of green tea on glucose control and insulin sensitivity: a meta-analysis of 17 randomized controlled trials.",
+   "journal": "The American Journal of Clinical Nutrition",
+   "label_hu": "Metaanalízis, 17 RCT, 1133 fő – éhomi vércukor és HbA1c",
+   "label_en": "Meta-analysis, 17 RCTs, 1133 subjects – fasting glucose and HbA1c",
+   "label_ro": "Metaanaliză, 17 studii, 1133 subiecți – glicemie à jeun și HbA1c",
+   "label_de": "Metaanalyse, 17 RCTs, 1133 Personen – Nüchternglukose und HbA1c",
+   "doi": "10.3945/ajcn.112.052746"
+  },
+  {
+   "pmid": "16968850",
+   "year": "2006",
+   "type": "cohort study",
+   "title": "Green tea consumption and mortality due to cardiovascular disease, cancer, and all causes in Japan: the Ohsaki study.",
+   "journal": "JAMA",
+   "label_hu": "Kohorszvizsgálat, 40 530 japán felnőtt – halálozás (Ohsaki, JAMA)",
+   "label_en": "Cohort study, 40,530 Japanese adults – mortality (Ohsaki, JAMA)",
+   "label_ro": "Studiu de cohortă, 40.530 adulți japonezi – mortalitate (Ohsaki)",
+   "label_de": "Kohortenstudie, 40.530 japanische Erwachsene – Sterblichkeit (Ohsaki)",
+   "doi": "10.1001/jama.296.10.1255"
+  }
+ ],
+ "2": [
+  {
+   "pmid": "39213264",
+   "year": "2024",
+   "type": "randomized controlled trial",
+   "title": "Effect of matcha green tea on cognitive functions and sleep quality in older adults with cognitive decline: A randomized controlled study over 12 months.",
+   "journal": "PLOS ONE",
+   "label_hu": "12 hónapos kettős vak RCT, 99 idős, enyhe kognitív hanyatlás (Japán)",
+   "label_en": "12-month double-blind RCT, 99 older adults with cognitive decline (Japan)",
+   "label_ro": "Studiu randomizat dublu-orb, 12 luni, 99 vârstnici cu declin cognitiv",
+   "label_de": "12-monatige doppelblinde RCT, 99 ältere Personen mit kognitivem Abbau",
+   "doi": "10.1371/journal.pone.0309287"
+  }
+ ],
+ "3": [
+  {
+   "pmid": "20833235",
+   "year": "2011",
+   "type": "controlled clinical trial",
+   "title": "Effects of rooibos (Aspalathus linearis) on oxidative stress and biochemical parameters in adults at risk for cardiovascular disease.",
+   "journal": "Journal of Ethnopharmacology",
+   "label_hu": "Emberi vizsgálat, 40 fő, 6 hét – lipidprofil és redox (Marnewick)",
+   "label_en": "Human trial, 40 subjects, 6 weeks – lipid profile and redox (Marnewick)",
+   "label_ro": "Studiu clinic, 40 subiecți, 6 săptămâni – profil lipidic și redox",
+   "label_de": "Humanstudie, 40 Personen, 6 Wochen – Lipidprofil und Redoxstatus",
+   "doi": "10.1016/j.jep.2010.08.061"
+  }
+ ],
+ "4": [
+  {
+   "pmid": "21630133",
+   "year": "2011",
+   "type": "open multicentre clinical trial",
+   "title": "First time proof of sage's tolerability and efficacy in menopausal women with hot flushes.",
+   "journal": "Advances in Therapy",
+   "label_hu": "Nyílt multicentrikus vizsgálat, 71 nő – menopauzás hőhullám (Bommer)",
+   "label_en": "Open multicentre trial, 71 women – menopausal hot flushes (Bommer)",
+   "label_ro": "Studiu deschis multicentric, 71 femei – bufeuri de menopauză (Bommer)",
+   "label_de": "Offene Multicenterstudie, 71 Frauen – menopausale Hitzewallungen",
+   "doi": "10.1007/s12325-011-0027-z"
+  },
+  {
+   "pmid": "16504956",
+   "year": "2006",
+   "type": "randomized controlled trial",
+   "title": "Efficacy and tolerability of a spray with Salvia officinalis in the treatment of acute pharyngitis - a randomised, double-blind, placebo-controlled study with adaptive design and interim analysis.",
+   "journal": "European Journal of Medical Research",
+   "label_hu": "Placebo-kontrollált RCT, 286 beteg – zsályaspray akut garatgyulladásban",
+   "label_en": "Placebo-controlled RCT, 286 patients – sage spray in acute pharyngitis",
+   "label_ro": "Studiu randomizat placebo, 286 pacienți – spray de salvie în faringită",
+   "label_de": "Placebokontrollierte RCT, 286 Patienten – Salbeispray bei Pharyngitis"
+  }
+ ],
+ "5": [
+  {
+   "pmid": "27023596",
+   "year": "2016",
+   "type": "randomized controlled trial",
+   "title": "Elderberry Supplementation Reduces Cold Duration and Symptoms in Air-Travellers: A Randomized, Double-Blind Placebo-Controlled Clinical Trial.",
+   "journal": "Nutrients",
+   "label_hu": "Kettős vak RCT, 312 légiutas – megfázás időtartama (Tiralongo)",
+   "label_en": "Double-blind RCT, 312 air travellers – cold duration (Tiralongo)",
+   "label_ro": "Studiu randomizat dublu-orb, 312 călători aerieni – durata răcelii",
+   "label_de": "Doppelblinde RCT, 312 Flugreisende – Erkältungsdauer (Tiralongo)",
+   "doi": "10.3390/nu8040182"
+  },
+  {
+   "pmid": "30670267",
+   "year": "2019",
+   "type": "meta-analysis",
+   "title": "Black elderberry (Sambucus nigra) supplementation effectively treats upper respiratory symptoms: A meta-analysis of randomized, controlled clinical trials.",
+   "journal": "Complementary Therapies in Medicine",
+   "label_hu": "Metaanalízis (2019), 180 résztvevő – felső légúti tünetek",
+   "label_en": "Meta-analysis (2019), 180 participants – upper respiratory symptoms",
+   "label_ro": "Metaanaliză (2019), 180 participanți – simptome respiratorii superioare",
+   "label_de": "Metaanalyse (2019), 180 Teilnehmer – Symptome der oberen Atemwege",
+   "doi": "10.1016/j.ctim.2018.12.004"
+  },
+  {
+   "pmid": "32929634",
+   "year": "2020",
+   "type": "randomized controlled trial",
+   "title": "Elderberry Extract Outpatient Influenza Treatment for Emergency Room Patients Ages 5 and Above: a Randomized, Double-Blind, Placebo-Controlled Trial.",
+   "journal": "Journal of General Internal Medicine",
+   "label_hu": "Negatív RCT, 87 influenzás beteg – nincs hatás (Macknin, 2020)",
+   "label_en": "Negative RCT, 87 influenza patients – no benefit (Macknin, 2020)",
+   "label_ro": "Studiu randomizat negativ, 87 pacienți cu gripă – fără efect (Macknin)",
+   "label_de": "Negative RCT, 87 Influenzapatienten – kein Nutzen (Macknin, 2020)",
+   "doi": "10.1007/s11606-020-06170-w"
+  }
+ ],
+ "6": [
+  {
+   "pmid": "29389474",
+   "year": "2018",
+   "type": "randomized controlled trial",
+   "title": "Effects of Rosmarinus officinalis L. on memory performance, anxiety, depression, and sleep quality in university students: A randomized clinical trial.",
+   "journal": "Complementary Therapies in Clinical Practice",
+   "label_hu": "Kettős vak RCT, 68 egyetemista – memória, szorongás, alvás (2018)",
+   "label_en": "Double-blind RCT, 68 university students – memory, anxiety, sleep (2018)",
+   "label_ro": "Studiu randomizat dublu-orb, 68 studenți – memorie, anxietate, somn",
+   "label_de": "Doppelblinde RCT, 68 Studierende – Gedächtnis, Angst, Schlaf (2018)",
+   "doi": "10.1016/j.ctcp.2017.11.004"
+  },
+  {
+   "pmid": "30318972",
+   "year": "2018",
+   "type": "randomized controlled trial",
+   "title": "Acute ingestion of rosemary water: Evidence of cognitive and cerebrovascular effects in healthy adults.",
+   "journal": "Journal of Psychopharmacology",
+   "label_hu": "Randomizált vizsgálat, 80 egészséges felnőtt – kognitív hatás (Moss)",
+   "label_en": "Randomised trial, 80 healthy adults – cognitive effects (Moss)",
+   "label_ro": "Studiu randomizat, 80 adulți sănătoși – efecte cognitive (Moss)",
+   "label_de": "Randomisierte Studie, 80 gesunde Erwachsene – kognitive Effekte (Moss)",
+   "doi": "10.1177/0269881118798339"
+  }
+ ],
+ "7": [
+  {
+   "pmid": "36502789",
+   "year": "2023",
+   "type": "meta-analysis",
+   "title": "Menthacarin, a Proprietary Peppermint Oil and Caraway Oil Combination, Improves Multiple Complaints in Patients with Functional Gastrointestinal Disorders: A Systematic Review and Meta-Analysis.",
+   "journal": "Digestive Diseases",
+   "label_hu": "Szisztematikus áttekintés, 5 RCT, 580 beteg – kömény+borsmentaolaj",
+   "label_en": "Systematic review, 5 RCTs, 580 patients – caraway + peppermint oil",
+   "label_ro": "Sinteză sistematică, 5 studii, 580 pacienți – chimen + ulei de mentă",
+   "label_de": "Systematische Übersicht, 5 RCTs, 580 Patienten – Kümmel + Pfefferminzöl",
+   "doi": "10.1159/000528553"
+  }
+ ],
+ "8": [
+  {
+   "pmid": "19593179",
+   "year": "2009",
+   "type": "randomized controlled trial",
+   "title": "A randomized, double-blind, placebo-controlled trial of oral Matricaria recutita (chamomile) extract therapy for generalized anxiety disorder.",
+   "journal": "Journal of Clinical Psychopharmacology",
+   "label_hu": "Kettős vak RCT, 57 beteg – generalizált szorongás (Amsterdam, 2009)",
+   "label_en": "Double-blind RCT, 57 patients – generalised anxiety (Amsterdam, 2009)",
+   "label_ro": "Studiu randomizat dublu-orb, 57 pacienți – anxietate generalizată (2009)",
+   "label_de": "Doppelblinde RCT, 57 Patienten – generalisierte Angststörung (2009)",
+   "doi": "10.1097/JCP.0b013e3181ac935c"
+  },
+  {
+   "pmid": "27912875",
+   "year": "2016",
+   "type": "randomized controlled trial",
+   "title": "Long-term chamomile (Matricaria chamomilla L.) treatment for generalized anxiety disorder: A randomized clinical trial.",
+   "journal": "Phytomedicine",
+   "label_hu": "Hosszú távú fenntartó RCT, 93 beteg, 26 hét – szorongás (Mao, 2016)",
+   "label_en": "Long-term maintenance RCT, 93 patients, 26 weeks – anxiety (Mao, 2016)",
+   "label_ro": "Studiu randomizat de întreținere, 93 pacienți, 26 săptămâni – anxietate",
+   "label_de": "Langzeit-Erhaltungs-RCT, 93 Patienten, 26 Wochen – Angst (Mao, 2016)",
+   "doi": "10.1016/j.phymed.2016.10.012"
+  }
+ ],
+ "9": [
+  {
+   "pmid": "17063641",
+   "year": "2006",
+   "type": "randomized controlled trial",
+   "title": "Efficacy and tolerability of a fluid extract combination of thyme herb and ivy leaves and matched placebo in adults suffering from acute bronchitis with productive cough. A prospective, double-blind, placebo-controlled clinical trial.",
+   "journal": "Arzneimittel-Forschung",
+   "label_hu": "Placebo-kontrollált RCT, 361 beteg – kakukkfű+borostyán, hörghurut",
+   "label_en": "Placebo-controlled RCT, 361 patients – thyme + ivy in acute bronchitis",
+   "label_ro": "Studiu randomizat placebo, 361 pacienți – cimbru + iederă în bronșită",
+   "label_de": "Placebokontrollierte RCT, 361 Patienten – Thymian + Efeu bei Bronchitis",
+   "doi": "10.1055/s-0031-1296767"
+  },
+  {
+   "pmid": "17966760",
+   "year": "2007",
+   "type": "randomized controlled trial",
+   "title": "Evaluation of efficacy and tolerability of a fixed combination of dry extracts of thyme herb and primrose root in adults suffering from acute bronchitis with productive cough. A prospective, double-blind, placebo-controlled multicentre clinical trial.",
+   "journal": "Arzneimittel-Forschung",
+   "label_hu": "Placebo-kontrollált RCT, 361 beteg – kakukkfű+kankalin, köhögés",
+   "label_en": "Placebo-controlled RCT, 361 patients – thyme + primrose for cough",
+   "label_ro": "Studiu randomizat placebo, 361 pacienți – cimbru + ciuboțica-cucului",
+   "label_de": "Placebokontrollierte RCT, 361 Patienten – Thymian + Primel bei Husten",
+   "doi": "10.1055/s-0031-1296656"
+  }
+ ],
+ "10": [
+  {
+   "pmid": "18843608",
+   "year": "2008",
+   "type": "Cochrane systematic review",
+   "title": "St John's wort for major depression.",
+   "journal": "Cochrane Database of Systematic Reviews",
+   "label_hu": "Cochrane-áttekintés, 29 vizsgálat, 5489 beteg – depresszió (Linde, 2008)",
+   "label_en": "Cochrane review, 29 trials, 5489 patients – depression (Linde, 2008)",
+   "label_ro": "Sinteză Cochrane, 29 studii, 5489 pacienți – depresie (Linde, 2008)",
+   "label_de": "Cochrane-Review, 29 Studien, 5489 Patienten – Depression (Linde, 2008)",
+   "doi": "10.1002/14651858.CD000448.pub3"
+  }
+ ],
+ "11": [
+  {
+   "pmid": "25656001",
+   "year": "2015",
+   "type": "preclinical / ethnopharmacology study",
+   "title": "Interactions of a standardized flavonoid fraction from Tilia americana with Serotoninergic drugs in elevated plus maze.",
+   "journal": "Journal of Ethnopharmacology",
+   "label_hu": "Etnofarmakológiai állatkísérlet – hárs szorongásoldó hatás (nem klinikai RCT)",
+   "label_en": "Ethnopharmacology animal study – linden anxiolytic effect (not a clinical RCT)",
+   "label_ro": "Studiu etnofarmacologic pe animale – tei anxiolitic (nu este studiu clinic)",
+   "label_de": "Ethnopharmakologische Tierstudie – Linde angstlösend (keine klinische RCT)",
+   "doi": "10.1016/j.jep.2015.01.029"
+  },
+  {
+   "pmid": "37039741",
+   "year": "2023",
+   "type": "systematic review (preclinical)",
+   "title": "Systematic review on the anxiolytic and hypnotic effects of flower extracts in in vivo pre-clinical studies published from 2010 to 2020.",
+   "journal": "Phytotherapy Research",
+   "label_hu": "Szisztematikus áttekintés – virágkivonatok (Tilia is), csak preklinikai adat",
+   "label_en": "Systematic review – flower extracts incl. Tilia; preclinical evidence only",
+   "label_ro": "Sinteză sistematică – extracte florale (inclusiv tei); doar date preclinice",
+   "label_de": "Systematische Übersicht – Blütenextrakte (inkl. Tilia); nur präklinisch",
+   "doi": "10.1002/ptr.7830"
+  }
+ ],
+ "12": [
+  {
+   "pmid": "33348687",
+   "year": "2020",
+   "type": "laboratory (phytochemical) study",
+   "title": "Phenolic Profile and Bioactive Potential of Stems and Seed Kernels of Sweet Cherry Fruit.",
+   "journal": "Antioxidants",
+   "label_hu": "Laborvizsgálat – cseresznyeszár polifenoljai és antioxidáns hatás (nem RCT)",
+   "label_en": "Laboratory study – cherry stem polyphenols and antioxidant activity (not an RCT)",
+   "label_ro": "Studiu de laborator – polifenoli din codițe de cireșe (nu este studiu clinic)",
+   "label_de": "Laborstudie – Polyphenole aus Kirschstielen, antioxidativ (keine RCT)",
+   "doi": "10.3390/antiox9121295"
+  },
+  {
+   "pmid": "35267384",
+   "year": "2022",
+   "type": "laboratory (phytochemical) study",
+   "title": "Mineral Content and Volatile Profiling of Prunus avium L. (Sweet Cherry) By-Products from Fundão Region (Portugal).",
+   "journal": "Foods",
+   "label_hu": "Laborvizsgálat – cseresznyeszár ásványi anyag- és illóanyag-profilja",
+   "label_en": "Laboratory study – mineral and volatile profile of cherry stems",
+   "label_ro": "Studiu de laborator – profilul mineral și volatil al codițelor de cireșe",
+   "label_de": "Laborstudie – Mineral- und Aromaprofil von Kirschstielen",
+   "doi": "10.3390/foods11050751"
+  }
+ ],
+ "13": [
+  {
+   "pmid": "34449930",
+   "year": "2021",
+   "type": "meta-analysis",
+   "title": "The effects of lemon balm (Melissa officinalis L.) on depression and anxiety in clinical trials: A systematic review and meta-analysis.",
+   "journal": "Phytotherapy Research",
+   "label_hu": "Metaanalízis – szorongás SMD ≈ −0,98, depresszió SMD ≈ −0,47",
+   "label_en": "Meta-analysis – anxiety SMD ≈ −0.98, depression SMD ≈ −0.47",
+   "label_ro": "Metaanaliză – anxietate SMD ≈ −0,98, depresie SMD ≈ −0,47",
+   "label_de": "Metaanalyse – Angst SMD ≈ −0,98, Depression SMD ≈ −0,47",
+   "doi": "10.1002/ptr.7252"
+  },
+  {
+   "pmid": "29908682",
+   "year": "2018",
+   "type": "randomized controlled trial",
+   "title": "The effects of Melissa officinalis supplementation on depression, anxiety, stress, and sleep disorder in patients with chronic stable angina.",
+   "journal": "Clinical Nutrition ESPEN",
+   "label_hu": "Kettős vak RCT, 80 szívbeteg – szorongás, stressz, alvászavar",
+   "label_en": "Double-blind RCT, 80 cardiac patients – anxiety, stress, sleep disorder",
+   "label_ro": "Studiu randomizat dublu-orb, 80 pacienți cardiaci – anxietate și somn",
+   "label_de": "Doppelblinde RCT, 80 Herzpatienten – Angst, Stress, Schlafstörung",
+   "doi": "10.1016/j.clnesp.2018.04.015"
+  }
+ ],
+ "14": [
+  {
+   "pmid": "18407528",
+   "year": "2008",
+   "type": "meta-analysis",
+   "title": "Does the hip powder of Rosa canina (rosehip) reduce pain in osteoarthritis patients?--a meta-analysis of randomized controlled trials.",
+   "journal": "Osteoarthritis and Cartilage",
+   "label_hu": "Metaanalízis, 3 RCT, 287 beteg – artrózisos fájdalom (Christensen, 2008)",
+   "label_en": "Meta-analysis, 3 RCTs, 287 patients – osteoarthritis pain (Christensen, 2008)",
+   "label_ro": "Metaanaliză, 3 studii, 287 pacienți – durere în artroză (Christensen, 2008)",
+   "label_de": "Metaanalyse, 3 RCTs, 287 Patienten – Arthroseschmerz (Christensen, 2008)",
+   "doi": "10.1016/j.joca.2008.03.001"
+  }
+ ],
+ "15": [
+  {
+   "pmid": "32583790",
+   "year": "2020",
+   "type": "review",
+   "title": "Achillea spp.: A comprehensive review on its ethnobotany, phytochemistry, phytopharmacology and industrial applications.",
+   "journal": "Cellular and Molecular Biology",
+   "label_hu": "Átfogó áttekintés – cickafark etnobotanika és farmakológia (nem hatásossági RCT)",
+   "label_en": "Comprehensive review – yarrow ethnobotany and pharmacology (not an efficacy RCT)",
+   "label_ro": "Sinteză cuprinzătoare – coada-șoricelului, etnobotanică (nu studiu de eficacitate)",
+   "label_de": "Umfassende Übersicht – Schafgarbe, Ethnobotanik (keine Wirksamkeits-RCT)"
+  },
+  {
+   "pmid": "28942136",
+   "year": "2017",
+   "type": "ethnobotanical review",
+   "title": "Traditional wound-healing plants used in the Balkan region (Southeast Europe).",
+   "journal": "Journal of Ethnopharmacology",
+   "label_hu": "Etnobotanikai áttekintés – balkáni sebgyógyító növények, köztük a cickafark",
+   "label_en": "Ethnobotanical review – Balkan wound-healing plants, including yarrow",
+   "label_ro": "Sinteză etnobotanică – plante balcanice cicatrizante, inclusiv coada-șoricelului",
+   "label_de": "Ethnobotanische Übersicht – Wundheilpflanzen des Balkans, u. a. Schafgarbe",
+   "doi": "10.1016/j.jep.2017.09.018"
+  }
+ ],
+ "16": [
+  {
+   "pmid": "25875025",
+   "year": "2015",
+   "type": "meta-analysis",
+   "title": "Effect of sour tea (Hibiscus sabdariffa L.) on arterial hypertension: a systematic review and meta-analysis of randomized controlled trials.",
+   "journal": "Journal of Hypertension",
+   "label_hu": "Metaanalízis, 5 RCT, 390 fő – szisztolés vérnyomás ≈ −7,6 Hgmm",
+   "label_en": "Meta-analysis, 5 RCTs, 390 subjects – systolic BP ≈ −7.6 mmHg",
+   "label_ro": "Metaanaliză, 5 studii, 390 subiecți – TA sistolică ≈ −7,6 mmHg",
+   "label_de": "Metaanalyse, 5 RCTs, 390 Personen – systolischer Blutdruck ≈ −7,6 mmHg",
+   "doi": "10.1097/HJH.0000000000000585"
+  },
+  {
+   "pmid": "34694241",
+   "year": "2022",
+   "type": "meta-analysis",
+   "title": "Efficacy of Hibiscus sabdariffa on Reducing Blood Pressure in Patients With Mild-to-Moderate Hypertension: A Systematic Review and Meta-Analysis of Published Randomized Controlled Trials.",
+   "journal": "Journal of Cardiovascular Pharmacology",
+   "label_hu": "Metaanalízis, 13 RCT, 1205 beteg – enyhe-közepes magas vérnyomás",
+   "label_en": "Meta-analysis, 13 RCTs, 1205 patients – mild-to-moderate hypertension",
+   "label_ro": "Metaanaliză, 13 studii, 1205 pacienți – hipertensiune ușoară-moderată",
+   "label_de": "Metaanalyse, 13 RCTs, 1205 Patienten – leichte bis mittlere Hypertonie",
+   "doi": "10.1097/FJC.0000000000001161"
+  },
+  {
+   "pmid": "31943427",
+   "year": "2020",
+   "type": "meta-analysis",
+   "title": "The efficacy of sour tea (Hibiscus sabdariffa L.) on selected cardiovascular disease risk factors: A systematic review and meta-analysis of randomized clinical trials.",
+   "journal": "Phytotherapy Research",
+   "label_hu": "Metaanalízis, 7 RCT, 362 fő – vérnyomás és éhomi vércukor",
+   "label_en": "Meta-analysis, 7 RCTs, 362 subjects – blood pressure and fasting glucose",
+   "label_ro": "Metaanaliză, 7 studii, 362 subiecți – tensiune și glicemie à jeun",
+   "label_de": "Metaanalyse, 7 RCTs, 362 Personen – Blutdruck und Nüchternglukose",
+   "doi": "10.1002/ptr.6541"
+  }
+ ],
+ "17": [
+  {
+   "pmid": "32765262",
+   "year": "2020",
+   "type": "systematic review",
+   "title": "Clinical and Preclinical Systematic Review of Panax ginseng C. A. Mey and Its Compounds for Fatigue.",
+   "journal": "Frontiers in Pharmacology",
+   "label_hu": "Szisztematikus áttekintés, 8 RCT – fáradtság, ginzeng",
+   "label_en": "Systematic review, 8 RCTs – ginseng for fatigue",
+   "label_ro": "Sinteză sistematică, 8 studii randomizate – ginseng pentru oboseală",
+   "label_de": "Systematische Übersicht, 8 RCTs – Ginseng bei Erschöpfung",
+   "doi": "10.3389/fphar.2020.01031"
+  },
+  {
+   "pmid": "25265315",
+   "year": "2014",
+   "type": "meta-analysis",
+   "title": "The effect of ginseng (the genus panax) on glycemic control: a systematic review and meta-analysis of randomized controlled clinical trials.",
+   "journal": "PLOS ONE",
+   "label_hu": "Metaanalízis, 16 RCT, 770 fő – éhomi vércukor csökkenés",
+   "label_en": "Meta-analysis, 16 RCTs, 770 subjects – reduced fasting blood glucose",
+   "label_ro": "Metaanaliză, 16 studii, 770 subiecți – scăderea glicemiei à jeun",
+   "label_de": "Metaanalyse, 16 RCTs, 770 Personen – niedrigere Nüchternglukose",
+   "doi": "10.1371/journal.pone.0107391"
+  }
+ ],
+ "18": [
+  {
+   "pmid": "25686270",
+   "year": "2015",
+   "type": "Cochrane systematic review",
+   "title": "Ganoderma lucidum mushroom for the treatment of cardiovascular risk factors.",
+   "journal": "Cochrane Database of Systematic Reviews",
+   "label_hu": "Cochrane-áttekintés, 5 vizsgálat, 398 fő – nincs igazolt hatás (Klupp)",
+   "label_en": "Cochrane review, 5 trials, 398 participants – no proven benefit (Klupp)",
+   "label_ro": "Sinteză Cochrane, 5 studii, 398 participanți – fără beneficiu dovedit",
+   "label_de": "Cochrane-Review, 5 Studien, 398 Personen – kein belegter Nutzen (Klupp)",
+   "doi": "10.1002/14651858.CD007259.pub2"
+  },
+  {
+   "pmid": "27511742",
+   "year": "2016",
+   "type": "randomized controlled trial",
+   "title": "A double-blind, randomised, placebo-controlled trial of Ganoderma lucidum for the treatment of cardiovascular risk factors of metabolic syndrome.",
+   "journal": "Scientific Reports",
+   "label_hu": "Negatív 16 hetes RCT, 84 beteg – metabolikus szindróma (Klupp, 2016)",
+   "label_en": "Negative 16-week RCT, 84 patients – metabolic syndrome (Klupp, 2016)",
+   "label_ro": "Studiu randomizat negativ, 16 săptămâni, 84 pacienți – sindrom metabolic",
+   "label_de": "Negative 16-Wochen-RCT, 84 Patienten – metabolisches Syndrom (Klupp)",
+   "doi": "10.1038/srep29540"
+  }
+ ],
+ "19": [
+  {
+   "pmid": "18844328",
+   "year": "2009",
+   "type": "randomized controlled trial",
+   "title": "Improving effects of the mushroom Yamabushitake (Hericium erinaceus) on mild cognitive impairment: a double-blind placebo-controlled clinical trial.",
+   "journal": "Phytotherapy Research",
+   "label_hu": "Kis kettős vak RCT, 30 fő, 16 hét – enyhe kognitív zavar (Mori, 2009)",
+   "label_en": "Small double-blind RCT, 30 subjects, 16 weeks – mild cognitive impairment (Mori)",
+   "label_ro": "Studiu mic randomizat, 30 subiecți, 16 săptămâni – deficit cognitiv ușor",
+   "label_de": "Kleine doppelblinde RCT, 30 Personen, 16 Wochen – leichte kognitive Störung",
+   "doi": "10.1002/ptr.2634"
+  },
+  {
+   "pmid": "20834180",
+   "year": "2010",
+   "type": "randomized controlled trial",
+   "title": "Reduction of depression and anxiety by 4 weeks Hericium erinaceus intake.",
+   "journal": "Biomedical Research (Tokyo)",
+   "label_hu": "Kis RCT, 30 nő, 4 hét – depresszió és szorongás (Nagano, 2010)",
+   "label_en": "Small RCT, 30 women, 4 weeks – depression and anxiety (Nagano, 2010)",
+   "label_ro": "Studiu mic randomizat, 30 femei, 4 săptămâni – depresie și anxietate",
+   "label_de": "Kleine RCT, 30 Frauen, 4 Wochen – Depression und Angst (Nagano, 2010)",
+   "doi": "10.2220/biomedres.31.231"
+  }
+ ],
+ "20": [
+  {
+   "pmid": "33511486",
+   "year": "2021",
+   "type": "meta-analysis",
+   "title": "Efficacy and Safety of Turmeric Extracts for the Treatment of Knee Osteoarthritis: a Systematic Review and Meta-analysis of Randomised Controlled Trials.",
+   "journal": "Current Rheumatology Reports",
+   "label_hu": "Metaanalízis, 16 RCT, 1810 fő – térd-artrózis, NSAID-hoz hasonló hatás",
+   "label_en": "Meta-analysis, 16 RCTs, 1810 adults – knee osteoarthritis, similar to NSAIDs",
+   "label_ro": "Metaanaliză, 16 studii, 1810 adulți – gonartroză, efect similar AINS",
+   "label_de": "Metaanalyse, 16 RCTs, 1810 Erwachsene – Kniearthrose, ähnlich wie NSAR",
+   "doi": "10.1007/s11926-020-00975-8"
+  },
+  {
+   "pmid": "38036015",
+   "year": "2023",
+   "type": "network meta-analysis",
+   "title": "Efficacy and safety of curcumin therapy for knee osteoarthritis: A Bayesian network meta-analysis.",
+   "journal": "Journal of Ethnopharmacology",
+   "label_hu": "Hálózati metaanalízis, 23 vizsgálat, 2175 beteg – térd-artrózis",
+   "label_en": "Network meta-analysis, 23 studies, 2175 patients – knee osteoarthritis",
+   "label_ro": "Metaanaliză în rețea, 23 studii, 2175 pacienți – gonartroză",
+   "label_de": "Netzwerk-Metaanalyse, 23 Studien, 2175 Patienten – Kniearthrose",
+   "doi": "10.1016/j.jep.2023.117493"
+  }
+ ],
+ "21": [
+  {
+   "pmid": "24642205",
+   "year": "2014",
+   "type": "meta-analysis",
+   "title": "A systematic review and meta-analysis of the effect and safety of ginger in the treatment of pregnancy-associated nausea and vomiting.",
+   "journal": "Nutrition Journal",
+   "label_hu": "Metaanalízis, 12 RCT, 1278 várandós – terhességi hányinger",
+   "label_en": "Meta-analysis, 12 RCTs, 1278 pregnant women – nausea of pregnancy",
+   "label_ro": "Metaanaliză, 12 studii, 1278 gravide – greață în sarcină",
+   "label_de": "Metaanalyse, 12 RCTs, 1278 Schwangere – Schwangerschaftsübelkeit",
+   "doi": "10.1186/1475-2891-13-20"
+  },
+  {
+   "pmid": "21818642",
+   "year": "2012",
+   "type": "randomized controlled trial",
+   "title": "Ginger (Zingiber officinale) reduces acute chemotherapy-induced nausea: a URCC CCOP study of 576 patients.",
+   "journal": "Supportive Care in Cancer",
+   "label_hu": "Kettős vak RCT, 576 daganatos beteg – kemoterápiás hányinger",
+   "label_en": "Double-blind RCT, 576 cancer patients – chemotherapy-induced nausea",
+   "label_ro": "Studiu randomizat dublu-orb, 576 pacienți – greață după chimioterapie",
+   "label_de": "Doppelblinde RCT, 576 Krebspatienten – Chemotherapie-Übelkeit",
+   "doi": "10.1007/s00520-011-1236-3"
+  },
+  {
+   "pmid": "24559600",
+   "year": "2014",
+   "type": "randomized controlled trial",
+   "title": "Comparison of the effect of ginger and zinc sulfate on primary dysmenorrhea: a placebo-controlled randomized trial.",
+   "journal": "Pain Management Nursing",
+   "label_hu": "Placebo-kontrollált RCT, 150 fiatal nő – primer dysmenorrhea",
+   "label_en": "Placebo-controlled RCT, 150 young women – primary dysmenorrhoea",
+   "label_ro": "Studiu randomizat placebo, 150 tinere – dismenoree primară",
+   "label_de": "Placebokontrollierte RCT, 150 junge Frauen – primäre Dysmenorrhö",
+   "doi": "10.1016/j.pmn.2013.09.001"
+  }
+ ],
+ "22": [
+  {
+   "pmid": "24818015",
+   "year": "2014",
+   "type": "observational intervention study",
+   "title": "Effect on blood pressure of daily lemon ingestion and walking.",
+   "journal": "Journal of Nutrition and Metabolism",
+   "label_hu": "Megfigyeléses vizsgálat, 101 középkorú nő, 5 hónap – vérnyomás (Japán)",
+   "label_en": "Observational study, 101 middle-aged women, 5 months – blood pressure (Japan)",
+   "label_ro": "Studiu observațional, 101 femei de vârstă medie, 5 luni – tensiune (Japonia)",
+   "label_de": "Beobachtungsstudie, 101 Frauen mittleren Alters, 5 Monate – Blutdruck",
+   "doi": "10.1155/2014/912684"
+  }
+ ],
+ "23": [
+  {
+   "pmid": "19585478",
+   "year": "2010",
+   "type": "randomized controlled trial",
+   "title": "Spearmint herbal tea has significant anti-androgen effects in polycystic ovarian syndrome. A randomized controlled trial.",
+   "journal": "Phytotherapy Research",
+   "label_hu": "RCT, 42 PCOS-os nő, 30 nap – androgénszint csökkenés (Grant, 2010)",
+   "label_en": "RCT, 42 women with PCOS, 30 days – reduced androgens (Grant, 2010)",
+   "label_ro": "Studiu randomizat, 42 femei cu SOP, 30 zile – scăderea androgenilor",
+   "label_de": "RCT, 42 Frauen mit PCOS, 30 Tage – niedrigere Androgene (Grant, 2010)",
+   "doi": "10.1002/ptr.2900"
+  },
+  {
+   "pmid": "17310494",
+   "year": "2007",
+   "type": "clinical trial",
+   "title": "Effect of spearmint (Mentha spicata Labiatae) teas on androgen levels in women with hirsutism.",
+   "journal": "Phytotherapy Research",
+   "label_hu": "Klinikai vizsgálat, 21 hirsutizmusos nő – szabad tesztoszteron csökkent",
+   "label_en": "Clinical trial, 21 hirsute women – reduced free testosterone",
+   "label_ro": "Studiu clinic, 21 femei cu hirsutism – testosteron liber scăzut",
+   "label_de": "Klinische Studie, 21 Frauen mit Hirsutismus – freies Testosteron gesenkt",
+   "doi": "10.1002/ptr.2074"
+  },
+  {
+   "pmid": "30541572",
+   "year": "2018",
+   "type": "randomized controlled trial",
+   "title": "Efficacy of a nootropic spearmint extract on reactive agility: a randomized, double-blind, placebo-controlled, parallel trial.",
+   "journal": "Journal of the International Society of Sports Nutrition",
+   "label_hu": "Kettős vak RCT, 142 fő, 90 nap – reakcióidő és figyelem",
+   "label_en": "Double-blind RCT, 142 subjects, 90 days – reaction time and attention",
+   "label_ro": "Studiu randomizat dublu-orb, 142 subiecți, 90 zile – timp de reacție",
+   "label_de": "Doppelblinde RCT, 142 Personen, 90 Tage – Reaktionszeit und Aufmerksamkeit",
+   "doi": "10.1186/s12970-018-0264-5"
+  }
+ ],
+ "24": [
+  {
+   "pmid": "24019277",
+   "year": "2013",
+   "type": "meta-analysis",
+   "title": "Cinnamon use in type 2 diabetes: an updated systematic review and meta-analysis.",
+   "journal": "Annals of Family Medicine",
+   "label_hu": "Metaanalízis, 10 RCT, 543 fő – éhomi vércukor ≈ −24,6 mg/dl",
+   "label_en": "Meta-analysis, 10 RCTs, 543 subjects – fasting glucose ≈ −24.6 mg/dl",
+   "label_ro": "Metaanaliză, 10 studii, 543 subiecți – glicemie à jeun ≈ −24,6 mg/dl",
+   "label_de": "Metaanalyse, 10 RCTs, 543 Personen – Nüchternglukose ≈ −24,6 mg/dl",
+   "doi": "10.1370/afm.1517"
+  },
+  {
+   "pmid": "26023601",
+   "year": "2015",
+   "type": "randomized controlled trial",
+   "title": "Comparative effect of cinnamon and Ibuprofen for treatment of primary dysmenorrhea: a randomized double-blind clinical trial.",
+   "journal": "Journal of Clinical and Diagnostic Research",
+   "label_hu": "Kettős vak RCT, 114 nő – menstruációs fájdalom, fahéj vs. ibuprofen",
+   "label_en": "Double-blind RCT, 114 women – menstrual pain, cinnamon vs ibuprofen",
+   "label_ro": "Studiu randomizat dublu-orb, 114 femei – durere menstruală, scorțișoară",
+   "label_de": "Doppelblinde RCT, 114 Frauen – Menstruationsschmerz, Zimt vs. Ibuprofen",
+   "doi": "10.7860/JCDR/2015/12084.5783"
+  }
+ ],
+ "25": [
+  {
+   "pmid": "34187122",
+   "year": "2021",
+   "type": "meta-analysis",
+   "title": "Effect of fennel on primary dysmenorrhea: a systematic review and meta-analysis.",
+   "journal": "Journal of Complementary & Integrative Medicine",
+   "label_hu": "Metaanalízis, 12 vizsgálat – primer dysmenorrhea, NSAID-hoz hasonló",
+   "label_en": "Meta-analysis, 12 trials – primary dysmenorrhoea, comparable to NSAIDs",
+   "label_ro": "Metaanaliză, 12 studii – dismenoree primară, comparabil cu AINS",
+   "label_de": "Metaanalyse, 12 Studien – primäre Dysmenorrhö, vergleichbar mit NSAR",
+   "doi": "10.1515/jcim-2019-0212"
+  },
+  {
+   "pmid": "12868253",
+   "year": "2003",
+   "type": "randomized controlled trial",
+   "title": "The effect of fennel (Foeniculum Vulgare) seed oil emulsion in infantile colic: a randomized, placebo-controlled study.",
+   "journal": "Alternative Therapies in Health and Medicine",
+   "label_hu": "Placebo-kontrollált RCT, 125 csecsemő – csecsemőkólika",
+   "label_en": "Placebo-controlled RCT, 125 infants – infantile colic",
+   "label_ro": "Studiu randomizat placebo, 125 sugari – colici infantile",
+   "label_de": "Placebokontrollierte RCT, 125 Säuglinge – Säuglingskoliken"
+  }
+ ],
+ "26": [
+  {
+   "pmid": "18254076",
+   "year": "2008",
+   "type": "Cochrane systematic review",
+   "title": "Hawthorn extract for treating chronic heart failure.",
+   "journal": "Cochrane Database of Systematic Reviews",
+   "label_hu": "Cochrane-áttekintés, 14 RCT, 855 beteg – krónikus szívelégtelenség",
+   "label_en": "Cochrane review, 14 RCTs, 855 patients – chronic heart failure",
+   "label_ro": "Sinteză Cochrane, 14 studii, 855 pacienți – insuficiență cardiacă cronică",
+   "label_de": "Cochrane-Review, 14 RCTs, 855 Patienten – chronische Herzinsuffizienz",
+   "doi": "10.1002/14651858.CD005312.pub2"
+  }
+ ],
+ "27": [
+  {
+   "pmid": "24642205",
+   "year": "2014",
+   "type": "meta-analysis",
+   "title": "A systematic review and meta-analysis of the effect and safety of ginger in the treatment of pregnancy-associated nausea and vomiting.",
+   "journal": "Nutrition Journal",
+   "label_hu": "Gyömbér: metaanalízis, 12 RCT, 1278 fő – hányinger",
+   "label_en": "Ginger: meta-analysis, 12 RCTs, 1278 subjects – nausea",
+   "label_ro": "Ghimbir: metaanaliză, 12 studii, 1278 subiecți – greață",
+   "label_de": "Ingwer: Metaanalyse, 12 RCTs, 1278 Personen – Übelkeit",
+   "doi": "10.1186/1475-2891-13-20"
+  },
+  {
+   "pmid": "18056558",
+   "year": "2007",
+   "type": "randomized controlled trial",
+   "title": "Effect of honey, dextromethorphan, and no treatment on nocturnal cough and sleep quality for coughing children and their parents.",
+   "journal": "Archives of Pediatrics & Adolescent Medicine",
+   "label_hu": "Méz: randomizált vizsgálat, 105 gyermek – éjszakai köhögés",
+   "label_en": "Honey: randomised trial, 105 children – nocturnal cough",
+   "label_ro": "Miere: studiu randomizat, 105 copii – tuse nocturnă",
+   "label_de": "Honig: randomisierte Studie, 105 Kinder – nächtlicher Husten",
+   "doi": "10.1001/archpedi.161.12.1140"
+  },
+  {
+   "pmid": "22869830",
+   "year": "2012",
+   "type": "randomized controlled trial",
+   "title": "Effect of honey on nocturnal cough and sleep quality: a double-blind, randomized, placebo-controlled study.",
+   "journal": "Pediatrics",
+   "label_hu": "Méz: kettős vak, placebo-kontrollált RCT, 300 kisgyermek – köhögés",
+   "label_en": "Honey: double-blind placebo-controlled RCT, 300 young children – cough",
+   "label_ro": "Miere: studiu randomizat dublu-orb, 300 copii mici – tuse",
+   "label_de": "Honig: doppelblinde placebokontrollierte RCT, 300 Kleinkinder – Husten",
+   "doi": "10.1542/peds.2011-3075"
+  }
+ ],
+ "28": [
+  {
+   "pmid": "17145239",
+   "year": "2006",
+   "type": "meta-analysis",
+   "title": "Valerian for sleep: a systematic review and meta-analysis.",
+   "journal": "The American Journal of Medicine",
+   "label_hu": "Szisztematikus áttekintés, 16 RCT, 1093 beteg – alvásminőség (Bent, 2006)",
+   "label_en": "Systematic review, 16 RCTs, 1093 patients – sleep quality (Bent, 2006)",
+   "label_ro": "Sinteză sistematică, 16 studii, 1093 pacienți – calitatea somnului (2006)",
+   "label_de": "Systematische Übersicht, 16 RCTs, 1093 Patienten – Schlafqualität (2006)",
+   "doi": "10.1016/j.amjmed.2006.02.026"
+  }
+ ],
+ "29": [
+  {
+   "pmid": "21294203",
+   "year": "2011",
+   "type": "randomized controlled trial",
+   "title": "A double-blind, placebo-controlled investigation of the effects of Passiflora incarnata (passionflower) herbal tea on subjective sleep quality.",
+   "journal": "Phytotherapy Research",
+   "label_hu": "Kettős vak, placebo-kontrollált RCT, 41 fő – alvásminőség (Ngan & Conduit)",
+   "label_en": "Double-blind placebo-controlled RCT, 41 subjects – sleep quality (Ngan & Conduit)",
+   "label_ro": "Studiu randomizat dublu-orb, 41 subiecți – calitatea somnului (Ngan & Conduit)",
+   "label_de": "Doppelblinde placebokontrollierte RCT, 41 Personen – Schlafqualität",
+   "doi": "10.1002/ptr.3400"
+  }
+ ],
+ "30": [
+  {
+   "pmid": "19962288",
+   "year": "2010",
+   "type": "randomized controlled trial",
+   "title": "A multi-center, double-blind, randomised study of the Lavender oil preparation Silexan in comparison to Lorazepam for generalized anxiety disorder.",
+   "journal": "Phytomedicine",
+   "label_hu": "Kettős vak RCT – Silexan vs. lorazepám generalizált szorongásban",
+   "label_en": "Double-blind RCT – Silexan vs lorazepam in generalised anxiety disorder",
+   "label_ro": "Studiu randomizat dublu-orb – Silexan vs lorazepam în anxietate generalizată",
+   "label_de": "Doppelblinde RCT – Silexan vs. Lorazepam bei generalisierter Angststörung",
+   "doi": "10.1016/j.phymed.2009.10.006"
+  },
+  {
+   "pmid": "23808618",
+   "year": "2013",
+   "type": "evidence-based review",
+   "title": "An orally administered lavandula oil preparation (Silexan) for anxiety disorder and related conditions: an evidence based review.",
+   "journal": "International Journal of Psychiatry in Clinical Practice",
+   "label_hu": "Bizonyítékalapú áttekintés, 7 vizsgálat – Silexan szorongásban",
+   "label_en": "Evidence-based review, 7 trials – Silexan for anxiety",
+   "label_ro": "Sinteză bazată pe dovezi, 7 studii – Silexan în anxietate",
+   "label_de": "Evidenzbasierte Übersicht, 7 Studien – Silexan bei Angststörungen",
+   "doi": "10.3109/13651501.2013.813555"
+  }
+ ],
+ "31": [
+  {
+   "pmid": "30497904",
+   "year": "2018",
+   "type": "randomized controlled trial",
+   "title": "Effects of a sea buckthorn oil spray emulsion on dry eye.",
+   "journal": "Contact Lens & Anterior Eye",
+   "label_hu": "Randomizált vizsgálat, 52 fő – száraz szem tünetei",
+   "label_en": "Randomised trial, 52 subjects – dry eye symptoms",
+   "label_ro": "Studiu randomizat, 52 subiecți – simptome de ochi uscat",
+   "label_de": "Randomisierte Studie, 52 Personen – Symptome des trockenen Auges",
+   "doi": "10.1016/j.clae.2018.11.011"
+  },
+  {
+   "pmid": "23945716",
+   "year": "2013",
+   "type": "randomized crossover trial",
+   "title": "Effects of sea buckthorn and bilberry on serum metabolites differ according to baseline metabolic profiles in overweight women: a randomized crossover trial.",
+   "journal": "The American Journal of Clinical Nutrition",
+   "label_hu": "Randomizált keresztezett vizsgálat, 80 túlsúlyos nő – vérzsírok, anyagcsere",
+   "label_en": "Randomised crossover trial, 80 overweight women – lipids and metabolism",
+   "label_ro": "Studiu randomizat încrucișat, 80 femei supraponderale – lipide și metabolism",
+   "label_de": "Randomisierte Cross-over-Studie, 80 übergewichtige Frauen – Stoffwechsel",
+   "doi": "10.3945/ajcn.113.060590"
+  },
+  {
+   "pmid": "21224867",
+   "year": "2011",
+   "type": "randomized crossover trial",
+   "title": "Different berries and berry fractions have various but slightly positive effects on the associated variables of metabolic diseases on overweight and obese women.",
+   "journal": "European Journal of Clinical Nutrition",
+   "label_hu": "Randomizált vizsgálat, 110 túlsúlyos nő – kis, kedvező anyagcsere-hatás",
+   "label_en": "Randomised trial, 110 overweight women – small favourable metabolic effects",
+   "label_ro": "Studiu randomizat, 110 femei supraponderale – efecte metabolice mici",
+   "label_de": "Randomisierte Studie, 110 übergewichtige Frauen – geringe Stoffwechseleffekte",
+   "doi": "10.1038/ejcn.2010.268"
+  }
+ ],
+ "32": [
+  {
+   "pmid": "16635963",
+   "year": "2005",
+   "type": "randomized controlled trial",
+   "title": "Urtica dioica for treatment of benign prostatic hyperplasia: a prospective, randomized, double-blind, placebo-controlled, crossover study.",
+   "journal": "Journal of Herbal Pharmacotherapy",
+   "label_hu": "Kettős vak RCT, 620 beteg, 6 hónap – jóindulatú prosztatamegnagyobbodás",
+   "label_en": "Double-blind RCT, 620 patients, 6 months – benign prostatic hyperplasia",
+   "label_ro": "Studiu randomizat dublu-orb, 620 pacienți, 6 luni – hiperplazie de prostată",
+   "label_de": "Doppelblinde RCT, 620 Patienten, 6 Monate – benigne Prostatahyperplasie"
+  },
+  {
+   "pmid": "32981268",
+   "year": "2020",
+   "type": "randomized controlled trial",
+   "title": "Urtica Dioica Root Extract on Clinical and Biochemical Parameters in Patients with Benign Prostatic Hyperplasia, Randomized Controlled Trial.",
+   "journal": "Pakistan Journal of Biological Sciences",
+   "label_hu": "RCT, 60 beteg, 12 hét – csalángyökér-kivonat, IPSS-javulás",
+   "label_en": "RCT, 60 patients, 12 weeks – nettle root extract, IPSS improvement",
+   "label_ro": "Studiu randomizat, 60 pacienți, 12 săptămâni – extract de rădăcină de urzică",
+   "label_de": "RCT, 60 Patienten, 12 Wochen – Brennnesselwurzel-Extrakt, IPSS-Besserung",
+   "doi": "10.3923/pjbs.2020.1338.1344"
+  },
+  {
+   "pmid": "2192379",
+   "year": "1990",
+   "type": "randomized controlled trial",
+   "title": "Randomized, double-blind study of freeze-dried Urtica dioica in the treatment of allergic rhinitis.",
+   "journal": "Planta Medica",
+   "label_hu": "Kettős vak RCT, 98 fő – allergiás nátha (Mittman, 1990)",
+   "label_en": "Double-blind RCT, 98 subjects – allergic rhinitis (Mittman, 1990)",
+   "label_ro": "Studiu randomizat dublu-orb, 98 subiecți – rinită alergică (Mittman, 1990)",
+   "label_de": "Doppelblinde RCT, 98 Personen – allergische Rhinitis (Mittman, 1990)",
+   "doi": "10.1055/s-2006-960881"
+  }
+ ],
+ "33": [
+  {
+   "pmid": "19535697",
+   "year": "2009",
+   "type": "randomized controlled trial",
+   "title": "An evaluation of the efficacy of licorice gargle for attenuating postoperative sore throat: a prospective, randomized, single-blind study.",
+   "journal": "Anesthesia and Analgesia",
+   "label_hu": "Randomizált vizsgálat, 40 beteg – műtét utáni torokfájás öblögetéssel",
+   "label_en": "Randomised trial, 40 patients – postoperative sore throat, licorice gargle",
+   "label_ro": "Studiu randomizat, 40 pacienți – durere în gât postoperator, gargară",
+   "label_de": "Randomisierte Studie, 40 Patienten – postoperative Halsschmerzen, Gurgeln",
+   "doi": "10.1213/ane.0b013e3181a6ad47"
+  },
+  {
+   "pmid": "26716864",
+   "year": "2016",
+   "type": "randomized controlled trial",
+   "title": "The efficacy of different doses of liquorice gargling for attenuating postoperative sore throat and cough after tracheal intubation.",
+   "journal": "European Journal of Anaesthesiology",
+   "label_hu": "Dózis-hatás RCT – édesgyökér-öblögetés intubáció utáni torokfájásban",
+   "label_en": "Dose-response RCT – licorice gargle for sore throat after intubation",
+   "label_ro": "Studiu randomizat doză-răspuns – gargară cu lemn-dulce după intubație",
+   "label_de": "Dosis-Wirkungs-RCT – Süßholz-Gurgeln bei Halsschmerz nach Intubation",
+   "doi": "10.1097/EJA.0000000000000400"
+  },
+  {
+   "pmid": "37764649",
+   "year": "2023",
+   "type": "narrative review (safety)",
+   "title": "Liquorice Toxicity: A Comprehensive Narrative Review.",
+   "journal": "Nutrients",
+   "label_hu": "Biztonsági áttekintés, 104 eset – áledoszteronizmus, vérnyomás↑, kálium↓",
+   "label_en": "Safety review, 104 cases – pseudohyperaldosteronism, high BP, low potassium",
+   "label_ro": "Sinteză de siguranță, 104 cazuri – pseudohiperaldosteronism, TA↑, potasiu↓",
+   "label_de": "Sicherheitsübersicht, 104 Fälle – Pseudohyperaldosteronismus, RR↑, Kalium↓",
+   "doi": "10.3390/nu15183866"
+  }
+ ]
+}

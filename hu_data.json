@@ -1,0 +1,634 @@
+{
+ "teas": [
+  {
+   "name": "Menta",
+   "lat": "Mentha × piperita",
+   "emoji": "🌿",
+   "accent": "#34d399",
+   "role": "Emésztés · IBS",
+   "hatas": "Emésztés, puffadás, IBS-görcsök, fejfájás.",
+   "prep": "1–2 teáskanál szárított levél egy csészére. Frissen forralt (~100 °C) víz, 5–7 perc lefedve áztatás. Frissen a legaromásabb.",
+   "clinical": "A borsmenta legjobban kutatott formája a bélben oldódó (enteroszolvens) borsmentaolaj. 12 randomizált vizsgálat (835 beteg) metaanalízise szerint az olaj a placebónál hatékonyabban javította az irritábilis bél szindróma (IBS) globális tüneteit (kockázati arány 2,39) és a hasi fájdalmat (RR 1,78). Egy 2022-es frissített metaanalízis megerősítette, hogy jobb a placebónál, de gyakoribbak a mellékhatások (pl. reflux), és a bizonyíték minősége alacsony. A tea hatása enyhébb, mint a koncentrált kapszuláé."
+  },
+  {
+   "name": "Zöld tea",
+   "lat": "Camellia sinensis",
+   "emoji": "🍵",
+   "accent": "#4ade80",
+   "role": "Szív · anyagcsere",
+   "hatas": "Szív-érrendszer, vércukor, testsúly, éberség.",
+   "prep": "1 teáskanál levél / csésze, 70–80 °C (NEM lobogó!) víz, 2–3 perc. A túl forró víz keserűvé teszi.",
+   "clinical": "RCT-metaanalízisek szerint a zöld tea és katechinjei (EGCG) javíthatják a vérnyomást (főleg magasabb kiindulási értéknél) és az LDL-koleszterint, mérsékelten csökkenthetik a haskörfogatot, és javíthatják a vércukrot/HbA1c-t. Nagy kohorszvizsgálatokban a rendszeres fogyasztás alacsonyabb szív-érrendszeri és összhalálozással társult (ok-okozat nem bizonyított). FONTOS: a főzött tea biztonságos; a tömény kivonat/kapszula napi ~800 mg EGCG felett májenzim-emelkedést okozhat – étkezéssel, nem éhgyomorra."
+  },
+  {
+   "name": "Matcha",
+   "lat": "Camellia sinensis (őrölt)",
+   "emoji": "🍵",
+   "accent": "#22c55e",
+   "role": "Fókusz · kogníció",
+   "hatas": "Éberség, koncentráció, nyugodt fókusz (L-teanin + koffein).",
+   "prep": "1–2 g (½–1 tk) port ~80 °C vízzel habosra keversz (nem áztatás) – a teljes levelet fogyasztod, ezért töményebb.",
+   "clinical": "Egy 12 hónapos, randomizált, kettős vak, placebo-kontrollált japán vizsgálatban (99 idős, enyhe kognitív hanyatlással) a napi 2 g matcha javította a „szociális éleslátás” (arckifejezés-felismerés) pontszámot a placebóhoz képest, de a globális kogníciót és a többi funkciót nem. A korábbi vizsgálatok rövidek (kb. 12 hetesek) és kis mintásak voltak – az agyi hatás ígéretes, de eddig szerény."
+  },
+  {
+   "name": "Rooibos",
+   "lat": "Aspalathus linearis",
+   "emoji": "🔴",
+   "accent": "#f87171",
+   "role": "Antioxidáns · koffeinmentes",
+   "hatas": "Antioxidáns, lipidprofil, koffeinmentes.",
+   "prep": "1–2 teáskanál szárított rooibos / csésze, ~100 °C, 5–10 perc (tovább áztatva sem lesz keserű). Koffeinmentes.",
+   "clinical": "A leggyakrabban idézett emberi vizsgálatban (40 fő, szív-érrendszeri kockázattal) napi 6 csésze hagyományos rooibos 6 héten át javította a lipidprofilt (LDL- és trigliceridcsökkenés) és csökkentette a lipidperoxidációt. A bizonyíték biztató, de kevés emberi vizsgálaton és kis mintaszámon alapul – az adatok többsége állatkísérletből származik. Előny: természetesen koffeinmentes."
+  },
+  {
+   "name": "Zsálya",
+   "lat": "Salvia officinalis",
+   "emoji": "🍃",
+   "accent": "#a3e635",
+   "role": "Torok · menopauza",
+   "hatas": "Torokgyulladás, menopauzás hőhullámok, memória, izzadás.",
+   "prep": "1 teáskanál szárított levél / csésze, ~100 °C, 5–10 perc lefedve. Toroköblögetésre erősebb, kihűtött főzet.",
+   "clinical": "Randomizált, kettős vak vizsgálatokban a zsálya-készítmények jelentősen csökkentették a hőhullámok gyakoriságát és intenzitását menopauzában – egy placebo-kontrollált vizsgálatban a hőhullám-pontszám kb. 55%-kal csökkent. Egy randomizált, placebo-kontrollált vizsgálat szerint (öblögetve) hatékony és biztonságos akut garatgyulladásnál. Kisebb vizsgálatok a memóriára és hangulatra is kedvező, acetilkolin-észteráz-gátló hatást mutattak."
+  },
+  {
+   "name": "Bodza",
+   "lat": "Sambucus nigra",
+   "emoji": "🫐",
+   "accent": "#a78bfa",
+   "role": "Megfázás · immun",
+   "hatas": "Megfázás, influenza, felső légúti tünetek.",
+   "prep": "Bodzavirág-tea: 1–2 tk szárított virág / csésze, ~100 °C, 10 perc. A bogyót MINDIG főzve/szirupként – nyersen enyhén mérgező!",
+   "clinical": "Randomizált vizsgálatokban a standardizált bodzabogyó-kivonat lerövidítette a megfázás/influenza tüneteit. Egy 312 fős légiutas-vizsgálatban a bodza rövidebb megfázás-időtartammal és enyhébb tünetekkel járt. Kisebb vizsgálatokban az influenza tartamát kb. 3–4 nappal rövidítette, egy metaanalízis pedig a felső légúti tünetek jelentős csökkenését találta. FONTOS: az eredmények nem egységesek – egy 2020-as vizsgálat nem talált előnyt. A nyers bogyó, levél és kéreg hőkezelés nélkül mérgező."
+  },
+  {
+   "name": "Rozmaring",
+   "lat": "Rosmarinus officinalis",
+   "emoji": "🌱",
+   "accent": "#2dd4bf",
+   "role": "Memória · hangulat",
+   "hatas": "Memória, koncentráció, hangulat, alvás, emésztés.",
+   "prep": "1 teáskanál szárított (vagy 1 friss ágvég) / csésze, ~100 °C, 5–10 perc lefedve.",
+   "clinical": "Egy 68 fős, kettős vak randomizált vizsgálatban napi 2×500 mg rozmaring egy hónapon át javította a memóriát, csökkentette a szorongást és a depressziót, és javította az alvásminőséget egyetemistáknál. Időseknél egy vizsgálat dózisfüggő, kétirányú hatást talált: a kis dózis (750 mg) javította, a nagyon nagy dózis (6000 mg) rontotta a memória-sebességet. A tea hatása enyhébb a koncentrált kivonaténál."
+  },
+  {
+   "name": "Kömény",
+   "lat": "Carum carvi",
+   "emoji": "🌾",
+   "accent": "#fbbf24",
+   "role": "Puffadás · dyspepsia",
+   "hatas": "Puffadás, görcsös emésztés, funkcionális dyspepsia.",
+   "prep": "1 teáskanál frissen tört mag / csésze, ~100 °C, 10–15 perc lefedve (a mag törése segíti a hatóanyag kioldódását).",
+   "clinical": "A legerősebb bizonyíték a kömény- + borsmentaolaj fix kombinációjára vonatkozik funkcionális dyspepsiánál. 5 randomizált vizsgálat (578 résztvevő) metaanalízise szerint a kombináció a placebónál szignifikánsan jobban javította a dyspepsia globális tüneteit (kb. 56%-os javulás). A köménymag-teára önmagában kevesebb szigorú humán adat van – a klinikai eredmény főleg a koncentrált olajkombinációra igaz."
+  },
+  {
+   "name": "Kamilla",
+   "lat": "Matricaria chamomilla",
+   "emoji": "🌼",
+   "accent": "#facc15",
+   "role": "Szorongás · alvás",
+   "hatas": "Szorongás, alvás, emésztés, gyulladás, bőr (öblítés).",
+   "prep": "1–2 teáskanál szárított virág / csésze, ~100 °C, 5–10 perc lefedve. A régióban (Románia, Kárpát-medence) az egyik legfontosabb gyógynövény.",
+   "clinical": "Randomizált, kettős vak vizsgálatban a kamilla-kivonat (napi 1500 mg) 8 hét alatt jelentősen csökkentette a generalizált szorongás (GAD) tüneteit a placebóhoz képest. Egy hosszú távú (38 hetes) vizsgálatban a folytatott kamilla-kezelés alacsonyabb szorongásszintet tartott fenn (a visszaesésig eltelt idő különbsége azonban nem érte el a szignifikanciát). Metaanalízisek szerint a kamilla javíthatja a szorongást és az alvásminőséget is."
+  },
+  {
+   "name": "Kakukkfű",
+   "lat": "Thymus vulgaris",
+   "emoji": "🌿",
+   "accent": "#84cc16",
+   "role": "Köhögés · légutak",
+   "hatas": "Köhögés, hörghurut, felső légúti tünetek, torok.",
+   "prep": "1–2 teáskanál szárított fű / csésze, ~100 °C, 10 perc lefedve. Erdélyben/Romániában elterjedt, fontos légúti gyógynövény.",
+   "clinical": "A kakukkfüvet – gyakran borostyánnal vagy kankalinnal kombinálva – köptetőként és köhögéscsillapítóként vizsgálták. Randomizált vizsgálatokban a kakukkfű-tartalmú készítmények csökkentették az akut hörghurut és a köhögés súlyosságát/tüneteit, és általában jól tolerálhatók. Az önálló kakukkfűteára kevesebb szigorú adat van, de a légúti tüneteknél itt a legerősebb a klinikai és hagyományos bizonyíték."
+  },
+  {
+   "name": "Orbáncfű",
+   "lat": "Hypericum perforatum",
+   "emoji": "💛",
+   "accent": "#fde047",
+   "role": "Hangulat · depresszió",
+   "hatas": "Enyhe–közepes depresszió, levert hangulat. Regionálisan fontos gyógynövény.",
+   "prep": "1–2 teáskanál szárított virágos hajtás / csésze, ~100 °C, 8–10 perc lefedve.",
+   "clinical": "Az orbáncfű-kivonat az egyik legjobban vizsgált gyógynövény depresszióban. Egy Cochrane-áttekintés (29 vizsgálat) szerint a kivonatok a placebónál hatékonyabbak, a standard antidepresszánsokkal hasonlóan hatékonyak, és kevesebb mellékhatásuk van – a hatás elsősorban enyhe–közepes depressziónál egyértelmű, súlyos depresszióban vegyesebb.",
+   "warn": "⚠️ KOMOLY FIGYELMEZTETÉS: az orbáncfű számos gyógyszer hatását gyengíti (pl. fogamzásgátló, véralvadásgátló, egyes antidepresszánsok, immunszupresszánsok). Gyógyszerszedés mellett csak orvossal egyeztetve!"
+  },
+  {
+   "name": "Hárs",
+   "lat": "Tilia spp.",
+   "emoji": "🌸",
+   "accent": "#fca5a5",
+   "traditional": true,
+   "role": "Megfázás · nyugtatás",
+   "hatas": "Megfázás, izzasztás (láznál), nyugtatás, enyhe alvászavar.",
+   "prep": "1–2 teáskanál szárított hársvirág / csésze, ~100 °C, 10 perc lefedve.",
+   "tradText": "A hársvirágot hagyományosan megfázásra, izzasztásra és enyhe nyugtatásra használják; európai gyógynövény-monográfiák hagyományos használatú növényként ismerik el. Nagy, jó minőségű randomizált klinikai vizsgálat azonban alig van – a bizonyíték főként hagyományos használaton és laboratóriumi adatokon alapul."
+  },
+  {
+   "name": "Meggy szár",
+   "lat": "Prunus cerasus (kocsány)",
+   "emoji": "🍒",
+   "accent": "#f472b6",
+   "traditional": true,
+   "role": "Vízhajtó · húgyúti",
+   "hatas": "Vízhajtás, húgyúti és ízületi panaszok (népi használat).",
+   "prep": "Egy marék szárított meggyszár ~0,5 l vízben, 5–10 perc főzés (dekoktum), majd leszűrés.",
+   "tradText": "A meggyszárat (kocsányt) a népi gyógyászatban vízhajtóként, húgyúti és ízületi panaszokra használják. A szárból készült teára gyakorlatilag nincs emberi klinikai vizsgálat. (Megjegyzés: a meggylé – nem a szár – szív-anyagcsere- és alvás-hatásait vizsgálták külön, kedvező eredménnyel.)"
+  },
+  {
+   "name": "Citromfű",
+   "lat": "Melissa officinalis",
+   "emoji": "🌿",
+   "accent": "#bef264",
+   "role": "Nyugtatás · alvás",
+   "hatas": "Szorongás, stressz, alvás, hangulat, emésztés.",
+   "prep": "1–2 teáskanál szárított levél / csésze, ~100 °C, 5–10 perc lefedve. Frissen is kiváló.",
+   "clinical": "Metaanalízis szerint a citromfű szignifikánsan javította a szorongás és a depresszió pontszámait a placebóhoz képest (standardizált átlagos különbség kb. −0,98). Randomizált vizsgálatokban (pl. szívműtét után) csökkentette a szorongást és javította az alvásminőséget; kis vizsgálatok a hangulatra és a kognitív teljesítményre is kedvező, GABA-rendszeren keresztüli hatást mutattak. Alvászavarra gyakran valeriánával (macskagyökér) kombinálva vizsgálták."
+  },
+  {
+   "name": "Csipkebogyó",
+   "lat": "Rosa canina",
+   "emoji": "🌹",
+   "accent": "#fb7185",
+   "role": "Ízületek · C-vitamin",
+   "hatas": "Ízületi (artrózis) fájdalom, C-vitamin, immun.",
+   "prep": "1–2 teáskanál szárított, tört csipkebogyó / csésze, ~100 °C, 10–15 perc lefedve (hosszabb áztatás több C-vitamint old ki).",
+   "clinical": "3 randomizált vizsgálat (287 beteg, ~3 hónap) metaanalízise szerint a csipkebogyó-por a placebónál jobban csökkentette a csípő- és térd-artrózis (osteoarthritis) fájdalmát (hatásméret 0,37), és kb. kétszer valószínűbb volt a terápiás válasz (NNT ≈ 6). A vizsgálatokat a gyártó támogatta és kis mintásak – független, nagy vizsgálat kellene a megerősítéshez. A csipkebogyó emellett kiemelkedően C-vitamin-gazdag."
+  },
+  {
+   "name": "Cickafark",
+   "lat": "Achillea millefolium",
+   "emoji": "🌾",
+   "accent": "#e5e7eb",
+   "traditional": true,
+   "role": "Emésztés · sebek",
+   "hatas": "Emésztési panaszok, étvágy, enyhe görcsök, sebek, menstruáció (népi).",
+   "prep": "1–2 teáskanál szárított virágos fű / csésze, ~100 °C, 10 perc lefedve.",
+   "tradText": "A cickafarkot a népi gyógyászatban emésztési panaszokra, étvágytalanságra, enyhe görcsökre, sebekre és menstruációs panaszokra használják; európai monográfiák hagyományos használatú növényként ismerik el. Jó minőségű, nagy randomizált emberi vizsgálat azonban alig van – a bizonyíték főleg hagyományos használaton és laboratóriumi adatokon alapul."
+  },
+  {
+   "name": "Hibiszkusz",
+   "lat": "Hibiscus sabdariffa",
+   "emoji": "🌺",
+   "accent": "#fda4af",
+   "role": "Vérnyomás · koffeinmentes",
+   "hatas": "Vérnyomás-csökkentés, antioxidáns, savanykás, koffeinmentes.",
+   "prep": "1–2 teáskanál szárított virág(csésze-levél) / csésze, ~100 °C, 5–10 perc. Hidegen (jeges teaként) is finom.",
+   "clinical": "17 randomizált vizsgálat metaanalízise szerint a hibiszkusztea/-kivonat a placebónál jobban csökkentette a szisztolés vérnyomást (átlagosan kb. −7 Hgmm), és a hatás a magasabb vérnyomásúaknál a legnagyobb. Egyes vizsgálatokban a lipidprofilra és a vércukorra is kedvezően hatott. Kellemesen savanykás és koffeinmentes.",
+   "warn": "⚠️ Vérnyomáscsökkentő gyógyszer mellett felerősítheti a hatást (túl alacsony vérnyomás). Gyógyszerszedés esetén érdemes orvossal egyeztetni."
+  },
+  {
+   "name": "Ginzeng",
+   "lat": "Panax ginseng",
+   "emoji": "🥕",
+   "accent": "#fbbf24",
+   "role": "Fáradtság · vércukor",
+   "hatas": "Fáradtság, energia, vércukor, memória (adaptogén).",
+   "prep": "1 tk szárított, szeletelt gyökér / csésze, ~90 °C, 5–10 perc áztatás vagy rövid főzés. Reggel/délelőtt ajánlott.",
+   "clinical": "A Panax ginzeng az egyik legvizsgáltabb adaptogén. Fáradtságra egy szisztematikus áttekintés (8 RCT) szerint a placebónál jobb volt a fáradtság-skálákon és a klinikai hatásban. Vércukorra 16 RCT metaanalízise szerint kismértékben csökkentette az éhomi vércukrot. Kis vizsgálatok a memóriára/hangulatra és a merevedési zavarra is kedvező jeleket mutattak. A vérnyomásra vonatkozó adatok vegyesek.",
+   "warn": "⚠️ Stimuláló lehet (álmatlanság, nyugtalanság), és kölcsönhat pl. véralvadásgátlóval és cukorbetegség-gyógyszerekkel. Magas vérnyomás vagy gyógyszerszedés esetén orvossal egyeztetve."
+  },
+  {
+   "name": "Reishi (gombatea)",
+   "lat": "Ganoderma lucidum",
+   "emoji": "🍄",
+   "accent": "#c084fc",
+   "role": "Fáradtság · immun",
+   "hatas": "Fáradtság, közérzet, immunmoduláció (adaptogén gomba).",
+   "prep": "Vizes főzet (dekoktum): 3–5 g szárított, szeletelt reishi ~500 ml vízben 30–60 perc lassú forralás. Keserű – ízesíthető.",
+   "clinical": "A reishit (pecsétviaszgomba) több mint 200 klinikai vizsgálatban vizsgálták; a legjobb humán jelek a fáradtságra és az általános közérzetre vonatkoznak, immunmoduláló hatásokkal. FONTOS ellenpont: egy jó minőségű 16 hetes RCT (2-es típusú cukorbetegség + metabolikus szindróma) NEM talált érdemi javulást a HbA1c-ben, vércukorban, lipidekben vagy vérnyomásban. A hagyományos forma vizes főzet („gombatea”).",
+   "warn": "⚠️ A metabolikus (vércukor/koleszterin) előnyök jó minőségű vizsgálatban nem igazolódtak. Ritka májkárosodás-jelentések – májbetegségnél kerülendő; leszedheti a vérnyomást és véralvadásgátlóval kölcsönhat."
+  },
+  {
+   "name": "Oroszlánsörény-gomba",
+   "lat": "Hericium erinaceus",
+   "emoji": "🦁",
+   "accent": "#fcd34d",
+   "role": "Kogníció · hangulat",
+   "hatas": "Kognitív funkció, hangulat, közérzet (funkcionális gomba).",
+   "prep": "Vizes főzet: 3–5 g szárított gomba ~500 ml vízben 30–45 perc lassú forralás. Enyhe, tengeri-gombás íz.",
+   "clinical": "Az oroszlánsörény-gombát kis mintás klinikai vizsgálatokban vizsgálták kognitív funkcióra és hangulatra: előzetes eredmények szerint javíthatja a közérzetet, csökkentheti a szorongást/ingerlékenységet, és egyes idős, enyhe kognitív hanyatlásban szenvedőknél átmenetileg javította a kognitív pontszámokat. A vizsgálatok azonban kicsik és rövidek – az idegnövekedési faktoros (NGF) hatás emberben még nem bizonyított megbízhatóan. Gyakran vizes főzetként fogyasztják."
+  },
+  {
+   "name": "Kurkuma",
+   "lat": "Curcuma longa",
+   "emoji": "🟠",
+   "accent": "#f59e0b",
+   "role": "Ízületek · gyulladás",
+   "hatas": "Ízületi (artrózis) fájdalom, gyulladáscsökkentés, emésztés.",
+   "prep": "1 tk kurkumapor vagy néhány szelet friss gyökér / csésze, ~100 °C, 10 perc. Egy csipet FEKETE BORS (piperin) és egy kis zsír (pl. tej) sokszorosára növeli a felszívódást.",
+   "clinical": "A kurkuma hatóanyaga a kurkumin. 16 RCT (1810 felnőtt) metaanalízise szerint a kurkuma-kivonat (kb. napi 1000 mg kurkumin) a térd-artrózis fájdalmában hasonló hatású volt, mint a nem-szteroid gyulladáscsökkentők (NSAID), kevesebb gyomor-bél mellékhatással. Egy nagyobb, 29 RCT-s (2396 fő) áttekintés több ízületi betegségben is tünet- és gyulladáscsökkenést talált. FONTOS: a kurkumin felszívódása gyenge – ezért használnak fekete borsot/zsírt vagy speciális kivonatot; a teából felszívódó mennyiség kisebb, mint a vizsgálati kapszuláké.",
+   "warn": "⚠️ Nagy dózisú kurkumin-kivonat ritkán májproblémát okozhat, és kölcsönhat véralvadásgátlóval. Epekő/epeúti elzáródás esetén óvatosan."
+  },
+  {
+   "name": "Gyömbér",
+   "lat": "Zingiber officinale",
+   "emoji": "🫚",
+   "accent": "#fde047",
+   "role": "Hányinger · emésztés",
+   "hatas": "Hányinger, emésztés, menstruációs fájdalom, gyulladás.",
+   "prep": "3–4 vékony szelet friss gyömbér (vagy ½ tk por) / csésze, ~100 °C, 8–10 perc lefedve. Citrommal, mézzel ízesíthető.",
+   "clinical": "A gyömbér az egyik legjobban igazolt hányinger elleni növény. 12 RCT (1278 terhes) metaanalízise szerint jelentősen csökkentette a terhességi hányingert a placebóhoz képest. Kemoterápia okozta hányingernél is csökkentette a tüneteket (pl. egy 576 fős vizsgálatban napi ~0,5–1 g). Primer menstruációs fájdalomnál (dysmenorrhea) több RCT szerint a placebónál hatékonyabb, egyes vizsgálatokban az ibuprofenhez hasonló. Az emésztést és a gyomor-bél mozgást is fokozza.",
+   "warn": "⚠️ Terhességben általában legfeljebb ~1 g/nap ajánlott; véralvadásgátló vagy epekő esetén orvossal egyeztetve."
+  },
+  {
+   "name": "Citrom",
+   "lat": "Citrus limon",
+   "emoji": "🍋",
+   "accent": "#facc15",
+   "role": "C-vitamin · ízesítő",
+   "hatas": "C-vitamin, antioxidáns, ízesítő; enyhe vérnyomás-hatás.",
+   "prep": "½ citrom leve/szelete forró (nem lobogó, ~60–70 °C) vízbe – a túl forró víz csökkenti a C-vitamint. Mézzel, gyömbérrel gyakori. Reggeli meleg citromos víz népszerű.",
+   "clinical": "A citrom önálló, nagy klinikai bizonyítéka korlátozott – főleg kis vizsgálatok vannak. Egy japán vizsgálatban (101 középkorú nő) a napi citromfogyasztás + gyaloglás alacsonyabb szisztolés vérnyomással társult. Kis klinikai vizsgálatokban a citromlé enyhén csökkentette a vérnyomást (a polifenolok/flavonoidok – pl. heszperidin – és a C-vitamin révén). A citrom kiemelkedően C-vitamin- és flavonoid-gazdag, de nagy, jó minőségű RCT-k hiányoznak – az önálló hatás inkább kiegészítő/ízesítő jellegű."
+  },
+  {
+   "name": "Fodormenta",
+   "lat": "Mentha spicata",
+   "emoji": "🌿",
+   "accent": "#4ade80",
+   "role": "PCOS · androgén",
+   "hatas": "PCOS/androgének, hirsutizmus, emésztés.",
+   "prep": "1–2 tk szárított fodormenta / csésze, ~100 °C, 5–7 perc lefedve. PCOS-nál a vizsgálatokban napi 2 csésze.",
+   "clinical": "A fodormenta (NEM a borsmenta!) androgéncsökkentő hatását több randomizált vizsgálat is igazolta PCOS-ban. Egy 30 napos RCT-ben (42 nő) a napi 2 csésze fodormentatea jelentősen csökkentette a szabad tesztoszteront a placebóhoz képest. Egy 2024-es, 12 hetes, 150 fős vizsgálatban a legnagyobb hatás a 12. hétre alakult ki. A hormonszint gyorsan változik, de a látható szőrnövekedés-javuláshoz hosszabb idő kell (a hajszálak lassan cserélődnek). A hatás valós, de enyhébb, mint a gyógyszeres antiandrogéneké (pl. spironolakton)."
+  },
+  {
+   "name": "Fahéj",
+   "lat": "Cinnamomum spp.",
+   "emoji": "🍂",
+   "accent": "#d97706",
+   "role": "Vércukor · lipidek",
+   "hatas": "Vércukor, koleszterin, menstruációs fájdalom.",
+   "prep": "½–1 tk őrölt fahéj vagy 1 fahéjrúd / csésze, ~100 °C, 10 perc. Önmagában vagy más teához keverve. Nagyobb mennyiséghez ceyloni fahéj ajánlott.",
+   "clinical": "Több RCT-metaanalízis szerint a fahéj csökkentheti az éhomi vércukrot és javíthatja a lipidprofilt, főleg cukorbetegeknél/metabolikus szindrómában. Egy 10 RCT-s (543 fő) elemzésben az éhomi vércukor kb. −24 mg/dl-rel csökkent, és a koleszterin, valamint a trigliceridek is mérséklődtek; a hatás nagyobb dózisnál (>1,5 g/nap) kifejezettebb. Primer menstruációs fájdalomra is csökkentette a fájdalom erősségét és tartamát.",
+   "warn": "⚠️ A kasszia (bolti) fahéj sok kumarint tartalmaz – nagy, rendszeres mennyiségben májra terhelő lehet. Erre a célra a ceyloni fahéj biztonságosabb."
+  },
+  {
+   "name": "Édeskömény",
+   "lat": "Foeniculum vulgare",
+   "emoji": "🌿",
+   "accent": "#a3e635",
+   "role": "Görcsök · menstruáció",
+   "hatas": "Puffadás, görcsök, menstruációs fájdalom, csecsemőkólika.",
+   "prep": "1 tk frissen tört édeskömény-mag / csésze, ~100 °C, 10–15 perc lefedve.",
+   "clinical": "Az édesköményt görcsoldó és emésztést segítő hatása miatt használják. Randomizált vizsgálatokban a primer menstruációs fájdalmat (dysmenorrhea) csökkentette a placebóhoz képest, és egy placebo-kontrollált vizsgálatban a csecsemőkólika tüneteit is enyhítette. Görcsoldó hatását méhösszehúzódásokra és bélgörcsökre laborban is igazolták. A vizsgálatok kis mintásak – nagyobb, megerősítő vizsgálatok kellenek."
+  },
+  {
+   "name": "Galagonya",
+   "lat": "Crataegus spp.",
+   "emoji": "🫀",
+   "accent": "#f472b6",
+   "role": "Szív · keringés",
+   "hatas": "Enyhe szívelégtelenség, keringés, vérnyomás.",
+   "prep": "1–2 tk szárított galagonya (virág + levél vagy bogyó) / csésze, ~100 °C, 10–15 perc lefedve. Bogyóból dekoktum is készíthető.",
+   "clinical": "A galagonya-kivonat az egyik legjobban vizsgált szív-gyógynövény. Egy Cochrane-áttekintés (14 kettős vak, placebo-kontrollált RCT) szerint a standard kezelés MELLÉ adva javította a krónikus szívelégtelenség tüneteit és a szív terhelhetőségét (pl. terheléses tolerancia, tünetek). Áttekintések enyhe vérnyomás- és lipidcsökkentő hatásról is beszámolnak.",
+   "warn": "⚠️ Szívgyógyszert (pl. digoxin) vagy vérnyomáscsökkentőt szedőknél kölcsönhat – csak orvossal egyeztetve. A tea a súlyos szívbetegség kezelését NEM helyettesíti. A „tejocote” néven árult mexikói hamisítványok veszélyesek lehetnek."
+  },
+  {
+   "name": "Gyömbér-citrom-méz",
+   "lat": "Meleg gyógytea-recept",
+   "emoji": "🍯",
+   "accent": "#fbbf24",
+   "role": "Recept · megfázás",
+   "hatas": "Megfázás, torokfájás, köhögés, hányinger, C-vitamin.",
+   "prep": "Hozzávalók (1 nagy bögre): 3–4 vékony szelet friss gyömbér · ½ citrom leve · 1–2 tk méz · ~300 ml víz.\n\n1. Forrald fel a vizet a gyömbérrel, és főzd lassú tűzön 8–10 percig, lefedve.\n2. Vedd le a tűzről, és hűtsd kissé (~60–70 °C-ra).\n3. Csak a langyos teába keverd a citromlevet és a mézet (a lobogó víz csökkenti a méz és a C-vitamin értékét).\n4. Ízlés szerint egy csipet fahéj vagy kurkuma is mehet bele.",
+   "clinical": "A recept elemei külön-külön is vizsgáltak. A gyömbér több metaanalízisben csökkentette a hányingert (terhesség, kemoterápia). A méz gyermekek éjszakai köhögésénél randomizált vizsgálatokban a kezeléshiánynál/placebónál jobban enyhítette a köhögést és javította az alvást – ezért több irányelv is ajánlja (1 év felett). A citrom C-vitamin- és flavonoidforrás, a meleg folyadék pedig önmagában is enyhíti a torokfájást és az orrdugulást. FONTOS: ez tüneti enyhítés, nem gyógyítja a fertőzést.",
+   "warn": "⚠️ 1 évnél fiatalabb csecsemőnek SOHA ne adj mézet (botulizmus-veszély). Cukorbetegeknek a méz mennyiségére figyelni kell."
+  },
+  {
+   "name": "Macskagyökér",
+   "lat": "Valeriana officinalis",
+   "emoji": "😴",
+   "accent": "#a78bfa",
+   "role": "Alvás · nyugtatás",
+   "hatas": "Elalvás, alvásminőség, nyugtatás.",
+   "prep": "1 tk szárított, aprított gyökér / csésze, ~90–100 °C, 10 perc lefedve. Lefekvés előtt ~30–60 perccel. Íze/szaga erős, jellegzetes.",
+   "clinical": "A macskagyökeret hagyományosan altatóként használják. Egy 16 RCT-t (1093 beteg) felölelő szisztematikus áttekintés szerint a valeriána javította az alvásminőséget (a javulás esélye kb. 1,8-szoros a placebóhoz képest), de a vizsgálatok módszertanilag gyengék voltak és publikációs torzítás is felmerült. Újabb áttekintések vegyesek: a szubjektív (érzékelt) alvásjavulást gyakran mutatja, objektív műszeres méréssel kevésbé. Általában biztonságos, jól tolerálható; gyakran citromfűvel/komlóval kombinálják."
+  },
+  {
+   "name": "Golgotavirág (passiflóra)",
+   "lat": "Passiflora incarnata",
+   "emoji": "🪻",
+   "accent": "#c084fc",
+   "role": "Szorongás · alvás",
+   "hatas": "Szorongás, elalvás, nyugtalanság.",
+   "prep": "1 tk szárított golgotavirág / csésze, ~100 °C, 8–10 perc lefedve. Este ajánlott.",
+   "clinical": "A golgotavirág (passiflóra) flavonoidjai a GABA-rendszeren hatnak. Egy kis, kettős vak RCT-ben (41 fő) a passiflóratea egy hét alatt javította az alvásminőséget a placebóhoz képest (átlagosan kb. 20 perccel több alvás). Szorongásra a gyógynövény-áttekintések a jobban vizsgáltak közé sorolják, szerény, placebónál nagyobb szorongáscsökkenéssel. A vizsgálatok kicsik – nagyobb, hosszú távú vizsgálatok kellenek."
+  },
+  {
+   "name": "Levendula",
+   "lat": "Lavandula angustifolia",
+   "emoji": "💜",
+   "accent": "#a78bfa",
+   "role": "Szorongás · nyugtatás",
+   "hatas": "Szorongás, nyugtalanság, alvás, hangulat.",
+   "prep": "1–2 tk szárított levendulavirág / csésze, ~100 °C, 5–8 perc lefedve. Kevés is elég – erős az aroma.",
+   "clinical": "A legerősebb bizonyíték egy standardizált, SZÁJON ÁT szedett levendulaolaj-készítményre (Silexan) van. Randomizált vizsgálatokban és metaanalízisekben a Silexan a placebónál jelentősen csökkentette a szorongást (Hamilton-szorongásskála), generalizált szorongásban a lorazepámmal/paroxetinnel összemérhető volt, függőség nélkül; enyhe–közepes depresszióban is hatásosnak bizonyult. FONTOS: ez a kapszulás olajra igaz – a levendulatea hatása enyhébb, elsősorban nyugtató/alvássegítő céllal.",
+   "warn": "⚠️ A Silexan-vizsgálatok többségét a gyártó végezte. A levendulatea hatása gyengébb, mint a standardizált kapszuláé."
+  },
+  {
+   "name": "Homoktövis",
+   "lat": "Hippophae rhamnoides",
+   "emoji": "🧡",
+   "accent": "#fb923c",
+   "role": "C-vitamin · bőr",
+   "hatas": "C-vitamin, antioxidáns, bőr, nyálkahártya.",
+   "prep": "1–2 tk szárított homoktövis-bogyó / csésze, ~90 °C, 10 perc; frissen préselt lével is keverhető. Nagyon savanykás, C-vitamin-gazdag.",
+   "clinical": "A homoktövis kivételesen gazdag C-vitaminban, karotinoidokban, flavonoidokban és omega-zsírsavakban. Kis klinikai vizsgálatokban a bőr hidratáltságára/gyógyulására, a szem szárazságára és egyes anyagcsere-mutatókra kedvező jeleket mutatott, és jelenleg is folynak vizsgálatok (pl. emésztés/székrekedés). A bizonyíték egyelőre korlátozott és kis mintás – nagy, jó minőségű teavizsgálatok hiányoznak; a fő értéke a magas tápanyagtartalom."
+  },
+  {
+   "name": "Csalán",
+   "lat": "Urtica dioica",
+   "emoji": "🌿",
+   "accent": "#65a30d",
+   "role": "Prosztata · ízület",
+   "hatas": "Prosztata (BPH) tünetek, ízület, allergia, vizelethajtás.",
+   "prep": "1–2 tk szárított csalánlevél / csésze, ~100 °C, 10 perc lefedve. (BPH-nál a vizsgálatok inkább a gyökérkivonatot használták.)",
+   "clinical": "A csalán(gyökér) jóindulatú prosztata-megnagyobbodásban (BPH) több randomizált vizsgálatban csökkentette a vizelési tüneteket (IPSS-pontszám), gyakran hagyományos kezelés mellé adva. A csalánlevél allergiás náthánál és – kis vizsgálatokban – a vércukorra is mutatott kedvező jeleket, ízületi panaszoknál pedig hagyományosan használják. A bizonyíték vegyes és sok vizsgálat kis mintás; a levéltea hatása enyhébb, mint a tömény gyökérkivonaté."
+  },
+  {
+   "name": "Édesgyökér",
+   "lat": "Glycyrrhiza glabra",
+   "emoji": "🍬",
+   "accent": "#a16207",
+   "role": "Torok · gyomor",
+   "hatas": "Torokfájás, köhögés, gyomorpanaszok. Természetesen édes.",
+   "prep": "½–1 tk szárított, aprított édesgyökér / csésze, ~100 °C, 5–10 perc. Cukor nélkül is édes. Csak alkalmanként, rövid ideig!",
+   "clinical": "Az édesgyökeret hagyományosan torokfájásra, köhögésre és gyomorpanaszokra használják; kis vizsgálatokban pl. a műtét utáni (intubáció okozta) torokfájást öblögetve csökkentette, és emésztési panaszoknál is vizsgálták. FONTOS: a glicirrizin-tartalma miatt a rendszeres/nagy fogyasztás áledoszteronizmust okozhat – magas vérnyomás, alacsony káliumszint, vízvisszatartás. Ezért csak alkalmanként, rövid ideig ajánlott.",
+   "warn": "⚠️ KOMOLY: rendszeres vagy nagy mennyiségű édesgyökér megemeli a vérnyomást és csökkenti a káliumszintet (áledoszteronizmus). Magas vérnyomás, szívbetegség, terhesség, vagy vízhajtó/szívgyógyszer szedése esetén kerülendő."
+  }
+ ],
+ "sources": [
+  {
+   "n": "Menta (borsmenta)",
+   "r": "IBS: 12 randomizált vizsgálat (835 beteg) metaanalízise; frissített metaanalízis (2022)."
+  },
+  {
+   "n": "Zöld tea",
+   "r": "Katechin/EGCG RCT-metaanalízisek (vérnyomás, LDL, haskörfogat, HbA1c); nagy kohorszvizsgálatok (halálozás). Kivonat-biztonság: EFSA (EGCG/máj)."
+  },
+  {
+   "n": "Matcha",
+   "r": "12 hónapos, kettős vak, placebo-kontrollált RCT, 99 idős, enyhe kognitív hanyatlás (Japán, 2024)."
+  },
+  {
+   "n": "Rooibos",
+   "r": "Emberi vizsgálat 40 fő, 6 hét (lipid/redox) – Marnewick és mtsai, J Ethnopharmacol (2011); többségében állatkísérletes adatok."
+  },
+  {
+   "n": "Zsálya",
+   "r": "Menopauzás hőhullám RCT – Bommer és mtsai (2011); akut garatgyulladás placebo-kontrollált (öblögetéses/spray) vizsgálat."
+  },
+  {
+   "n": "Bodza",
+   "r": "Légiutas RCT 312 fő – Tiralongo és mtsai (2016); influenza RCT-k; metaanalízis (2019); negatív RCT – Macknin (2020)."
+  },
+  {
+   "n": "Rozmaring",
+   "r": "Egyetemisták kettős vak RCT 68 fő (2018); idős dózis-válasz vizsgálat (memória-sebesség)."
+  },
+  {
+   "n": "Kömény",
+   "r": "Kömény+borsmentaolaj funkcionális dyspepsiában: 5 RCT (578 fő) metaanalízise."
+  },
+  {
+   "n": "Kamilla",
+   "r": "Generalizált szorongás RCT – Amsterdam és mtsai (2009); hosszú távú (38 hetes) fenntartó RCT (2016)."
+  },
+  {
+   "n": "Kakukkfű",
+   "r": "Kakukkfű (gyakran borostyánnal) akut hörghurut/köhögés RCT-k."
+  },
+  {
+   "n": "Orbáncfű",
+   "r": "Depresszió: Cochrane-áttekintés, 29 vizsgálat – Linde és mtsai (2008). Sok gyógyszer-kölcsönhatás."
+  },
+  {
+   "n": "Hárs",
+   "r": "Hagyományos használat; európai (EMA) növénymonográfia. Nagy RCT alig."
+  },
+  {
+   "n": "Meggy szár",
+   "r": "Hagyományos használat; a meggylé (nem a szár) külön vizsgálatai kedvezőek."
+  },
+  {
+   "n": "Citromfű",
+   "r": "Szorongás/depresszió metaanalízis (SMD ≈ −0,98); szívműtét utáni szorongás/alvás RCT."
+  },
+  {
+   "n": "Csipkebogyó",
+   "r": "Artrózis: 3 RCT (287 beteg) metaanalízise – Christensen és mtsai, Osteoarthritis Cartilage (2008); gyártó által támogatott."
+  },
+  {
+   "n": "Cickafark",
+   "r": "Hagyományos használat; EMA-monográfia."
+  },
+  {
+   "n": "Hibiszkusz",
+   "r": "Vérnyomás: 17 RCT metaanalízise (átlag SBP ≈ −7 Hgmm)."
+  },
+  {
+   "n": "Ginzeng",
+   "r": "Fáradtság: szisztematikus áttekintés (8 RCT); éhomi vércukor: 16 RCT metaanalízise."
+  },
+  {
+   "n": "Reishi",
+   "r": "200+ vizsgálat áttekintései (fáradtság/immun); negatív 16 hetes metabolikus RCT – Klupp és mtsai (2016)."
+  },
+  {
+   "n": "Oroszlánsörény-gomba",
+   "r": "Kis kognitív/hangulat RCT-k (pl. Mori 2009; Nagano 2010) – rövidek, kis minta."
+  },
+  {
+   "n": "Kurkuma",
+   "r": "Térd-artrózis: 16 RCT (1810 fő) metaanalízise (NSAID-hoz hasonló); több ízületi kórképet átfogó áttekintés."
+  },
+  {
+   "n": "Gyömbér",
+   "r": "Terhességi hányinger: 12 RCT (1278 fő) metaanalízise; kemoterápiás hányinger RCT; primer dysmenorrhea RCT-k."
+  },
+  {
+   "n": "Citrom",
+   "r": "Citromfogyasztás + gyaloglás és vérnyomás, 101 nő (Japán, 2014); kis citromlé-vizsgálatok."
+  },
+  {
+   "n": "Fodormenta",
+   "r": "PCOS/androgén RCT 42 fő – Grant és mtsai (2010); 12 hetes RCT 150 fő (2024)."
+  },
+  {
+   "n": "Fahéj",
+   "r": "Vércukor/lipid metaanalízis (10 RCT, 543 fő; FPG ≈ −24 mg/dl); dysmenorrhea RCT. Kasszia = kumarin (máj)."
+  },
+  {
+   "n": "Édeskömény",
+   "r": "Primer dysmenorrhea RCT-k; csecsemőkólika placebo-kontrollált vizsgálat."
+  },
+  {
+   "n": "Galagonya",
+   "r": "Krónikus szívelégtelenség: Cochrane-áttekintés, 14 RCT – Pittler és mtsai (2008), kiegészítő kezelésként."
+  },
+  {
+   "n": "Gyömbér-citrom-méz (recept)",
+   "r": "Gyömbér (hányinger-metaanalízisek) + méz (gyermekek éjszakai köhögése – RCT-k, irányelvi ajánlás 1 év felett) + citrom (C-vitamin)."
+  },
+  {
+   "n": "Macskagyökér",
+   "r": "Alvás: szisztematikus áttekintés, 16 RCT (1093 beteg), Am J Med (2006); szubjektív javulás, publikációs torzítással."
+  },
+  {
+   "n": "Golgotavirág (passiflóra)",
+   "r": "Alvás RCT 41 fő – Ngan & Conduit, Phytother Res (2011); szorongás-áttekintések."
+  },
+  {
+   "n": "Levendula",
+   "r": "Silexan (szájon át) szorongás RCT-k és metaanalízis; GAD-ban lorazepámmal összevetve. A tea enyhébb."
+  },
+  {
+   "n": "Homoktövis",
+   "r": "Kis klinikai vizsgálatok (bőr, szem, anyagcsere); korlátozott bizonyíték, magas tápanyagtartalom."
+  },
+  {
+   "n": "Csalán",
+   "r": "BPH kettős vak RCT-k (pl. 100 beteg, 2013; 300 mg gyökérkivonat, 80 fő, 2022); allergiás nátha RCT."
+  },
+  {
+   "n": "Édesgyökér",
+   "r": "Műtét utáni torokfájás öblögetéses RCT-k; glicirrizin biztonsági esetriportok (áledoszteronizmus: vérnyomás↑, kálium↓)."
+  }
+ ],
+ "tagMap": {
+  "0": [
+   "digestion",
+   "pain"
+  ],
+  "1": [
+   "cardio",
+   "glucose",
+   "mood"
+  ],
+  "2": [
+   "cognition",
+   "mood"
+  ],
+  "3": [
+   "cardio",
+   "immune"
+  ],
+  "4": [
+   "respiratory",
+   "women",
+   "cognition"
+  ],
+  "5": [
+   "cold",
+   "immune"
+  ],
+  "6": [
+   "cognition",
+   "mood",
+   "sleep"
+  ],
+  "7": [
+   "digestion"
+  ],
+  "8": [
+   "sleep",
+   "calm",
+   "digestion"
+  ],
+  "9": [
+   "cold",
+   "respiratory"
+  ],
+  "10": [
+   "mood"
+  ],
+  "11": [
+   "cold",
+   "calm"
+  ],
+  "12": [
+   "other"
+  ],
+  "13": [
+   "sleep",
+   "calm",
+   "mood"
+  ],
+  "14": [
+   "pain",
+   "immune"
+  ],
+  "15": [
+   "digestion"
+  ],
+  "16": [
+   "cardio"
+  ],
+  "17": [
+   "mood",
+   "glucose"
+  ],
+  "18": [
+   "immune",
+   "mood"
+  ],
+  "19": [
+   "cognition",
+   "mood"
+  ],
+  "20": [
+   "pain"
+  ],
+  "21": [
+   "digestion",
+   "pain",
+   "women"
+  ],
+  "22": [
+   "immune",
+   "cardio"
+  ],
+  "23": [
+   "women",
+   "digestion"
+  ],
+  "24": [
+   "glucose",
+   "women"
+  ],
+  "25": [
+   "digestion",
+   "women"
+  ],
+  "26": [
+   "cardio"
+  ],
+  "27": [
+   "cold",
+   "respiratory",
+   "digestion"
+  ],
+  "28": [
+   "sleep",
+   "calm"
+  ],
+  "29": [
+   "sleep",
+   "calm"
+  ],
+  "30": [
+   "calm",
+   "sleep",
+   "mood"
+  ],
+  "31": [
+   "immune"
+  ],
+  "32": [
+   "pain",
+   "other"
+  ],
+  "33": [
+   "respiratory",
+   "digestion"
+  ]
+ }
+}

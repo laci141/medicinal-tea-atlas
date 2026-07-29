@@ -1,0 +1,198 @@
+{
+  "26": {
+    "ro": {
+      "name": "Păducel",
+      "role": "Inimă · circulație",
+      "hatas": "Insuficiență cardiacă ușoară, circulație, tensiune arterială.",
+      "prep": "1–2 lingurițe de păducel uscat (flori + frunze sau fructe) / cană, ~100 °C, 10–15 minute acoperit. Din fructe se poate prepara și un decoct.",
+      "clinical": "Extractul de păducel este una dintre cele mai bine studiate plante pentru inimă. Conform unei analize Cochrane (14 studii RCT dublu-orb, controlate cu placebo), adăugat PE LÂNGĂ tratamentul standard, a ameliorat simptomele insuficienței cardiace cronice și capacitatea de efort a inimii (de ex. toleranța la efort, simptomele). Analizele raportează și un efect ușor de scădere a tensiunii arteriale și a lipidelor.",
+      "warn": "⚠️ La persoanele care iau medicamente pentru inimă (de ex. digoxină) sau hipotensoare, interacționează – numai după consultarea medicului. Ceaiul NU înlocuiește tratamentul bolilor cardiace grave. Contrafacerile mexicane vândute sub numele de „tejocote” pot fi periculoase."
+    },
+    "en": {
+      "name": "Hawthorn",
+      "role": "Heart · circulation",
+      "hatas": "Mild heart failure, circulation, blood pressure.",
+      "prep": "1–2 tsp dried hawthorn (flowers + leaves or berries) / cup, ~100 °C, 10–15 minutes covered. A decoction can also be made from the berries.",
+      "clinical": "Hawthorn extract is one of the best-studied heart herbs. According to a Cochrane review (14 double-blind, placebo-controlled RCTs), added ON TOP OF standard treatment it improved the symptoms of chronic heart failure and the heart's exercise capacity (e.g. exercise tolerance, symptoms). Reviews also report a mild blood-pressure- and lipid-lowering effect.",
+      "warn": "⚠️ It interacts in people taking heart medication (e.g. digoxin) or blood-pressure-lowering drugs – only after consulting a doctor. The tea does NOT replace treatment of serious heart disease. Mexican counterfeits sold as “tejocote” can be dangerous."
+    },
+    "de": {
+      "name": "Weißdorn",
+      "role": "Herz · Kreislauf",
+      "hatas": "Leichte Herzinsuffizienz, Kreislauf, Blutdruck.",
+      "prep": "1–2 TL getrockneter Weißdorn (Blüten + Blätter oder Beeren) / Tasse, ~100 °C, 10–15 Minuten abgedeckt. Aus den Beeren kann auch ein Dekokt zubereitet werden.",
+      "clinical": "Weißdornextrakt ist eine der am besten untersuchten Herzpflanzen. Laut einer Cochrane-Übersichtsarbeit (14 doppelblinde, placebokontrollierte RCTs) verbesserte er ZUSÄTZLICH zur Standardbehandlung die Symptome der chronischen Herzinsuffizienz und die Belastbarkeit des Herzens (z. B. Belastungstoleranz, Symptome). Übersichtsarbeiten berichten auch über eine leicht blutdruck- und lipidsenkende Wirkung.",
+      "warn": "⚠️ Bei Personen, die Herzmedikamente (z. B. Digoxin) oder Blutdrucksenker einnehmen, kommt es zu Wechselwirkungen – nur nach Rücksprache mit dem Arzt. Der Tee ersetzt NICHT die Behandlung schwerer Herzerkrankungen. Als „Tejocote” verkaufte mexikanische Fälschungen können gefährlich sein."
+    }
+  },
+  "27": {
+    "ro": {
+      "name": "Ghimbir-lămâie-miere",
+      "role": "Rețetă · răceală",
+      "hatas": "Răceală, durere în gât, tuse, greață, vitamina C.",
+      "prep": "Ingrediente (1 cană mare): 3–4 felii subțiri de ghimbir proaspăt · zeama de ½ lămâie · 1–2 lingurițe de miere · ~300 ml apă.\n\n1. Fierbe apa cu ghimbirul și fierbe la foc mic 8–10 minute, acoperit.\n2. Ia de pe foc și lasă să se răcească puțin (la ~60–70 °C).\n3. Adaugă zeama de lămâie și mierea numai în ceaiul călduț (apa clocotită reduce valoarea mierii și a vitaminei C).\n4. După gust, poți adăuga și un vârf de scorțișoară sau curcuma.",
+      "clinical": "Elementele rețetei au fost studiate și separat. Ghimbirul a redus greața în mai multe metaanalize (sarcină, chimioterapie). La tusea nocturnă a copiilor, mierea, în studii randomizate, a ameliorat tusea și a îmbunătățit somnul mai bine decât lipsa tratamentului/placebo – de aceea este recomandată și de mai multe ghiduri (peste 1 an). Lămâia este o sursă de vitamina C și flavonoide, iar lichidul cald, în sine, ameliorează durerea în gât și congestia nazală. IMPORTANT: aceasta este o ameliorare simptomatică, nu vindecă infecția.",
+      "warn": "⚠️ Nu da NICIODATĂ miere sugarilor sub 1 an (risc de botulism). Diabeticii trebuie să fie atenți la cantitatea de miere."
+    },
+    "en": {
+      "name": "Ginger-lemon-honey",
+      "role": "Recipe · cold",
+      "hatas": "Cold, sore throat, cough, nausea, vitamin C.",
+      "prep": "Ingredients (1 large mug): 3–4 thin slices of fresh ginger · juice of ½ lemon · 1–2 tsp honey · ~300 ml water.\n\n1. Bring the water to a boil with the ginger and simmer over low heat for 8–10 minutes, covered.\n2. Take it off the heat and let it cool slightly (to ~60–70 °C).\n3. Stir the lemon juice and honey only into the lukewarm tea (boiling water reduces the value of the honey and vitamin C).\n4. To taste, a pinch of cinnamon or turmeric can also be added.",
+      "clinical": "The components of the recipe have also been studied individually. In several meta-analyses ginger reduced nausea (pregnancy, chemotherapy). For children's nighttime cough, in randomized trials honey relieved the cough and improved sleep better than no treatment/placebo – which is why several guidelines recommend it (over 1 year of age). Lemon is a source of vitamin C and flavonoids, and warm liquid itself relieves sore throat and nasal congestion. IMPORTANT: this is symptomatic relief, it does not cure the infection.",
+      "warn": "⚠️ NEVER give honey to infants under 1 year of age (risk of botulism). Diabetics need to watch the amount of honey."
+    },
+    "de": {
+      "name": "Ingwer-Zitrone-Honig",
+      "role": "Rezept · Erkältung",
+      "hatas": "Erkältung, Halsschmerzen, Husten, Übelkeit, Vitamin C.",
+      "prep": "Zutaten (1 große Tasse): 3–4 dünne Scheiben frischer Ingwer · Saft von ½ Zitrone · 1–2 TL Honig · ~300 ml Wasser.\n\n1. Das Wasser mit dem Ingwer aufkochen und bei schwacher Hitze 8–10 Minuten abgedeckt köcheln lassen.\n2. Vom Herd nehmen und etwas abkühlen lassen (auf ~60–70 °C).\n3. Zitronensaft und Honig erst in den lauwarmen Tee einrühren (kochendes Wasser mindert den Wert von Honig und Vitamin C).\n4. Nach Geschmack kann auch eine Prise Zimt oder Kurkuma hinzugefügt werden.",
+      "clinical": "Die Bestandteile des Rezepts wurden auch einzeln untersucht. Ingwer reduzierte in mehreren Metaanalysen die Übelkeit (Schwangerschaft, Chemotherapie). Bei nächtlichem Husten von Kindern linderte Honig in randomisierten Studien den Husten besser als keine Behandlung/Placebo und verbesserte den Schlaf – deshalb wird er auch von mehreren Leitlinien empfohlen (ab 1 Jahr). Die Zitrone ist eine Quelle für Vitamin C und Flavonoide, und die warme Flüssigkeit selbst lindert Halsschmerzen und verstopfte Nase. WICHTIG: Dies ist eine symptomatische Linderung, sie heilt die Infektion nicht.",
+      "warn": "⚠️ Säuglingen unter 1 Jahr NIEMALS Honig geben (Botulismusgefahr). Diabetiker müssen auf die Honigmenge achten."
+    }
+  },
+  "28": {
+    "ro": {
+      "name": "Valeriană",
+      "role": "Somn · calmare",
+      "hatas": "Adormire, calitatea somnului, calmare.",
+      "prep": "1 linguriță de rădăcină uscată și mărunțită / cană, ~90–100 °C, 10 minute acoperit. Cu ~30–60 de minute înainte de culcare. Gustul/mirosul este puternic, caracteristic.",
+      "clinical": "Valeriana este folosită în mod tradițional ca somnifer. Conform unei analize sistematice care a cuprins 16 studii RCT (1093 de pacienți), valeriana a îmbunătățit calitatea somnului (șansa de ameliorare este de aproximativ 1,8 ori mai mare comparativ cu placebo), dar studiile au fost slabe din punct de vedere metodologic și a apărut și posibilitatea unei distorsiuni de publicare. Analizele mai recente sunt mixte: adesea arată o ameliorare subiectivă (percepută) a somnului, dar mai puțin la măsurătorile obiective cu aparate. În general este sigură, bine tolerată; se combină adesea cu roiniță/hamei."
+    },
+    "en": {
+      "name": "Valerian",
+      "role": "Sleep · calming",
+      "hatas": "Falling asleep, sleep quality, calming.",
+      "prep": "1 tsp dried, chopped root / cup, ~90–100 °C, 10 minutes covered. About 30–60 minutes before bedtime. Its taste/smell is strong and distinctive.",
+      "clinical": "Valerian is traditionally used as a sleep aid. According to a systematic review covering 16 RCTs (1093 patients), valerian improved sleep quality (the odds of improvement are about 1.8 times higher compared to placebo), but the studies were methodologically weak and publication bias was also a concern. More recent reviews are mixed: it often shows subjective (perceived) sleep improvement, but less so with objective instrumental measurement. It is generally safe and well tolerated; it is often combined with lemon balm/hops."
+    },
+    "de": {
+      "name": "Baldrian",
+      "role": "Schlaf · Beruhigung",
+      "hatas": "Einschlafen, Schlafqualität, Beruhigung.",
+      "prep": "1 TL getrocknete, zerkleinerte Wurzel / Tasse, ~90–100 °C, 10 Minuten abgedeckt. Etwa 30–60 Minuten vor dem Schlafengehen. Geschmack/Geruch sind stark und charakteristisch.",
+      "clinical": "Baldrian wird traditionell als Schlafmittel verwendet. Laut einer systematischen Übersichtsarbeit mit 16 RCTs (1093 Patienten) verbesserte Baldrian die Schlafqualität (die Chance auf Besserung ist im Vergleich zu Placebo etwa 1,8-mal höher), doch die Studien waren methodisch schwach und es bestand auch der Verdacht auf einen Publikationsbias. Neuere Übersichtsarbeiten sind uneinheitlich: Eine subjektive (empfundene) Schlafverbesserung zeigt sich häufig, mit objektiver apparativer Messung weniger. Im Allgemeinen ist er sicher und gut verträglich; er wird oft mit Melisse/Hopfen kombiniert."
+    }
+  },
+  "29": {
+    "ro": {
+      "name": "Floarea-pasiunii (passiflora)",
+      "role": "Anxietate · somn",
+      "hatas": "Anxietate, adormire, neliniște.",
+      "prep": "1 linguriță de floarea-pasiunii uscată / cană, ~100 °C, 8–10 minute acoperit. Recomandat seara.",
+      "clinical": "Flavonoidele florii-pasiunii (passiflora) acționează asupra sistemului GABA. Într-un mic studiu RCT dublu-orb (41 de persoane), ceaiul de passiflora a îmbunătățit calitatea somnului într-o săptămână comparativ cu placebo (în medie cu aproximativ 20 de minute mai mult somn). Pentru anxietate, analizele privind plantele o încadrează printre cele mai bine studiate, cu o reducere modestă a anxietății, mai mare decât la placebo. Studiile sunt mici – sunt necesare studii mai mari, pe termen lung."
+    },
+    "en": {
+      "name": "Passionflower (passiflora)",
+      "role": "Anxiety · sleep",
+      "hatas": "Anxiety, falling asleep, restlessness.",
+      "prep": "1 tsp dried passionflower / cup, ~100 °C, 8–10 minutes covered. Recommended in the evening.",
+      "clinical": "The flavonoids of passionflower (passiflora) act on the GABA system. In a small, double-blind RCT (41 people), passionflower tea improved sleep quality over one week compared to placebo (on average about 20 minutes more sleep). For anxiety, herbal reviews rank it among the better-studied ones, with a modest anxiety reduction that is greater than placebo. The studies are small – larger, long-term studies are needed."
+    },
+    "de": {
+      "name": "Passionsblume (Passiflora)",
+      "role": "Angst · Schlaf",
+      "hatas": "Angst, Einschlafen, Unruhe.",
+      "prep": "1 TL getrocknete Passionsblume / Tasse, ~100 °C, 8–10 Minuten abgedeckt. Abends empfohlen.",
+      "clinical": "Die Flavonoide der Passionsblume (Passiflora) wirken auf das GABA-System. In einer kleinen, doppelblinden RCT (41 Personen) verbesserte Passionsblumentee innerhalb einer Woche die Schlafqualität im Vergleich zu Placebo (durchschnittlich etwa 20 Minuten mehr Schlaf). Bei Angst zählen herbale Übersichtsarbeiten sie zu den besser untersuchten, mit einer moderaten, placeboüberlegenen Angstreduktion. Die Studien sind klein – größere, langfristige Studien sind erforderlich."
+    }
+  },
+  "30": {
+    "ro": {
+      "name": "Lavandă",
+      "role": "Anxietate · calmare",
+      "hatas": "Anxietate, neliniște, somn, dispoziție.",
+      "prep": "1–2 lingurițe de flori de lavandă uscate / cană, ~100 °C, 5–8 minute acoperit. Este suficientă și o cantitate mică – aroma este puternică.",
+      "clinical": "Cele mai puternice dovezi există pentru un preparat standardizat de ulei de lavandă administrat ORAL (Silexan). În studii randomizate și metaanalize, Silexan a redus semnificativ anxietatea comparativ cu placebo (scala de anxietate Hamilton), în anxietatea generalizată a fost comparabil cu lorazepamul/paroxetina, fără dependență; s-a dovedit eficient și în depresia ușoară–moderată. IMPORTANT: acest lucru este valabil pentru uleiul în capsule – efectul ceaiului de lavandă este mai ușor, în principal în scop calmant/de ajutor pentru somn.",
+      "warn": "⚠️ Majoritatea studiilor Silexan au fost efectuate de producător. Efectul ceaiului de lavandă este mai slab decât cel al capsulei standardizate."
+    },
+    "en": {
+      "name": "Lavender",
+      "role": "Anxiety · calming",
+      "hatas": "Anxiety, restlessness, sleep, mood.",
+      "prep": "1–2 tsp dried lavender flowers / cup, ~100 °C, 5–8 minutes covered. A small amount is enough – the aroma is strong.",
+      "clinical": "The strongest evidence exists for a standardized, ORALLY taken lavender oil preparation (Silexan). In randomized trials and meta-analyses, Silexan significantly reduced anxiety compared to placebo (Hamilton Anxiety Scale); in generalized anxiety it was comparable to lorazepam/paroxetine, without dependence; it also proved effective in mild-to-moderate depression. IMPORTANT: this applies to the capsule oil – the effect of lavender tea is milder, primarily for calming/sleep-aiding purposes.",
+      "warn": "⚠️ Most of the Silexan studies were carried out by the manufacturer. The effect of lavender tea is weaker than that of the standardized capsule."
+    },
+    "de": {
+      "name": "Lavendel",
+      "role": "Angst · Beruhigung",
+      "hatas": "Angst, Unruhe, Schlaf, Stimmung.",
+      "prep": "1–2 TL getrocknete Lavendelblüten / Tasse, ~100 °C, 5–8 Minuten abgedeckt. Eine kleine Menge genügt – das Aroma ist stark.",
+      "clinical": "Die stärkste Evidenz besteht für ein standardisiertes, ORAL eingenommenes Lavendelöl-Präparat (Silexan). In randomisierten Studien und Metaanalysen reduzierte Silexan die Angst signifikant im Vergleich zu Placebo (Hamilton-Angstskala); bei generalisierter Angst war es mit Lorazepam/Paroxetin vergleichbar, ohne Abhängigkeit; auch bei leichter bis mittelschwerer Depression erwies es sich als wirksam. WICHTIG: Dies gilt für das Kapselöl – die Wirkung von Lavendeltee ist milder, vor allem zu beruhigenden/schlaffördernden Zwecken.",
+      "warn": "⚠️ Die meisten Silexan-Studien wurden vom Hersteller durchgeführt. Die Wirkung von Lavendeltee ist schwächer als die der standardisierten Kapsel."
+    }
+  },
+  "31": {
+    "ro": {
+      "name": "Cătină",
+      "role": "Vitamina C · piele",
+      "hatas": "Vitamina C, antioxidant, piele, mucoase.",
+      "prep": "1–2 lingurițe de fructe de cătină uscate / cană, ~90 °C, 10 minute; se poate amesteca și cu suc proaspăt stors. Foarte acrișor, bogat în vitamina C.",
+      "clinical": "Cătina este excepțional de bogată în vitamina C, carotenoizi, flavonoide și acizi grași omega. În studii clinice mici a arătat semne favorabile asupra hidratării/vindecării pielii, uscăciunii ochilor și asupra unor indicatori metabolici, iar în prezent se desfășoară și studii (de ex. digestie/constipație). Dovezile sunt deocamdată limitate și pe eșantioane mici – lipsesc studii mari, de bună calitate, asupra ceaiului; valoarea sa principală este conținutul ridicat de nutrienți."
+    },
+    "en": {
+      "name": "Sea buckthorn",
+      "role": "Vitamin C · skin",
+      "hatas": "Vitamin C, antioxidant, skin, mucous membranes.",
+      "prep": "1–2 tsp dried sea buckthorn berries / cup, ~90 °C, 10 minutes; can also be mixed with freshly pressed juice. Very tart, rich in vitamin C.",
+      "clinical": "Sea buckthorn is exceptionally rich in vitamin C, carotenoids, flavonoids and omega fatty acids. In small clinical trials it showed favorable signs for skin hydration/healing, dry eye and certain metabolic markers, and studies are currently ongoing (e.g. digestion/constipation). The evidence is so far limited and based on small samples – large, high-quality tea studies are lacking; its main value is the high nutrient content."
+    },
+    "de": {
+      "name": "Sanddorn",
+      "role": "Vitamin C · Haut",
+      "hatas": "Vitamin C, Antioxidans, Haut, Schleimhäute.",
+      "prep": "1–2 TL getrocknete Sanddornbeeren / Tasse, ~90 °C, 10 Minuten; kann auch mit frisch gepresstem Saft gemischt werden. Sehr säuerlich, reich an Vitamin C.",
+      "clinical": "Sanddorn ist außergewöhnlich reich an Vitamin C, Carotinoiden, Flavonoiden und Omega-Fettsäuren. In kleinen klinischen Studien zeigte er günstige Anzeichen für die Hautfeuchtigkeit/-heilung, trockene Augen und einige Stoffwechselmarker, und derzeit laufen weitere Studien (z. B. Verdauung/Verstopfung). Die Evidenz ist bislang begrenzt und beruht auf kleinen Stichproben – große, hochwertige Teestudien fehlen; sein Hauptwert ist der hohe Nährstoffgehalt."
+    }
+  },
+  "32": {
+    "ro": {
+      "name": "Urzică",
+      "role": "Prostată · articulații",
+      "hatas": "Simptome de prostată (HBP), articulații, alergie, diureză.",
+      "prep": "1–2 lingurițe de frunze de urzică uscate / cană, ~100 °C, 10 minute acoperit. (În HBP, studiile au folosit mai degrabă extractul de rădăcină.)",
+      "clinical": "Urzica (rădăcina) în hipertrofia benignă de prostată (HBP), în mai multe studii randomizate, a redus simptomele urinare (scorul IPSS), adesea administrată pe lângă tratamentul convențional. Frunza de urzică a arătat semne favorabile în rinita alergică și – în studii mici – asupra glicemiei, iar în afecțiunile articulare este folosită în mod tradițional. Dovezile sunt mixte și multe studii au eșantioane mici; efectul ceaiului din frunze este mai ușor decât cel al extractului concentrat de rădăcină."
+    },
+    "en": {
+      "name": "Nettle",
+      "role": "Prostate · joints",
+      "hatas": "Prostate (BPH) symptoms, joints, allergy, diuresis.",
+      "prep": "1–2 tsp dried nettle leaves / cup, ~100 °C, 10 minutes covered. (For BPH, the studies rather used the root extract.)",
+      "clinical": "Nettle (root) in benign prostatic hyperplasia (BPH) reduced urinary symptoms (IPSS score) in several randomized trials, often given alongside conventional treatment. Nettle leaf showed favorable signs in allergic rhinitis and – in small studies – on blood sugar as well, and it is traditionally used for joint complaints. The evidence is mixed and many studies have small samples; the effect of the leaf tea is milder than that of the concentrated root extract."
+    },
+    "de": {
+      "name": "Brennnessel",
+      "role": "Prostata · Gelenke",
+      "hatas": "Prostata-(BPH-)Symptome, Gelenke, Allergie, Harntreibung.",
+      "prep": "1–2 TL getrocknete Brennnesselblätter / Tasse, ~100 °C, 10 Minuten abgedeckt. (Bei BPH verwendeten die Studien eher den Wurzelextrakt.)",
+      "clinical": "Brennnessel(wurzel) reduzierte bei gutartiger Prostatavergrößerung (BPH) in mehreren randomisierten Studien die Harnsymptome (IPSS-Score), oft zusätzlich zur konventionellen Behandlung verabreicht. Das Brennnesselblatt zeigte günstige Anzeichen bei allergischem Schnupfen und – in kleinen Studien – auch auf den Blutzucker, und bei Gelenkbeschwerden wird es traditionell verwendet. Die Evidenz ist uneinheitlich und viele Studien haben kleine Stichproben; die Wirkung des Blättertees ist milder als die des konzentrierten Wurzelextrakts."
+    }
+  },
+  "33": {
+    "ro": {
+      "name": "Lemn-dulce",
+      "role": "Gât · stomac",
+      "hatas": "Durere în gât, tuse, tulburări gastrice. Dulce în mod natural.",
+      "prep": "½–1 linguriță de lemn-dulce uscat și mărunțit / cană, ~100 °C, 5–10 minute. Dulce chiar și fără zahăr. Numai ocazional, pentru scurt timp!",
+      "clinical": "Lemnul-dulce este folosit în mod tradițional pentru durerea în gât, tuse și tulburări gastrice; în studii mici, de ex., a redus prin gargară durerea în gât de după operație (cauzată de intubație) și a fost studiat și în tulburările digestive. IMPORTANT: din cauza conținutului de glicirizină, consumul regulat/în cantități mari poate cauza pseudoaldosteronism – tensiune arterială crescută, nivel scăzut de potasiu, retenție de apă. De aceea este recomandat numai ocazional, pentru scurt timp.",
+      "warn": "⚠️ SERIOS: lemnul-dulce în cantități regulate sau mari crește tensiunea arterială și scade nivelul de potasiu (pseudoaldosteronism). De evitat în caz de hipertensiune arterială, boli de inimă, sarcină sau administrare de diuretice/medicamente pentru inimă."
+    },
+    "en": {
+      "name": "Licorice",
+      "role": "Throat · stomach",
+      "hatas": "Sore throat, cough, stomach complaints. Naturally sweet.",
+      "prep": "½–1 tsp dried, chopped licorice / cup, ~100 °C, 5–10 minutes. Sweet even without sugar. Only occasionally, for a short time!",
+      "clinical": "Licorice is traditionally used for sore throat, cough and stomach complaints; in small studies, for example, it reduced post-operative (intubation-caused) sore throat when used as a gargle, and it has also been studied in digestive complaints. IMPORTANT: because of its glycyrrhizin content, regular/high consumption can cause pseudoaldosteronism – high blood pressure, low potassium level, water retention. Therefore it is recommended only occasionally, for a short time.",
+      "warn": "⚠️ SERIOUS: regular or large amounts of licorice raise blood pressure and lower the potassium level (pseudoaldosteronism). To be avoided in case of high blood pressure, heart disease, pregnancy, or use of diuretics/heart medication."
+    },
+    "de": {
+      "name": "Süßholz",
+      "role": "Hals · Magen",
+      "hatas": "Halsschmerzen, Husten, Magenbeschwerden. Von Natur aus süß.",
+      "prep": "½–1 TL getrocknetes, zerkleinertes Süßholz / Tasse, ~100 °C, 5–10 Minuten. Auch ohne Zucker süß. Nur gelegentlich, für kurze Zeit!",
+      "clinical": "Süßholz wird traditionell bei Halsschmerzen, Husten und Magenbeschwerden verwendet; in kleinen Studien reduzierte es z. B. als Gurgellösung die postoperativen (durch Intubation verursachten) Halsschmerzen und wurde auch bei Verdauungsbeschwerden untersucht. WICHTIG: Aufgrund seines Glycyrrhizin-Gehalts kann regelmäßiger/hoher Konsum einen Pseudoaldosteronismus verursachen – Bluthochdruck, niedriger Kaliumspiegel, Wassereinlagerungen. Deshalb wird es nur gelegentlich und für kurze Zeit empfohlen.",
+      "warn": "⚠️ ERNST: regelmäßiges oder in großen Mengen konsumiertes Süßholz erhöht den Blutdruck und senkt den Kaliumspiegel (Pseudoaldosteronismus). Bei Bluthochdruck, Herzerkrankungen, Schwangerschaft oder Einnahme von Diuretika/Herzmedikamenten zu vermeiden."
+    }
+  }
+}
