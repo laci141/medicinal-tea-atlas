@@ -1,61 +1,60 @@
-# 🍵 Clinical Tea Cards / Teák / Ceaiuri / Tees
+# 🍵 Teák – klinikai kártyák / Ceaiuri / Teas / Tees
 
-A single, self-contained HTML file (`index.html`): cards for 34 medicinal, spice,
-fruit, calming, ginseng and mushroom teas. Each card shows the effect, how to prepare it,
-and the results of the clinical studies behind it — **with study links right below the
-description**.
+Egyetlen, önálló HTML-fájl (`index.html`): 34 gyógy-, fűszer-, gyümölcs-, nyugtató-,
+ginzeng- és gombatea kártyája, mindegyiknél a hatás, az elkészítés és a mögötte álló
+klinikai vizsgálatok eredménye – **PubMed-linkekkel a leírás alatt**.
 
-## Languages
+## Nyelvek
 
-Four languages, switchable in the top-right corner: **HU · RO · EN · DE**
+Négy nyelv, a jobb felső sarokban váltható: **HU · RO · EN · DE**
 
-- The chosen language is remembered (`localStorage`) and added to the end of the URL
-  (`index.html#en`), so the link can be shared in a specific language.
-- On first open it picks the browser's language if it is one of the four — otherwise Hungarian.
+- A választott nyelv megmarad (`localStorage`), és az URL végére is kikerül (`index.html#en`),
+  így a link megosztható a kívánt nyelven.
+- Első megnyitáskor a böngésző nyelve alapján választ, ha az egyike a négynek – különben magyar.
 
-## What it contains
+## Mit tartalmaz
 
-- **34 tea cards** — tap to flip; the back has *Preparation* and *Clinical result*
-  (for traditional-use plants, *Traditional use*).
-- **Study links after the description** — in every popup, in every language, the scientific
-  background is present: 68 concrete references (study type, year, journal), each with a
-  **PubMed + DOI + OpenAlex** link, plus a PubMed and OpenAlex search that opens the plant's
-  full literature.
-- **References verified** — all 67 unique PMIDs are real, the stored titles match the titles
-  in PubMed, and none of them is a retracted publication.
-- **Filter by goal** — sleep, digestion, cold, blood pressure, pain, mood, women's health,
-  immunity, blood sugar.
-- **Search** in the sidebar, by tea name.
-- **Sources page** — brief summaries of the referenced studies, with links.
-- **Print / PDF** — all teas with full text, in the current language, including the links.
+- **34 tea-kártya** – koppintásra megfordul; hátul *Elkészítés* és *Klinikai eredmény*
+  (hagyományos használatú növényeknél *Hagyományos használat*).
+- **Vizsgálat-linkek a leírás után** – minden felugró ablakban, minden nyelven ott van a
+  tudományos háttér: 68 konkrét hivatkozás (vizsgálat típusa, éve, folyóirata), mindegyiknél
+  **PubMed + DOI + OpenAlex** link, plusz egy PubMed- és OpenAlex-keresés, amellyel a növény
+  teljes szakirodalma megnyitható.
+- **A hivatkozások ellenőrizve** – mind a 67 egyedi PMID valódi, a rögzített címek egyeznek a
+  PubMed-ben szereplő címekkel, és visszavont közlemény nincs köztük.
+- **Szűrés cél szerint** – alvás, emésztés, megfázás, vérnyomás, fájdalom, hangulat,
+  nő-egészség, immunitás, vércukor.
+- **Keresés** az oldalsávban, tea-név szerint.
+- **Források oldal** – a hivatkozott vizsgálatok tömör összefoglalói, linkkel.
+- **Nyomtatás / PDF** – az összes tea teljes szöveggel, az aktuális nyelven, a linkekkel együtt.
 
-## Mobile
+## Mobil
 
-Verified on phones with an automated test (Playwright), across **5 screen sizes × 4 languages**
+Telefonon ellenőrizve, automata teszttel (Playwright), **5 képernyőméreten × 4 nyelven**
 (320, 375, 390, 768, 1280 px):
 
-- no horizontal scrolling in any language or size;
-- card height adapts to the content, so the longer German/Romanian text does not overflow;
-- the popup stays within the screen and is fully scrollable;
-- touch targets are at least ~44 px tall;
-- the sidebar menu opens/closes (☰, ×, tap on the backdrop) and does not run off-screen;
-- there is a link below the description for all 34 teas, in all 4 languages.
+- nincs vízszintes görgetés egyetlen nyelven és méreten sem;
+- a kártyák magassága a tartalomhoz igazodik, ezért a hosszabb német/román szöveg sem lóg ki;
+- a felugró ablak a képernyőn belül marad és végiggörgethető;
+- az érintőfelületek legalább ~44 px magasak;
+- az oldalsáv menü nyílik/záródik (☰, ×, háttérre koppintás), és nem lóg ki a képernyőről;
+- mind a 34 teánál, mind a 4 nyelven van link a leírás alatt.
 
-The test can be re-run with `scripts/check.mjs` (Playwright required):
+A teszt újrafuttatható a `scripts/check.mjs` fájllal (Playwright szükséges):
 
 ```bash
-node scripts/check.mjs /absolute/path/index.html
+node scripts/check.mjs /abszolút/út/index.html
 ```
 
-## Look
+## Megjelenés
 
-Dark, colorful gradient background + **glass-panel (liquid glass) effect** on every panel,
-with a smaller blur on mobile (11px) for speed and readability, and 15px on desktop.
-`-webkit-backdrop-filter` is set everywhere for Safari.
+Sötét, színes gradiens háttér + **glass-panel (liquid glass) effekt** minden panelen,
+mobilon kisebb blurral (11px) a gyorsaság és olvashatóság érdekében,
+desktopon 15px-tel. `-webkit-backdrop-filter` mindenhol beállítva a Safari miatt.
 
-## Important
+## Fontos
 
-This is informational, a scientific overview — **not personalized medical advice**.
-In case of an existing illness, pregnancy/breastfeeding or medication use, and before taking
-concentrated extracts / dietary supplements, medical advice is required. The effect of teas
-is typically milder than the concentrated extracts used in the studies.
+Tájékoztató, tudományos áttekintés – **nem személyre szabott orvosi tanács**.
+Meglévő betegség, terhesség/szoptatás vagy gyógyszerszedés esetén, illetve tömény
+kivonatok/étrend-kiegészítők előtt orvosi vélemény szükséges. A teák hatása jellemzően
+enyhébb, mint a vizsgálatokban használt tömény kivonatoké.
