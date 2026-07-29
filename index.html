@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teák – klinikai kártyák</title>
+<style>
+  :root{ --ink:#e8eef7; --muted:#aab6c9; --side:288px; }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{min-height:100vh;background:#0b1020;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5;}
+  body::before{content:"";position:fixed;inset:0;z-index:-1;
+    background:
+      radial-gradient(620px 440px at 12% 18%, rgba(34,197,94,.34), transparent 60%),
+      radial-gradient(720px 520px at 88% 26%, rgba(245,158,11,.30), transparent 60%),
+      radial-gradient(640px 620px at 50% 92%, rgba(168,85,247,.26), transparent 60%),
+      radial-gradient(520px 420px at 78% 82%, rgba(56,189,248,.22), transparent 60%),
+      #0b1020;}
+  .glass{background:linear-gradient(160deg, rgba(255,255,255,.07), rgba(255,255,255,.045));border:1px solid rgba(255,255,255,.10);border-radius:20px;backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);box-shadow:0 18px 50px -18px rgba(0,0,0,.75);color:var(--ink);}
+
+  .menu-toggle{position:fixed;top:16px;left:16px;z-index:80;display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:14px;cursor:pointer;font-size:14px;font-weight:600;color:var(--ink);}
+
+  .sidebar{position:fixed;top:0;left:0;height:100vh;width:var(--side);z-index:75;border-radius:0 20px 20px 0;padding:18px 14px;display:flex;flex-direction:column;transition:transform .32s cubic-bezier(.2,.8,.2,1);overflow:hidden;}
+  body.menu-closed .sidebar{transform:translateX(-110%);}
+  .side-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;padding:2px 6px;}
+  .side-head h2{margin:0;font-size:18px;}
+  .collapse{width:34px;height:34px;border-radius:10px;cursor:pointer;font-size:18px;line-height:1;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--ink);}
+  .side-sub{font-size:12px;color:var(--muted);padding:0 6px 8px;}
+  .search-wrap{padding:0 6px 8px;}
+  #search{width:100%;padding:9px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);color:var(--ink);font-size:14px;outline:none;}
+  #search:focus{border-color:rgba(52,211,153,.5);}
+  #search::placeholder{color:var(--muted);}
+  nav{overflow:auto;flex:1;padding-right:4px;}
+  .group-label{font-size:11px;letter-spacing:.9px;text-transform:uppercase;color:var(--muted);margin:14px 8px 6px;}
+  .m-item{display:flex;align-items:center;gap:10px;width:100%;text-align:left;padding:10px 10px;border-radius:12px;cursor:pointer;margin-bottom:3px;background:transparent;border:1px solid transparent;color:var(--ink);font-size:14.5px;transition:background .15s ease,border-color .15s ease;}
+  .m-item:hover{background:rgba(255,255,255,.06);}
+  .m-item.active{background:rgba(52,211,153,.14);border-color:rgba(52,211,153,.4);}
+  .m-item .em{font-size:18px;width:22px;text-align:center;}
+  .m-item .nm{flex:1;}
+  .m-item .st{width:9px;height:9px;border-radius:50%;flex:0 0 auto;}
+  .st.clin{background:#34d399;box-shadow:0 0 8px rgba(52,211,153,.7);}
+  .st.trad{background:#fbbf24;box-shadow:0 0 8px rgba(251,191,36,.6);}
+  .no-hit{font-size:13px;color:var(--muted);padding:10px 8px;display:none;}
+
+  .backdrop{position:fixed;inset:0;background:rgba(6,9,18,.5);z-index:70;opacity:0;pointer-events:none;transition:opacity .3s;}
+  @media(max-width:860px){ body:not(.menu-closed) .backdrop{opacity:1;pointer-events:auto;} }
+
+  .main{margin-left:var(--side);padding:70px 22px 60px;transition:margin .32s cubic-bezier(.2,.8,.2,1);}
+  body.menu-closed .main{margin-left:0;}
+  @media(max-width:860px){ .main{margin-left:0;} }
+
+  .head{max-width:1080px;margin:0 auto 22px;padding:24px 22px;text-align:center;}
+  .head h1{margin:0 0 6px;font-size:clamp(22px,4vw,30px);}
+  .head p{margin:0;color:var(--muted);font-size:15px;}
+  .head .hint{margin-top:12px;font-size:13px;color:var(--muted);}
+  .head .hint b{color:var(--ink);}
+
+  .grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:18px;}
+
+  .card{perspective:1400px;cursor:pointer;height:342px;}
+  .inner{position:relative;width:100%;height:100%;transition:transform .6s cubic-bezier(.2,.7,.2,1);transform-style:preserve-3d;}
+  .card.flipped .inner{transform:rotateY(180deg);}
+  .face{position:absolute;inset:0;-webkit-backface-visibility:hidden;backface-visibility:hidden;padding:20px 18px;display:flex;flex-direction:column;overflow:hidden;}
+  .face.back{transform:rotateY(180deg);}
+  .accent{position:absolute;top:0;left:0;right:0;height:4px;border-radius:20px 20px 0 0;}
+  .emoji{font-size:40px;line-height:1;margin-bottom:10px;}
+  .name{font-size:20px;font-weight:700;margin:0;}
+  .lat{font-style:italic;color:var(--muted);font-size:13px;margin:2px 0 14px;}
+  .role{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px;}
+  .hatas{font-size:15px;color:var(--ink);}
+  .flip-tag{margin-top:auto;font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:6px;}
+
+  .back-title{font-size:18px;font-weight:700;}
+  .back-sub{font-size:12.5px;color:var(--muted);margin:2px 0 0;}
+  .back-actions{display:flex;flex-direction:column;gap:10px;margin-top:16px;}
+  .btn-prep,.btn-clin,.btn-trad{width:100%;font-size:14px;font-weight:600;border-radius:12px;padding:11px 12px;cursor:pointer;}
+  .btn-prep{color:#3b2c05;background:linear-gradient(180deg,#fcd34d,#fbbf24);border:none;box-shadow:0 8px 20px -8px rgba(251,191,36,.6);}
+  .btn-clin{color:#052e1a;background:linear-gradient(180deg,#5eead4,#34d399);border:none;box-shadow:0 8px 20px -8px rgba(52,211,153,.7);}
+  .btn-trad{color:#fde68a;background:rgba(251,191,36,.12);border:1px solid rgba(251,191,36,.4);}
+  .btn-prep:hover,.btn-clin:hover{transform:translateY(-1px);}
+  .btn-back{margin-top:auto;width:100%;font-size:12.5px;color:var(--muted);background:transparent;border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:8px;cursor:pointer;}
+
+  .focus{max-width:440px;margin:0 auto;}
+  .focus .card{height:470px;}
+  .focus .emoji{font-size:52px;}
+  .focus .name{font-size:26px;}
+
+  .overlay{position:fixed;inset:0;z-index:100;background:rgba(6,9,18,.55);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);display:flex;align-items:center;justify-content:center;padding:18px;opacity:0;pointer-events:none;transition:opacity .28s ease;}
+  .overlay.open{opacity:1;pointer-events:auto;}
+  .modal{max-width:560px;width:100%;max-height:86vh;overflow:auto;padding:26px 24px;position:relative;transform:scale(.86) translateY(14px);opacity:0;transition:transform .34s cubic-bezier(.2,.8,.2,1), opacity .3s ease;}
+  .overlay.open .modal{transform:scale(1) translateY(0);opacity:1;}
+  .modal .m-emoji{font-size:34px;}
+  .modal h2{margin:6px 0 2px;font-size:22px;}
+  .modal .m-lat{font-style:italic;color:var(--muted);font-size:13px;margin-bottom:4px;}
+  .m-kicker{display:inline-block;font-size:11.5px;letter-spacing:.9px;text-transform:uppercase;border-radius:999px;padding:4px 11px;margin:10px 0 14px;border:1px solid transparent;}
+  .m-kicker.clin{color:#34d399;border-color:rgba(52,211,153,.4);background:rgba(52,211,153,.10);}
+  .m-kicker.prep{color:#fbbf24;border-color:rgba(251,191,36,.4);background:rgba(251,191,36,.10);}
+  .m-kicker.trad{color:#fbbf24;border-color:rgba(251,191,36,.4);background:rgba(251,191,36,.10);}
+  .modal p{font-size:15px;color:#eef3fb;margin:0 0 12px;}
+  .modal .warn{font-size:14px;color:#fecaca;background:rgba(239,68,68,.10);border:1px solid rgba(239,68,68,.35);border-radius:12px;padding:12px 14px;}
+  .close{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:var(--ink);font-size:20px;line-height:1;cursor:pointer;}
+
+  .disclaimer{max-width:1080px;margin:26px auto 0;font-size:12.5px;color:var(--muted);text-align:center;padding:16px 18px;}
+
+  .goals{max-width:1080px;margin:0 auto 16px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;}
+  .chip{display:inline-flex;align-items:center;gap:6px;padding:8px 13px;border-radius:999px;cursor:pointer;font-size:13.5px;color:var(--ink);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);transition:background .15s,border-color .15s;}
+  .chip:hover{background:rgba(255,255,255,.1);}
+  .chip.active{background:rgba(52,211,153,.16);border-color:rgba(52,211,153,.5);}
+  .side-print{margin-top:8px;width:100%;font-size:13px;font-weight:600;color:var(--ink);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:10px;cursor:pointer;}
+  .side-print:hover{background:rgba(255,255,255,.1);}
+  .src-note{max-width:1080px;margin:0 auto 16px;font-size:13px;color:var(--muted);text-align:center;}
+  .src-list{max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:8px;}
+  .src-item{padding:12px 14px;font-size:13.5px;}
+  .src-item b{display:block;margin-bottom:2px;}
+  .src-item span{color:var(--muted);}
+  #printArea{display:none;}
+  @media print{
+    body::before{display:none;}
+    .sidebar,.menu-toggle,.main,.overlay,.backdrop{display:none!important;}
+    #printArea{display:block!important;color:#000;padding:0 6mm;}
+    #printArea h1{font-size:20px;margin:0 0 10px;}
+    #printArea .p-tea{page-break-inside:avoid;border-bottom:1px solid #ccc;padding:8px 0;}
+    #printArea h2{font-size:15px;margin:6px 0 2px;}
+    #printArea .p-lat{font-style:italic;color:#444;font-size:12px;margin-bottom:4px;}
+    #printArea p{font-size:12px;margin:4px 0;color:#000;line-height:1.45;}
+  }
+
+  @media(max-width:600px){
+    .glass{border-radius:16px;backdrop-filter:blur(11px);-webkit-backdrop-filter:blur(11px);box-shadow:0 12px 32px -14px rgba(0,0,0,.7);}
+    .main{padding:66px 14px 48px;}
+    .head{padding:18px 16px;}
+    .face{padding:18px 16px;}
+    .card{height:352px;}
+    .grid{gap:14px;}
+    .modal{padding:22px 18px;}
+    :root{--side:280px;}
+  }
+</style>
+</head>
+<body>
+
+<button class="menu-toggle glass" id="menuToggle">☰ Menü</button>
+<div class="backdrop" id="backdrop"></div>
+
+<aside class="sidebar glass" id="sidebar">
+  <div class="side-head"><h2>🍵 Teák</h2><button class="collapse" id="collapseBtn" aria-label="Menü bezárása">×</button></div>
+  <div class="side-sub">Válassz teát, keress rá, vagy nézd az összeset.</div>
+  <div class="search-wrap"><input id="search" type="text" placeholder="🔍 Keresés (pl. gyömbér, alvás)…" autocomplete="off"></div>
+  <nav id="menu"></nav>
+  <div class="no-hit" id="noHit">Nincs találat erre a keresésre.</div>
+  <button class="side-print" id="printBtn">🖨️ Nyomtatás / PDF (összes tea)</button>
+</aside>
+
+<main class="main">
+  <div id="mainContent"></div>
+  <div class="disclaimer glass">
+    Ez tájékoztató, tudományos áttekintés – nem személyre szabott orvosi tanács. Meglévő betegség, terhesség/szoptatás vagy gyógyszerszedés esetén, illetve tömény kivonatok/étrend-kiegészítők előtt kérj orvosi véleményt. A teák hatása jellemzően enyhébb, mint a vizsgálatokban használt tömény kivonatoké.
+  </div>
+</main>
+
+<div id="printArea"></div>
+
+<div class="overlay" id="overlay">
+  <div class="modal glass" role="dialog" aria-modal="true">
+    <button class="close" id="closeBtn" aria-label="Bezárás">×</button>
+    <div class="m-emoji" id="mEmoji"></div>
+    <h2 id="mName"></h2>
+    <div class="m-lat" id="mLat"></div>
+    <div class="m-kicker clin" id="mKicker">🔬 Klinikai eredmény</div>
+    <div id="mBody"></div>
+  </div>
+</div>
+
+<script>
+const teas = [
+  { name:"Menta", lat:"Mentha × piperita", emoji:"🌿", accent:"#34d399", role:"Emésztés · IBS",
+    hatas:"Emésztés, puffadás, IBS-görcsök, fejfájás.",
+    prep:"1–2 teáskanál szárított levél egy csészére. Frissen forralt (~100 °C) víz, 5–7 perc lefedve áztatás. Frissen a legaromásabb.",
+    clinical:"A borsmenta legjobban kutatott formája a bélben oldódó (enteroszolvens) borsmentaolaj. 12 randomizált vizsgálat (835 beteg) metaanalízise szerint az olaj a placebónál hatékonyabban javította az irritábilis bél szindróma (IBS) globális tüneteit (kockázati arány 2,39) és a hasi fájdalmat (RR 1,78). Egy 2022-es frissített metaanalízis megerősítette, hogy jobb a placebónál, de gyakoribbak a mellékhatások (pl. reflux), és a bizonyíték minősége alacsony. A tea hatása enyhébb, mint a koncentrált kapszuláé." },
+
+  { name:"Zöld tea", lat:"Camellia sinensis", emoji:"🍵", accent:"#4ade80", role:"Szív · anyagcsere",
+    hatas:"Szív-érrendszer, vércukor, testsúly, éberség.",
+    prep:"1 teáskanál levél / csésze, 70–80 °C (NEM lobogó!) víz, 2–3 perc. A túl forró víz keserűvé teszi.",
+    clinical:"RCT-metaanalízisek szerint a zöld tea és katechinjei (EGCG) javíthatják a vérnyomást (főleg magasabb kiindulási értéknél) és az LDL-koleszterint, mérsékelten csökkenthetik a haskörfogatot, és javíthatják a vércukrot/HbA1c-t. Nagy kohorszvizsgálatokban a rendszeres fogyasztás alacsonyabb szív-érrendszeri és összhalálozással társult (ok-okozat nem bizonyított). FONTOS: a főzött tea biztonságos; a tömény kivonat/kapszula napi ~800 mg EGCG felett májenzim-emelkedést okozhat – étkezéssel, nem éhgyomorra." },
+
+  { name:"Matcha", lat:"Camellia sinensis (őrölt)", emoji:"🍵", accent:"#22c55e", role:"Fókusz · kogníció",
+    hatas:"Éberség, koncentráció, nyugodt fókusz (L-teanin + koffein).",
+    prep:"1–2 g (½–1 tk) port ~80 °C vízzel habosra keversz (nem áztatás) – a teljes levelet fogyasztod, ezért töményebb.",
+    clinical:"Egy 12 hónapos, randomizált, kettős vak, placebo-kontrollált japán vizsgálatban (99 idős, enyhe kognitív hanyatlással) a napi 2 g matcha javította a „szociális éleslátás” (arckifejezés-felismerés) pontszámot a placebóhoz képest, de a globális kogníciót és a többi funkciót nem. A korábbi vizsgálatok rövidek (kb. 12 hetesek) és kis mintásak voltak – az agyi hatás ígéretes, de eddig szerény." },
+
+  { name:"Rooibos", lat:"Aspalathus linearis", emoji:"🔴", accent:"#f87171", role:"Antioxidáns · koffeinmentes",
+    hatas:"Antioxidáns, lipidprofil, koffeinmentes.",
+    prep:"1–2 teáskanál szárított rooibos / csésze, ~100 °C, 5–10 perc (tovább áztatva sem lesz keserű). Koffeinmentes.",
+    clinical:"A leggyakrabban idézett emberi vizsgálatban (40 fő, szív-érrendszeri kockázattal) napi 6 csésze hagyományos rooibos 6 héten át javította a lipidprofilt (LDL- és trigliceridcsökkenés) és csökkentette a lipidperoxidációt. A bizonyíték biztató, de kevés emberi vizsgálaton és kis mintaszámon alapul – az adatok többsége állatkísérletből származik. Előny: természetesen koffeinmentes." },
+
+  { name:"Zsálya", lat:"Salvia officinalis", emoji:"🍃", accent:"#a3e635", role:"Torok · menopauza",
+    hatas:"Torokgyulladás, menopauzás hőhullámok, memória, izzadás.",
+    prep:"1 teáskanál szárított levél / csésze, ~100 °C, 5–10 perc lefedve. Toroköblögetésre erősebb, kihűtött főzet.",
+    clinical:"Randomizált, kettős vak vizsgálatokban a zsálya-készítmények jelentősen csökkentették a hőhullámok gyakoriságát és intenzitását menopauzában – egy placebo-kontrollált vizsgálatban a hőhullám-pontszám kb. 55%-kal csökkent. Egy randomizált, placebo-kontrollált vizsgálat szerint (öblögetve) hatékony és biztonságos akut garatgyulladásnál. Kisebb vizsgálatok a memóriára és hangulatra is kedvező, acetilkolin-észteráz-gátló hatást mutattak." },
+
+  { name:"Bodza", lat:"Sambucus nigra", emoji:"🫐", accent:"#a78bfa", role:"Megfázás · immun",
+    hatas:"Megfázás, influenza, felső légúti tünetek.",
+    prep:"Bodzavirág-tea: 1–2 tk szárított virág / csésze, ~100 °C, 10 perc. A bogyót MINDIG főzve/szirupként – nyersen enyhén mérgező!",
+    clinical:"Randomizált vizsgálatokban a standardizált bodzabogyó-kivonat lerövidítette a megfázás/influenza tüneteit. Egy 312 fős légiutas-vizsgálatban a bodza rövidebb megfázás-időtartammal és enyhébb tünetekkel járt. Kisebb vizsgálatokban az influenza tartamát kb. 3–4 nappal rövidítette, egy metaanalízis pedig a felső légúti tünetek jelentős csökkenését találta. FONTOS: az eredmények nem egységesek – egy 2020-as vizsgálat nem talált előnyt. A nyers bogyó, levél és kéreg hőkezelés nélkül mérgező." },
+
+  { name:"Rozmaring", lat:"Rosmarinus officinalis", emoji:"🌱", accent:"#2dd4bf", role:"Memória · hangulat",
+    hatas:"Memória, koncentráció, hangulat, alvás, emésztés.",
+    prep:"1 teáskanál szárított (vagy 1 friss ágvég) / csésze, ~100 °C, 5–10 perc lefedve.",
+    clinical:"Egy 68 fős, kettős vak randomizált vizsgálatban napi 2×500 mg rozmaring egy hónapon át javította a memóriát, csökkentette a szorongást és a depressziót, és javította az alvásminőséget egyetemistáknál. Időseknél egy vizsgálat dózisfüggő, kétirányú hatást talált: a kis dózis (750 mg) javította, a nagyon nagy dózis (6000 mg) rontotta a memória-sebességet. A tea hatása enyhébb a koncentrált kivonaténál." },
+
+  { name:"Kömény", lat:"Carum carvi", emoji:"🌾", accent:"#fbbf24", role:"Puffadás · dyspepsia",
+    hatas:"Puffadás, görcsös emésztés, funkcionális dyspepsia.",
+    prep:"1 teáskanál frissen tört mag / csésze, ~100 °C, 10–15 perc lefedve (a mag törése segíti a hatóanyag kioldódását).",
+    clinical:"A legerősebb bizonyíték a kömény- + borsmentaolaj fix kombinációjára vonatkozik funkcionális dyspepsiánál. 5 randomizált vizsgálat (578 résztvevő) metaanalízise szerint a kombináció a placebónál szignifikánsan jobban javította a dyspepsia globális tüneteit (kb. 56%-os javulás). A köménymag-teára önmagában kevesebb szigorú humán adat van – a klinikai eredmény főleg a koncentrált olajkombinációra igaz." },
+
+  { name:"Kamilla", lat:"Matricaria chamomilla", emoji:"🌼", accent:"#facc15", role:"Szorongás · alvás",
+    hatas:"Szorongás, alvás, emésztés, gyulladás, bőr (öblítés).",
+    prep:"1–2 teáskanál szárított virág / csésze, ~100 °C, 5–10 perc lefedve. A régióban (Románia, Kárpát-medence) az egyik legfontosabb gyógynövény.",
+    clinical:"Randomizált, kettős vak vizsgálatban a kamilla-kivonat (napi 1500 mg) 8 hét alatt jelentősen csökkentette a generalizált szorongás (GAD) tüneteit a placebóhoz képest. Egy hosszú távú (38 hetes) vizsgálatban a folytatott kamilla-kezelés alacsonyabb szorongásszintet tartott fenn (a visszaesésig eltelt idő különbsége azonban nem érte el a szignifikanciát). Metaanalízisek szerint a kamilla javíthatja a szorongást és az alvásminőséget is." },
+
+  { name:"Kakukkfű", lat:"Thymus vulgaris", emoji:"🌿", accent:"#84cc16", role:"Köhögés · légutak",
+    hatas:"Köhögés, hörghurut, felső légúti tünetek, torok.",
+    prep:"1–2 teáskanál szárított fű / csésze, ~100 °C, 10 perc lefedve. Erdélyben/Romániában elterjedt, fontos légúti gyógynövény.",
+    clinical:"A kakukkfüvet – gyakran borostyánnal vagy kankalinnal kombinálva – köptetőként és köhögéscsillapítóként vizsgálták. Randomizált vizsgálatokban a kakukkfű-tartalmú készítmények csökkentették az akut hörghurut és a köhögés súlyosságát/tüneteit, és általában jól tolerálhatók. Az önálló kakukkfűteára kevesebb szigorú adat van, de a légúti tüneteknél itt a legerősebb a klinikai és hagyományos bizonyíték." },
+
+  { name:"Orbáncfű", lat:"Hypericum perforatum", emoji:"💛", accent:"#fde047", role:"Hangulat · depresszió",
+    hatas:"Enyhe–közepes depresszió, levert hangulat. Regionálisan fontos gyógynövény.",
+    prep:"1–2 teáskanál szárított virágos hajtás / csésze, ~100 °C, 8–10 perc lefedve.",
+    clinical:"Az orbáncfű-kivonat az egyik legjobban vizsgált gyógynövény depresszióban. Egy Cochrane-áttekintés (29 vizsgálat) szerint a kivonatok a placebónál hatékonyabbak, a standard antidepresszánsokkal hasonlóan hatékonyak, és kevesebb mellékhatásuk van – a hatás elsősorban enyhe–közepes depressziónál egyértelmű, súlyos depresszióban vegyesebb.",
+    warn:"⚠️ KOMOLY FIGYELMEZTETÉS: az orbáncfű számos gyógyszer hatását gyengíti (pl. fogamzásgátló, véralvadásgátló, egyes antidepresszánsok, immunszupresszánsok). Gyógyszerszedés mellett csak orvossal egyeztetve!" },
+
+  { name:"Hárs", lat:"Tilia spp.", emoji:"🌸", accent:"#fca5a5", traditional:true, role:"Megfázás · nyugtatás",
+    hatas:"Megfázás, izzasztás (láznál), nyugtatás, enyhe alvászavar.",
+    prep:"1–2 teáskanál szárított hársvirág / csésze, ~100 °C, 10 perc lefedve.",
+    tradText:"A hársvirágot hagyományosan megfázásra, izzasztásra és enyhe nyugtatásra használják; európai gyógynövény-monográfiák hagyományos használatú növényként ismerik el. Nagy, jó minőségű randomizált klinikai vizsgálat azonban alig van – a bizonyíték főként hagyományos használaton és laboratóriumi adatokon alapul." },
+
+  { name:"Meggy szár", lat:"Prunus cerasus (kocsány)", emoji:"🍒", accent:"#f472b6", traditional:true, role:"Vízhajtó · húgyúti",
+    hatas:"Vízhajtás, húgyúti és ízületi panaszok (népi használat).",
+    prep:"Egy marék szárított meggyszár ~0,5 l vízben, 5–10 perc főzés (dekoktum), majd leszűrés.",
+    tradText:"A meggyszárat (kocsányt) a népi gyógyászatban vízhajtóként, húgyúti és ízületi panaszokra használják. A szárból készült teára gyakorlatilag nincs emberi klinikai vizsgálat. (Megjegyzés: a meggylé – nem a szár – szív-anyagcsere- és alvás-hatásait vizsgálták külön, kedvező eredménnyel.)" },
+
+  { name:"Citromfű", lat:"Melissa officinalis", emoji:"🌿", accent:"#bef264", role:"Nyugtatás · alvás",
+    hatas:"Szorongás, stressz, alvás, hangulat, emésztés.",
+    prep:"1–2 teáskanál szárított levél / csésze, ~100 °C, 5–10 perc lefedve. Frissen is kiváló.",
+    clinical:"Metaanalízis szerint a citromfű szignifikánsan javította a szorongás és a depresszió pontszámait a placebóhoz képest (standardizált átlagos különbség kb. −0,98). Randomizált vizsgálatokban (pl. szívműtét után) csökkentette a szorongást és javította az alvásminőséget; kis vizsgálatok a hangulatra és a kognitív teljesítményre is kedvező, GABA-rendszeren keresztüli hatást mutattak. Alvászavarra gyakran valeriánával (macskagyökér) kombinálva vizsgálták." },
+
+  { name:"Csipkebogyó", lat:"Rosa canina", emoji:"🌹", accent:"#fb7185", role:"Ízületek · C-vitamin",
+    hatas:"Ízületi (artrózis) fájdalom, C-vitamin, immun.",
+    prep:"1–2 teáskanál szárított, tört csipkebogyó / csésze, ~100 °C, 10–15 perc lefedve (hosszabb áztatás több C-vitamint old ki).",
+    clinical:"3 randomizált vizsgálat (287 beteg, ~3 hónap) metaanalízise szerint a csipkebogyó-por a placebónál jobban csökkentette a csípő- és térd-artrózis (osteoarthritis) fájdalmát (hatásméret 0,37), és kb. kétszer valószínűbb volt a terápiás válasz (NNT ≈ 6). A vizsgálatokat a gyártó támogatta és kis mintásak – független, nagy vizsgálat kellene a megerősítéshez. A csipkebogyó emellett kiemelkedően C-vitamin-gazdag." },
+
+  { name:"Cickafark", lat:"Achillea millefolium", emoji:"🌾", accent:"#e5e7eb", traditional:true, role:"Emésztés · sebek",
+    hatas:"Emésztési panaszok, étvágy, enyhe görcsök, sebek, menstruáció (népi).",
+    prep:"1–2 teáskanál szárított virágos fű / csésze, ~100 °C, 10 perc lefedve.",
+    tradText:"A cickafarkot a népi gyógyászatban emésztési panaszokra, étvágytalanságra, enyhe görcsökre, sebekre és menstruációs panaszokra használják; európai monográfiák hagyományos használatú növényként ismerik el. Jó minőségű, nagy randomizált emberi vizsgálat azonban alig van – a bizonyíték főleg hagyományos használaton és laboratóriumi adatokon alapul." },
+
+  { name:"Hibiszkusz", lat:"Hibiscus sabdariffa", emoji:"🌺", accent:"#fda4af", role:"Vérnyomás · koffeinmentes",
+    hatas:"Vérnyomás-csökkentés, antioxidáns, savanykás, koffeinmentes.",
+    prep:"1–2 teáskanál szárított virág(csésze-levél) / csésze, ~100 °C, 5–10 perc. Hidegen (jeges teaként) is finom.",
+    clinical:"17 randomizált vizsgálat metaanalízise szerint a hibiszkusztea/-kivonat a placebónál jobban csökkentette a szisztolés vérnyomást (átlagosan kb. −7 Hgmm), és a hatás a magasabb vérnyomásúaknál a legnagyobb. Egyes vizsgálatokban a lipidprofilra és a vércukorra is kedvezően hatott. Kellemesen savanykás és koffeinmentes.",
+    warn:"⚠️ Vérnyomáscsökkentő gyógyszer mellett felerősítheti a hatást (túl alacsony vérnyomás). Gyógyszerszedés esetén érdemes orvossal egyeztetni." },
+
+  { name:"Ginzeng", lat:"Panax ginseng", emoji:"🥕", accent:"#fbbf24", role:"Fáradtság · vércukor",
+    hatas:"Fáradtság, energia, vércukor, memória (adaptogén).",
+    prep:"1 tk szárított, szeletelt gyökér / csésze, ~90 °C, 5–10 perc áztatás vagy rövid főzés. Reggel/délelőtt ajánlott.",
+    clinical:"A Panax ginzeng az egyik legvizsgáltabb adaptogén. Fáradtságra egy szisztematikus áttekintés (8 RCT) szerint a placebónál jobb volt a fáradtság-skálákon és a klinikai hatásban. Vércukorra 16 RCT metaanalízise szerint kismértékben csökkentette az éhomi vércukrot. Kis vizsgálatok a memóriára/hangulatra és a merevedési zavarra is kedvező jeleket mutattak. A vérnyomásra vonatkozó adatok vegyesek.",
+    warn:"⚠️ Stimuláló lehet (álmatlanság, nyugtalanság), és kölcsönhat pl. véralvadásgátlóval és cukorbetegség-gyógyszerekkel. Magas vérnyomás vagy gyógyszerszedés esetén orvossal egyeztetve." },
+
+  { name:"Reishi (gombatea)", lat:"Ganoderma lucidum", emoji:"🍄", accent:"#c084fc", role:"Fáradtság · immun",
+    hatas:"Fáradtság, közérzet, immunmoduláció (adaptogén gomba).",
+    prep:"Vizes főzet (dekoktum): 3–5 g szárított, szeletelt reishi ~500 ml vízben 30–60 perc lassú forralás. Keserű – ízesíthető.",
+    clinical:"A reishit (pecsétviaszgomba) több mint 200 klinikai vizsgálatban vizsgálták; a legjobb humán jelek a fáradtságra és az általános közérzetre vonatkoznak, immunmoduláló hatásokkal. FONTOS ellenpont: egy jó minőségű 16 hetes RCT (2-es típusú cukorbetegség + metabolikus szindróma) NEM talált érdemi javulást a HbA1c-ben, vércukorban, lipidekben vagy vérnyomásban. A hagyományos forma vizes főzet („gombatea”).",
+    warn:"⚠️ A metabolikus (vércukor/koleszterin) előnyök jó minőségű vizsgálatban nem igazolódtak. Ritka májkárosodás-jelentések – májbetegségnél kerülendő; leszedheti a vérnyomást és véralvadásgátlóval kölcsönhat." },
+
+  { name:"Oroszlánsörény-gomba", lat:"Hericium erinaceus", emoji:"🦁", accent:"#fcd34d", role:"Kogníció · hangulat",
+    hatas:"Kognitív funkció, hangulat, közérzet (funkcionális gomba).",
+    prep:"Vizes főzet: 3–5 g szárított gomba ~500 ml vízben 30–45 perc lassú forralás. Enyhe, tengeri-gombás íz.",
+    clinical:"Az oroszlánsörény-gombát kis mintás klinikai vizsgálatokban vizsgálták kognitív funkcióra és hangulatra: előzetes eredmények szerint javíthatja a közérzetet, csökkentheti a szorongást/ingerlékenységet, és egyes idős, enyhe kognitív hanyatlásban szenvedőknél átmenetileg javította a kognitív pontszámokat. A vizsgálatok azonban kicsik és rövidek – az idegnövekedési faktoros (NGF) hatás emberben még nem bizonyított megbízhatóan. Gyakran vizes főzetként fogyasztják." },
+
+  { name:"Kurkuma", lat:"Curcuma longa", emoji:"🟠", accent:"#f59e0b", role:"Ízületek · gyulladás",
+    hatas:"Ízületi (artrózis) fájdalom, gyulladáscsökkentés, emésztés.",
+    prep:"1 tk kurkumapor vagy néhány szelet friss gyökér / csésze, ~100 °C, 10 perc. Egy csipet FEKETE BORS (piperin) és egy kis zsír (pl. tej) sokszorosára növeli a felszívódást.",
+    clinical:"A kurkuma hatóanyaga a kurkumin. 16 RCT (1810 felnőtt) metaanalízise szerint a kurkuma-kivonat (kb. napi 1000 mg kurkumin) a térd-artrózis fájdalmában hasonló hatású volt, mint a nem-szteroid gyulladáscsökkentők (NSAID), kevesebb gyomor-bél mellékhatással. Egy nagyobb, 29 RCT-s (2396 fő) áttekintés több ízületi betegségben is tünet- és gyulladáscsökkenést talált. FONTOS: a kurkumin felszívódása gyenge – ezért használnak fekete borsot/zsírt vagy speciális kivonatot; a teából felszívódó mennyiség kisebb, mint a vizsgálati kapszuláké.",
+    warn:"⚠️ Nagy dózisú kurkumin-kivonat ritkán májproblémát okozhat, és kölcsönhat véralvadásgátlóval. Epekő/epeúti elzáródás esetén óvatosan." },
+
+  { name:"Gyömbér", lat:"Zingiber officinale", emoji:"🫚", accent:"#fde047", role:"Hányinger · emésztés",
+    hatas:"Hányinger, emésztés, menstruációs fájdalom, gyulladás.",
+    prep:"3–4 vékony szelet friss gyömbér (vagy ½ tk por) / csésze, ~100 °C, 8–10 perc lefedve. Citrommal, mézzel ízesíthető.",
+    clinical:"A gyömbér az egyik legjobban igazolt hányinger elleni növény. 12 RCT (1278 terhes) metaanalízise szerint jelentősen csökkentette a terhességi hányingert a placebóhoz képest. Kemoterápia okozta hányingernél is csökkentette a tüneteket (pl. egy 576 fős vizsgálatban napi ~0,5–1 g). Primer menstruációs fájdalomnál (dysmenorrhea) több RCT szerint a placebónál hatékonyabb, egyes vizsgálatokban az ibuprofenhez hasonló. Az emésztést és a gyomor-bél mozgást is fokozza.",
+    warn:"⚠️ Terhességben általában legfeljebb ~1 g/nap ajánlott; véralvadásgátló vagy epekő esetén orvossal egyeztetve." },
+
+  { name:"Citrom", lat:"Citrus limon", emoji:"🍋", accent:"#facc15", role:"C-vitamin · ízesítő",
+    hatas:"C-vitamin, antioxidáns, ízesítő; enyhe vérnyomás-hatás.",
+    prep:"½ citrom leve/szelete forró (nem lobogó, ~60–70 °C) vízbe – a túl forró víz csökkenti a C-vitamint. Mézzel, gyömbérrel gyakori. Reggeli meleg citromos víz népszerű.",
+    clinical:"A citrom önálló, nagy klinikai bizonyítéka korlátozott – főleg kis vizsgálatok vannak. Egy japán vizsgálatban (101 középkorú nő) a napi citromfogyasztás + gyaloglás alacsonyabb szisztolés vérnyomással társult. Kis klinikai vizsgálatokban a citromlé enyhén csökkentette a vérnyomást (a polifenolok/flavonoidok – pl. heszperidin – és a C-vitamin révén). A citrom kiemelkedően C-vitamin- és flavonoid-gazdag, de nagy, jó minőségű RCT-k hiányoznak – az önálló hatás inkább kiegészítő/ízesítő jellegű." },
+
+  { name:"Fodormenta", lat:"Mentha spicata", emoji:"🌿", accent:"#4ade80", role:"PCOS · androgén",
+    hatas:"PCOS/androgének, hirsutizmus, emésztés.",
+    prep:"1–2 tk szárított fodormenta / csésze, ~100 °C, 5–7 perc lefedve. PCOS-nál a vizsgálatokban napi 2 csésze.",
+    clinical:"A fodormenta (NEM a borsmenta!) androgéncsökkentő hatását több randomizált vizsgálat is igazolta PCOS-ban. Egy 30 napos RCT-ben (42 nő) a napi 2 csésze fodormentatea jelentősen csökkentette a szabad tesztoszteront a placebóhoz képest. Egy 2024-es, 12 hetes, 150 fős vizsgálatban a legnagyobb hatás a 12. hétre alakult ki. A hormonszint gyorsan változik, de a látható szőrnövekedés-javuláshoz hosszabb idő kell (a hajszálak lassan cserélődnek). A hatás valós, de enyhébb, mint a gyógyszeres antiandrogéneké (pl. spironolakton)." },
+
+  { name:"Fahéj", lat:"Cinnamomum spp.", emoji:"🍂", accent:"#d97706", role:"Vércukor · lipidek",
+    hatas:"Vércukor, koleszterin, menstruációs fájdalom.",
+    prep:"½–1 tk őrölt fahéj vagy 1 fahéjrúd / csésze, ~100 °C, 10 perc. Önmagában vagy más teához keverve. Nagyobb mennyiséghez ceyloni fahéj ajánlott.",
+    clinical:"Több RCT-metaanalízis szerint a fahéj csökkentheti az éhomi vércukrot és javíthatja a lipidprofilt, főleg cukorbetegeknél/metabolikus szindrómában. Egy 10 RCT-s (543 fő) elemzésben az éhomi vércukor kb. −24 mg/dl-rel csökkent, és a koleszterin, valamint a trigliceridek is mérséklődtek; a hatás nagyobb dózisnál (>1,5 g/nap) kifejezettebb. Primer menstruációs fájdalomra is csökkentette a fájdalom erősségét és tartamát.",
+    warn:"⚠️ A kasszia (bolti) fahéj sok kumarint tartalmaz – nagy, rendszeres mennyiségben májra terhelő lehet. Erre a célra a ceyloni fahéj biztonságosabb." },
+
+  { name:"Édeskömény", lat:"Foeniculum vulgare", emoji:"🌿", accent:"#a3e635", role:"Görcsök · menstruáció",
+    hatas:"Puffadás, görcsök, menstruációs fájdalom, csecsemőkólika.",
+    prep:"1 tk frissen tört édeskömény-mag / csésze, ~100 °C, 10–15 perc lefedve.",
+    clinical:"Az édesköményt görcsoldó és emésztést segítő hatása miatt használják. Randomizált vizsgálatokban a primer menstruációs fájdalmat (dysmenorrhea) csökkentette a placebóhoz képest, és egy placebo-kontrollált vizsgálatban a csecsemőkólika tüneteit is enyhítette. Görcsoldó hatását méhösszehúzódásokra és bélgörcsökre laborban is igazolták. A vizsgálatok kis mintásak – nagyobb, megerősítő vizsgálatok kellenek." },
+
+  { name:"Galagonya", lat:"Crataegus spp.", emoji:"🫀", accent:"#f472b6", role:"Szív · keringés",
+    hatas:"Enyhe szívelégtelenség, keringés, vérnyomás.",
+    prep:"1–2 tk szárított galagonya (virág + levél vagy bogyó) / csésze, ~100 °C, 10–15 perc lefedve. Bogyóból dekoktum is készíthető.",
+    clinical:"A galagonya-kivonat az egyik legjobban vizsgált szív-gyógynövény. Egy Cochrane-áttekintés (14 kettős vak, placebo-kontrollált RCT) szerint a standard kezelés MELLÉ adva javította a krónikus szívelégtelenség tüneteit és a szív terhelhetőségét (pl. terheléses tolerancia, tünetek). Áttekintések enyhe vérnyomás- és lipidcsökkentő hatásról is beszámolnak.",
+    warn:"⚠️ Szívgyógyszert (pl. digoxin) vagy vérnyomáscsökkentőt szedőknél kölcsönhat – csak orvossal egyeztetve. A tea a súlyos szívbetegség kezelését NEM helyettesíti. A „tejocote” néven árult mexikói hamisítványok veszélyesek lehetnek." },
+
+  { name:"Gyömbér-citrom-méz", lat:"Meleg gyógytea-recept", emoji:"🍯", accent:"#fbbf24", role:"Recept · megfázás",
+    hatas:"Megfázás, torokfájás, köhögés, hányinger, C-vitamin.",
+    prep:"Hozzávalók (1 nagy bögre): 3–4 vékony szelet friss gyömbér · ½ citrom leve · 1–2 tk méz · ~300 ml víz.\n\n1. Forrald fel a vizet a gyömbérrel, és főzd lassú tűzön 8–10 percig, lefedve.\n2. Vedd le a tűzről, és hűtsd kissé (~60–70 °C-ra).\n3. Csak a langyos teába keverd a citromlevet és a mézet (a lobogó víz csökkenti a méz és a C-vitamin értékét).\n4. Ízlés szerint egy csipet fahéj vagy kurkuma is mehet bele.",
+    clinical:"A recept elemei külön-külön is vizsgáltak. A gyömbér több metaanalízisben csökkentette a hányingert (terhesség, kemoterápia). A méz gyermekek éjszakai köhögésénél randomizált vizsgálatokban a kezeléshiánynál/placebónál jobban enyhítette a köhögést és javította az alvást – ezért több irányelv is ajánlja (1 év felett). A citrom C-vitamin- és flavonoidforrás, a meleg folyadék pedig önmagában is enyhíti a torokfájást és az orrdugulást. FONTOS: ez tüneti enyhítés, nem gyógyítja a fertőzést.",
+    warn:"⚠️ 1 évnél fiatalabb csecsemőnek SOHA ne adj mézet (botulizmus-veszély). Cukorbetegeknek a méz mennyiségére figyelni kell." },
+
+  { name:"Macskagyökér", lat:"Valeriana officinalis", emoji:"😴", accent:"#a78bfa", role:"Alvás · nyugtatás",
+    hatas:"Elalvás, alvásminőség, nyugtatás.",
+    prep:"1 tk szárított, aprított gyökér / csésze, ~90–100 °C, 10 perc lefedve. Lefekvés előtt ~30–60 perccel. Íze/szaga erős, jellegzetes.",
+    clinical:"A macskagyökeret hagyományosan altatóként használják. Egy 16 RCT-t (1093 beteg) felölelő szisztematikus áttekintés szerint a valeriána javította az alvásminőséget (a javulás esélye kb. 1,8-szoros a placebóhoz képest), de a vizsgálatok módszertanilag gyengék voltak és publikációs torzítás is felmerült. Újabb áttekintések vegyesek: a szubjektív (érzékelt) alvásjavulást gyakran mutatja, objektív műszeres méréssel kevésbé. Általában biztonságos, jól tolerálható; gyakran citromfűvel/komlóval kombinálják." },
+
+  { name:"Golgotavirág (passiflóra)", lat:"Passiflora incarnata", emoji:"🪻", accent:"#c084fc", role:"Szorongás · alvás",
+    hatas:"Szorongás, elalvás, nyugtalanság.",
+    prep:"1 tk szárított golgotavirág / csésze, ~100 °C, 8–10 perc lefedve. Este ajánlott.",
+    clinical:"A golgotavirág (passiflóra) flavonoidjai a GABA-rendszeren hatnak. Egy kis, kettős vak RCT-ben (41 fő) a passiflóratea egy hét alatt javította az alvásminőséget a placebóhoz képest (átlagosan kb. 20 perccel több alvás). Szorongásra a gyógynövény-áttekintések a jobban vizsgáltak közé sorolják, szerény, placebónál nagyobb szorongáscsökkenéssel. A vizsgálatok kicsik – nagyobb, hosszú távú vizsgálatok kellenek." },
+
+  { name:"Levendula", lat:"Lavandula angustifolia", emoji:"💜", accent:"#a78bfa", role:"Szorongás · nyugtatás",
+    hatas:"Szorongás, nyugtalanság, alvás, hangulat.",
+    prep:"1–2 tk szárított levendulavirág / csésze, ~100 °C, 5–8 perc lefedve. Kevés is elég – erős az aroma.",
+    clinical:"A legerősebb bizonyíték egy standardizált, SZÁJON ÁT szedett levendulaolaj-készítményre (Silexan) van. Randomizált vizsgálatokban és metaanalízisekben a Silexan a placebónál jelentősen csökkentette a szorongást (Hamilton-szorongásskála), generalizált szorongásban a lorazepámmal/paroxetinnel összemérhető volt, függőség nélkül; enyhe–közepes depresszióban is hatásosnak bizonyult. FONTOS: ez a kapszulás olajra igaz – a levendulatea hatása enyhébb, elsősorban nyugtató/alvássegítő céllal.",
+    warn:"⚠️ A Silexan-vizsgálatok többségét a gyártó végezte. A levendulatea hatása gyengébb, mint a standardizált kapszuláé." },
+
+  { name:"Homoktövis", lat:"Hippophae rhamnoides", emoji:"🧡", accent:"#fb923c", role:"C-vitamin · bőr",
+    hatas:"C-vitamin, antioxidáns, bőr, nyálkahártya.",
+    prep:"1–2 tk szárított homoktövis-bogyó / csésze, ~90 °C, 10 perc; frissen préselt lével is keverhető. Nagyon savanykás, C-vitamin-gazdag.",
+    clinical:"A homoktövis kivételesen gazdag C-vitaminban, karotinoidokban, flavonoidokban és omega-zsírsavakban. Kis klinikai vizsgálatokban a bőr hidratáltságára/gyógyulására, a szem szárazságára és egyes anyagcsere-mutatókra kedvező jeleket mutatott, és jelenleg is folynak vizsgálatok (pl. emésztés/székrekedés). A bizonyíték egyelőre korlátozott és kis mintás – nagy, jó minőségű teavizsgálatok hiányoznak; a fő értéke a magas tápanyagtartalom." },
+
+  { name:"Csalán", lat:"Urtica dioica", emoji:"🌿", accent:"#65a30d", role:"Prosztata · ízület",
+    hatas:"Prosztata (BPH) tünetek, ízület, allergia, vizelethajtás.",
+    prep:"1–2 tk szárított csalánlevél / csésze, ~100 °C, 10 perc lefedve. (BPH-nál a vizsgálatok inkább a gyökérkivonatot használták.)",
+    clinical:"A csalán(gyökér) jóindulatú prosztata-megnagyobbodásban (BPH) több randomizált vizsgálatban csökkentette a vizelési tüneteket (IPSS-pontszám), gyakran hagyományos kezelés mellé adva. A csalánlevél allergiás náthánál és – kis vizsgálatokban – a vércukorra is mutatott kedvező jeleket, ízületi panaszoknál pedig hagyományosan használják. A bizonyíték vegyes és sok vizsgálat kis mintás; a levéltea hatása enyhébb, mint a tömény gyökérkivonaté." },
+
+  { name:"Édesgyökér", lat:"Glycyrrhiza glabra", emoji:"🍬", accent:"#a16207", role:"Torok · gyomor",
+    hatas:"Torokfájás, köhögés, gyomorpanaszok. Természetesen édes.",
+    prep:"½–1 tk szárított, aprított édesgyökér / csésze, ~100 °C, 5–10 perc. Cukor nélkül is édes. Csak alkalmanként, rövid ideig!",
+    clinical:"Az édesgyökeret hagyományosan torokfájásra, köhögésre és gyomorpanaszokra használják; kis vizsgálatokban pl. a műtét utáni (intubáció okozta) torokfájást öblögetve csökkentette, és emésztési panaszoknál is vizsgálták. FONTOS: a glicirrizin-tartalma miatt a rendszeres/nagy fogyasztás áledoszteronizmust okozhat – magas vérnyomás, alacsony káliumszint, vízvisszatartás. Ezért csak alkalmanként, rövid ideig ajánlott.",
+    warn:"⚠️ KOMOLY: rendszeres vagy nagy mennyiségű édesgyökér megemeli a vérnyomást és csökkenti a káliumszintet (áledoszteronizmus). Magas vérnyomás, szívbetegség, terhesség, vagy vízhajtó/szívgyógyszer szedése esetén kerülendő." }
+];
+
+// Cél-címkék minden teához
+const tagMap={0:['digestion','pain'],1:['cardio','glucose','mood'],2:['cognition','mood'],3:['cardio','immune'],4:['respiratory','women','cognition'],5:['cold','immune'],6:['cognition','mood','sleep'],7:['digestion'],8:['sleep','calm','digestion'],9:['cold','respiratory'],10:['mood'],11:['cold','calm'],12:['other'],13:['sleep','calm','mood'],14:['pain','immune'],15:['digestion'],16:['cardio'],17:['mood','glucose'],18:['immune','mood'],19:['cognition','mood'],20:['pain'],21:['digestion','pain','women'],22:['immune','cardio'],23:['women','digestion'],24:['glucose','women'],25:['digestion','women'],26:['cardio'],27:['cold','respiratory','digestion'],28:['sleep','calm'],29:['sleep','calm'],30:['calm','sleep','mood'],31:['immune'],32:['pain','other'],33:['respiratory','digestion']};
+teas.forEach((t,i)=>{ t.tags=tagMap[i]||[]; });
+
+// Cél szerinti szűrők
+const goals=[
+  {key:null, emoji:'🗂️', label:'Összes'},
+  {key:'sleepcalm', emoji:'😴', label:'Alvás/nyugtatás', match:['sleep','calm']},
+  {key:'digestion', emoji:'🍽️', label:'Emésztés', match:['digestion']},
+  {key:'cold', emoji:'🤧', label:'Megfázás/légút', match:['cold','respiratory']},
+  {key:'cardio', emoji:'🫀', label:'Vérnyomás/szív', match:['cardio']},
+  {key:'pain', emoji:'💪', label:'Fájdalom/ízület', match:['pain']},
+  {key:'mood', emoji:'🧠', label:'Hangulat/agy', match:['mood','cognition']},
+  {key:'women', emoji:'🌸', label:'Nő-egészség', match:['women']},
+  {key:'immune', emoji:'🍊', label:'Immun/C-vitamin', match:['immune']},
+  {key:'glucose', emoji:'🩸', label:'Vércukor', match:['glucose']}
+];
+let goalKey=null;
+
+function updateGoalMenu(){
+  document.querySelectorAll('.goal-item').forEach(b=>b.classList.toggle('active',(b.dataset.goal||'')===(goalKey||'')));
+}
+
+const sources=[
+  {n:'Menta (borsmenta)', r:'IBS: 12 randomizált vizsgálat (835 beteg) metaanalízise; frissített metaanalízis (2022).'},
+  {n:'Zöld tea', r:'Katechin/EGCG RCT-metaanalízisek (vérnyomás, LDL, haskörfogat, HbA1c); nagy kohorszvizsgálatok (halálozás). Kivonat-biztonság: EFSA (EGCG/máj).'},
+  {n:'Matcha', r:'12 hónapos, kettős vak, placebo-kontrollált RCT, 99 idős, enyhe kognitív hanyatlás (Japán, 2024).'},
+  {n:'Rooibos', r:'Emberi vizsgálat 40 fő, 6 hét (lipid/redox) – Marnewick és mtsai, J Ethnopharmacol (2011); többségében állatkísérletes adatok.'},
+  {n:'Zsálya', r:'Menopauzás hőhullám RCT – Bommer és mtsai (2011); akut garatgyulladás placebo-kontrollált (öblögetéses/spray) vizsgálat.'},
+  {n:'Bodza', r:'Légiutas RCT 312 fő – Tiralongo és mtsai (2016); influenza RCT-k; metaanalízis (2019); negatív RCT – Macknin (2020).'},
+  {n:'Rozmaring', r:'Egyetemisták kettős vak RCT 68 fő (2018); idős dózis-válasz vizsgálat (memória-sebesség).'},
+  {n:'Kömény', r:'Kömény+borsmentaolaj funkcionális dyspepsiában: 5 RCT (578 fő) metaanalízise.'},
+  {n:'Kamilla', r:'Generalizált szorongás RCT – Amsterdam és mtsai (2009); hosszú távú (38 hetes) fenntartó RCT (2016).'},
+  {n:'Kakukkfű', r:'Kakukkfű (gyakran borostyánnal) akut hörghurut/köhögés RCT-k.'},
+  {n:'Orbáncfű', r:'Depresszió: Cochrane-áttekintés, 29 vizsgálat – Linde és mtsai (2008). Sok gyógyszer-kölcsönhatás.'},
+  {n:'Hárs', r:'Hagyományos használat; európai (EMA) növénymonográfia. Nagy RCT alig.'},
+  {n:'Meggy szár', r:'Hagyományos használat; a meggylé (nem a szár) külön vizsgálatai kedvezőek.'},
+  {n:'Citromfű', r:'Szorongás/depresszió metaanalízis (SMD ≈ −0,98); szívműtét utáni szorongás/alvás RCT.'},
+  {n:'Csipkebogyó', r:'Artrózis: 3 RCT (287 beteg) metaanalízise – Christensen és mtsai, Osteoarthritis Cartilage (2008); gyártó által támogatott.'},
+  {n:'Cickafark', r:'Hagyományos használat; EMA-monográfia.'},
+  {n:'Hibiszkusz', r:'Vérnyomás: 17 RCT metaanalízise (átlag SBP ≈ −7 Hgmm).'},
+  {n:'Ginzeng', r:'Fáradtság: szisztematikus áttekintés (8 RCT); éhomi vércukor: 16 RCT metaanalízise.'},
+  {n:'Reishi', r:'200+ vizsgálat áttekintései (fáradtság/immun); negatív 16 hetes metabolikus RCT – Klupp és mtsai (2016).'},
+  {n:'Oroszlánsörény-gomba', r:'Kis kognitív/hangulat RCT-k (pl. Mori 2009; Nagano 2010) – rövidek, kis minta.'},
+  {n:'Kurkuma', r:'Térd-artrózis: 16 RCT (1810 fő) metaanalízise (NSAID-hoz hasonló); több ízületi kórképet átfogó áttekintés.'},
+  {n:'Gyömbér', r:'Terhességi hányinger: 12 RCT (1278 fő) metaanalízise; kemoterápiás hányinger RCT; primer dysmenorrhea RCT-k.'},
+  {n:'Citrom', r:'Citromfogyasztás + gyaloglás és vérnyomás, 101 nő (Japán, 2014); kis citromlé-vizsgálatok.'},
+  {n:'Fodormenta', r:'PCOS/androgén RCT 42 fő – Grant és mtsai (2010); 12 hetes RCT 150 fő (2024).'},
+  {n:'Fahéj', r:'Vércukor/lipid metaanalízis (10 RCT, 543 fő; FPG ≈ −24 mg/dl); dysmenorrhea RCT. Kasszia = kumarin (máj).'},
+  {n:'Édeskömény', r:'Primer dysmenorrhea RCT-k; csecsemőkólika placebo-kontrollált vizsgálat.'},
+  {n:'Galagonya', r:'Krónikus szívelégtelenség: Cochrane-áttekintés, 14 RCT – Pittler és mtsai (2008), kiegészítő kezelésként.'},
+  {n:'Gyömbér-citrom-méz (recept)', r:'Gyömbér (hányinger-metaanalízisek) + méz (gyermekek éjszakai köhögése – RCT-k, irányelvi ajánlás 1 év felett) + citrom (C-vitamin).'},
+  {n:'Macskagyökér', r:'Alvás: szisztematikus áttekintés, 16 RCT (1093 beteg), Am J Med (2006); szubjektív javulás, publikációs torzítással.'},
+  {n:'Golgotavirág (passiflóra)', r:'Alvás RCT 41 fő – Ngan & Conduit, Phytother Res (2011); szorongás-áttekintések.'},
+  {n:'Levendula', r:'Silexan (szájon át) szorongás RCT-k és metaanalízis; GAD-ban lorazepámmal összevetve. A tea enyhébb.'},
+  {n:'Homoktövis', r:'Kis klinikai vizsgálatok (bőr, szem, anyagcsere); korlátozott bizonyíték, magas tápanyagtartalom.'},
+  {n:'Csalán', r:'BPH kettős vak RCT-k (pl. 100 beteg, 2013; 300 mg gyökérkivonat, 80 fő, 2022); allergiás nátha RCT.'},
+  {n:'Édesgyökér', r:'Műtét utáni torokfájás öblögetéses RCT-k; glicirrizin biztonsági esetriportok (áledoszteronizmus: vérnyomás↑, kálium↓).'}
+];
+
+// Menü csoportok (minden tea külön menüpont)
+const groups = [
+  { label:"Nézet", items:[{special:'all', name:'Összes tea', emoji:'🗂️'},{special:'sources', name:'Források', emoji:'📚'}] },
+  { label:"Klasszikus teák", idx:[1,2,3] },
+  { label:"Nyugtató és alvásteák", idx:[8,13,6,28,29,30] },
+  { label:"Gyógynövény- és fűszerteák", idx:[0,4,5,7,9,10,15,20,21,23,24,25,32,33,11,12] },
+  { label:"Gyümölcs- és virágteák", idx:[14,16,22,26,31] },
+  { label:"Ginzeng és gombateák", idx:[17,18,19] },
+  { label:"Receptek", idx:[27] }
+];
+
+const menu = document.getElementById('menu');
+const mainContent = document.getElementById('mainContent');
+const overlay = document.getElementById('overlay');
+const noHit = document.getElementById('noHit');
+let selected = 'all';
+
+// Cél szerinti szűrők a menü tetején
+const goalLbl=document.createElement('div'); goalLbl.className='group-label'; goalLbl.textContent='Cél szerint'; menu.appendChild(goalLbl);
+goals.forEach(g=>{
+  const b=document.createElement('button'); b.className='m-item goal-item'; b.dataset.goal=g.key||'';
+  b.innerHTML=`<span class="em">${g.emoji}</span><span class="nm">${g.key?g.label:'Összes (szűrő törlése)'}</span>`;
+  b.addEventListener('click',()=>{ goalKey=g.key||null; select('all'); updateGoalMenu(); if(window.innerWidth<=860) closeMenu(); });
+  menu.appendChild(b);
+});
+
+groups.forEach(g=>{
+  const lbl=document.createElement('div'); lbl.className='group-label'; lbl.textContent=g.label; menu.appendChild(lbl);
+  const list = g.items ? g.items : g.idx.map(i=>({idx:i, ...teas[i]}));
+  list.forEach(it=>{
+    const b=document.createElement('button'); b.className='m-item';
+    const key = it.special ? it.special : it.idx; b.dataset.key=key;
+    const dot = it.special ? '' : `<span class="st ${teas[it.idx].clinical?'clin':'trad'}"></span>`;
+    b.innerHTML=`<span class="em">${it.emoji}</span><span class="nm">${it.name}</span>${dot}`;
+    b.addEventListener('click',()=>{ select(it.special?it.special:it.idx); if(window.innerWidth<=860) closeMenu(); });
+    menu.appendChild(b);
+  });
+});
+
+function cardHTML(t,i){
+  const infoBtn = t.traditional
+    ? `<button class="btn-trad" data-i="${i}">🌱 Hagyományos használat</button>`
+    : `<button class="btn-clin" data-i="${i}">🔬 Klinikai eredmény</button>`;
+  return `<div class="card" data-i="${i}">
+    <div class="inner">
+      <div class="face front glass">
+        <div class="accent" style="background:${t.accent}"></div>
+        <div class="emoji">${t.emoji}</div>
+        <div class="role">${t.role}</div>
+        <h3 class="name">${t.name}</h3>
+        <div class="lat">${t.lat}</div>
+        <div class="hatas">${t.hatas}</div>
+        <div class="flip-tag">↻ Koppints a megfordításhoz</div>
+      </div>
+      <div class="face back glass">
+        <div class="accent" style="background:${t.accent}"></div>
+        <div class="back-title">${t.emoji} ${t.name}</div>
+        <div class="back-sub">Válassz a részletekhez:</div>
+        <div class="back-actions">
+          <button class="btn-prep" data-i="${i}">🫖 Elkészítés</button>
+          ${infoBtn}
+        </div>
+        <button class="btn-back">← Vissza</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+function render(){
+  if(selected==='all'){
+    const activeGoal = goals.find(g=>(g.key||null)===goalKey) || goals[0];
+    const chips = goals.map(g=>`<button class="chip ${((g.key||null)===goalKey)?'active':''}" data-goal="${g.key||''}">${g.emoji} ${g.label}</button>`).join('');
+    const items = teas.map((t,i)=>[t,i]).filter(([t,i])=> !goalKey || (activeGoal.match && (t.tags||[]).some(x=>activeGoal.match.includes(x))));
+    mainContent.innerHTML =
+      `<div class="head glass">
+         <h1>🍵 Teák – klinikai kártyák</h1>
+         <p>Gyógy-, fűszer-, gyümölcs-, nyugtató-, ginzeng- és gombateák + recept: hatás, elkészítés és a klinikai kutatások eredménye.</p>
+         <div class="hint"><b>Koppints egy kártyára</b> a megfordításhoz. Hátul a <b>🫖 Elkészítés</b> és a <b>🔬 Klinikai eredmény</b> gomb felugró ablakot nyit. Alul <b>cél szerint</b> is szűrhetsz.</div>
+       </div>
+       <div class="goals">${chips}</div>
+       <div class="grid">${items.map(([t,i])=>cardHTML(t,i)).join('')}</div>`;
+  } else if(selected==='sources'){
+    renderSources();
+  } else {
+    const t=teas[selected];
+    mainContent.innerHTML =
+      `<div class="head glass"><h1>${t.emoji} ${t.name}</h1><p><i>${t.lat}</i></p></div>
+       <div class="focus">${cardHTML(t,selected)}</div>`;
+  }
+  updateGoalMenu();
+}
+
+function renderSources(){
+  const items = sources.map(s=>`<div class="src-item glass"><b>${s.n}</b><span>${s.r}</span></div>`).join('');
+  mainContent.innerHTML =
+    `<div class="head glass"><h1>📚 Források</h1><p>A kártyákon hivatkozott vizsgálatok rövid leírása.</p></div>
+     <div class="src-note">Ezek a hivatkozott vizsgálatok tömör összefoglalói (típus, résztvevőszám, kimenet, év). A pontos cikkek a leírás alapján kereshetők. Tájékoztatás, nem orvosi tanács.</div>
+     <div class="src-list">${items}</div>`;
+}
+
+function select(key){
+  selected=key;
+  document.querySelectorAll('.m-item').forEach(b=>b.classList.toggle('active', b.dataset.key==String(key)));
+  render(); window.scrollTo({top:0,behavior:'smooth'});
+}
+
+mainContent.addEventListener('click',e=>{
+  const chip=e.target.closest('.chip');
+  if(chip){ goalKey = chip.dataset.goal || null; render(); return; }
+  const prep=e.target.closest('.btn-prep');
+  if(prep){ openModal(teas[+prep.dataset.i],'prep'); return; }
+  const clin=e.target.closest('.btn-clin');
+  if(clin){ openModal(teas[+clin.dataset.i],'clinical'); return; }
+  const trad=e.target.closest('.btn-trad');
+  if(trad){ openModal(teas[+trad.dataset.i],'trad'); return; }
+  const back=e.target.closest('.btn-back');
+  if(back){ const c=e.target.closest('.card'); if(c) c.classList.remove('flipped'); return; }
+  const card=e.target.closest('.card');
+  if(card){ card.classList.toggle('flipped'); }
+});
+
+function openModal(t, mode){
+  document.getElementById('mEmoji').textContent=t.emoji;
+  document.getElementById('mName').textContent=t.name;
+  document.getElementById('mLat').textContent=t.lat;
+  const kicker=document.getElementById('mKicker');
+  const body=document.getElementById('mBody');
+  if(mode==='prep'){
+    kicker.className='m-kicker prep'; kicker.textContent='🫖 Elkészítés';
+    body.innerHTML='<p>'+t.prep.replace(/\n/g,'<br>')+'</p>';
+  } else if(mode==='trad'){
+    kicker.className='m-kicker trad'; kicker.textContent='🌱 Hagyományos használat';
+    body.innerHTML='<p>'+t.tradText+'</p>';
+  } else {
+    kicker.className='m-kicker clin'; kicker.textContent='🔬 Klinikai eredmény';
+    body.innerHTML='<p>'+t.clinical+'</p>'+(t.warn?'<div class="warn">'+t.warn+'</div>':'');
+  }
+  overlay.classList.add('open');
+}
+function closeModal(){ overlay.classList.remove('open'); }
+document.getElementById('closeBtn').addEventListener('click',closeModal);
+overlay.addEventListener('click',e=>{ if(e.target===overlay) closeModal(); });
+document.addEventListener('keydown',e=>{ if(e.key==='Escape'){ closeModal(); } });
+
+const search=document.getElementById('search');
+search.addEventListener('input',()=>{
+  const q=search.value.trim().toLowerCase();
+  const nodes=[...menu.children];
+  let anyHit=false;
+  nodes.forEach(n=>{
+    if(n.classList.contains('m-item')){
+      const nm=n.querySelector('.nm').textContent.toLowerCase();
+      const show = !q || nm.includes(q);
+      n.style.display = show ? '' : 'none';
+      if(show && q) anyHit=true;
+    }
+  });
+  nodes.forEach((n,idx)=>{
+    if(n.classList.contains('group-label')){
+      let visible=false;
+      for(let j=idx+1;j<nodes.length;j++){
+        if(nodes[j].classList.contains('group-label')) break;
+        if(nodes[j].classList.contains('m-item') && nodes[j].style.display!=='none'){ visible=true; break; }
+      }
+      n.style.display = visible ? '' : 'none';
+    }
+  });
+  noHit.style.display = (q && !anyHit) ? 'block' : 'none';
+});
+
+const menuToggle=document.getElementById('menuToggle');
+const collapseBtn=document.getElementById('collapseBtn');
+const backdrop=document.getElementById('backdrop');
+function closeMenu(){ document.body.classList.add('menu-closed'); }
+menuToggle.addEventListener('click',()=>document.body.classList.toggle('menu-closed'));
+collapseBtn.addEventListener('click',closeMenu);
+backdrop.addEventListener('click',closeMenu);
+if(window.innerWidth<=860) document.body.classList.add('menu-closed');
+
+// Nyomtatható / PDF nézet (összes tea, teljes szöveggel)
+function buildPrint(){
+  let html='<h1>🍵 Teák – klinikai áttekintés</h1>';
+  teas.forEach(t=>{
+    html+='<div class="p-tea"><h2>'+t.emoji+' '+t.name+'</h2>'
+      +'<div class="p-lat">'+t.lat+'</div>'
+      +'<p><b>Hatás:</b> '+t.hatas+'</p>'
+      +'<p><b>Elkészítés:</b> '+t.prep.replace(/\n/g,' ')+'</p>';
+    if(t.traditional) html+='<p><b>Hagyományos használat:</b> '+t.tradText+'</p>';
+    else html+='<p><b>Klinikai eredmény:</b> '+t.clinical+'</p>';
+    if(t.warn) html+='<p><b>Figyelmeztetés:</b> '+t.warn+'</p>';
+    html+='</div>';
+  });
+  html+='<h1 style="margin-top:18px;">📚 Források</h1>';
+  sources.forEach(s=>{ html+='<p style="font-size:11px;margin:3px 0;"><b>'+s.n+':</b> '+s.r+'</p>'; });
+  html+='<p style="margin-top:16px;font-size:11px;color:#555;">Tájékoztató, tudományos áttekintés – nem személyre szabott orvosi tanács.</p>';
+  document.getElementById('printArea').innerHTML=html;
+}
+buildPrint();
+document.getElementById('printBtn').addEventListener('click',()=>window.print());
+
+select('all');
+</script>
+</body>
+</html>
