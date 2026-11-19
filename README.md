@@ -1,4 +1,6 @@
 # 🍵 Teák – klinikai kártyák / Ceaiuri / Teas / Tees
+🌐 **Élő oldal:** https://medicinal-tea-atlas.pages.dev/#hu
+Nyelvek: [HU](https://medicinal-tea-atlas.pages.dev/#hu) · [RO](https://medicinal-tea-atlas.pages.dev/#ro) · [EN](https://medicinal-tea-atlas.pages.dev/#en) · [DE](https://medicinal-tea-atlas.pages.dev/#de) · [English README](README.en.md)
 
 Egyetlen, önálló HTML-fájl (`index.html`): 34 gyógy-, fűszer-, gyümölcs-, nyugtató-,
 ginzeng- és gombatea kártyája, mindegyiknél a hatás, az elkészítés és a mögötte álló
@@ -22,7 +24,7 @@ Négy nyelv, a jobb felső sarokban váltható: **HU · RO · EN · DE**
   teljes szakirodalma megnyitható.
 - **A hivatkozások ellenőrizve** – mind a 67 egyedi PMID valódi, a rögzített címek egyeznek a
   PubMed-ben szereplő címekkel, és visszavont közlemény nincs köztük.
-- **Szűrés cél szerint** – alvás, emésztés, megfázás, vérnyomás, fájdalom, hangulat,
+- **Szűrés cél szerint** – a kártyák feletti gombsor – alvás, emésztés, megfázás, vérnyomás, fájdalom, hangulat,
   nő-egészség, immunitás, vércukor.
 - **Keresés** az oldalsávban, tea-név szerint.
 - **Források oldal** – a hivatkozott vizsgálatok tömör összefoglalói, linkkel.
@@ -40,11 +42,15 @@ Telefonon ellenőrizve, automata teszttel (Playwright), **5 képernyőméreten �
 - az oldalsáv menü nyílik/záródik (☰, ×, háttérre koppintás), és nem lóg ki a képernyőről;
 - mind a 34 teánál, mind a 4 nyelven van link a leírás alatt.
 
-A teszt újrafuttatható a `scripts/check.mjs` fájllal (Playwright szükséges):
+A teszt újrafuttatható a `check.mjs` fájllal (Playwright szükséges):
 
 ```bash
-node scripts/check.mjs /abszolút/út/index.html
+node check.mjs /abszolút/út/index.html
 ```
+
+## Build
+
+Szerkeszd a `template.html` fájlt és a JSON-fájlokat, majd futtasd a `python build.py` parancsot, végül a `node check.mjs "<abszolút út>/index.html"` parancsot.
 
 ## Megjelenés
 

@@ -1,4 +1,6 @@
 # 🍵 Clinical Tea Cards / Teák / Ceaiuri / Tees
+🌐 **Live site:** https://medicinal-tea-atlas.pages.dev/#en
+Languages: [HU](https://medicinal-tea-atlas.pages.dev/#hu) · [RO](https://medicinal-tea-atlas.pages.dev/#ro) · [EN](https://medicinal-tea-atlas.pages.dev/#en) · [DE](https://medicinal-tea-atlas.pages.dev/#de) · [Magyar README](README.md)
 
 A single, self-contained HTML file (`index.html`): cards for 34 medicinal, spice,
 fruit, calming, ginseng and mushroom teas. Each card shows the effect, how to prepare it,
@@ -23,7 +25,7 @@ Four languages, switchable in the top-right corner: **HU · RO · EN · DE**
   full literature.
 - **References verified** — all 67 unique PMIDs are real, the stored titles match the titles
   in PubMed, and none of them is a retracted publication.
-- **Filter by goal** — sleep, digestion, cold, blood pressure, pain, mood, women's health,
+- **Filter by goal** — the button row above the cards — sleep, digestion, cold, blood pressure, pain, mood, women's health,
   immunity, blood sugar.
 - **Search** in the sidebar, by tea name.
 - **Sources page** — brief summaries of the referenced studies, with links.
@@ -41,11 +43,15 @@ Verified on phones with an automated test (Playwright), across **5 screen sizes 
 - the sidebar menu opens/closes (☰, ×, tap on the backdrop) and does not run off-screen;
 - there is a link below the description for all 34 teas, in all 4 languages.
 
-The test can be re-run with `scripts/check.mjs` (Playwright required):
+The test can be re-run with `check.mjs` (Playwright required):
 
 ```bash
-node scripts/check.mjs /absolute/path/index.html
+node check.mjs /absolute/path/index.html
 ```
+
+## Build
+
+Edit `template.html` and the JSON files, run `python build.py`, then `node check.mjs "<absolute path>/index.html"`.
 
 ## Look
 
