@@ -2,9 +2,13 @@
 """Összefűzi a HU alapadatokat + RO/EN/DE fordításokat + PubMed linkeket egy önálló HTML-be."""
 import json, os, sys, re
 
+# keep the final print from raising UnicodeEncodeError on a non-UTF-8 console
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+
 HERE = os.path.dirname(os.path.abspath(__file__))
-DATA = os.path.join(HERE, "data")
-OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(HERE), "index.html")
+DATA = HERE
+OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, "index.html")
 
 def load(name, required=True):
     p = os.path.join(DATA, name)
@@ -19,6 +23,7 @@ hu = load("hu_data.json")
 teas, sources, tagMap = hu["teas"], hu["sources"], hu["tagMap"]
 ui = load("ui.json")
 sources_tr = load("sources_tr.json")
+videos = load("videos.json")
 
 # --- fordítások összefűzése a 4 részből ---
 tr = {}
@@ -68,6 +73,23 @@ for lg in ("hu",) + LANGS:
     if lg not in ui:
         problems.append(f"ui: hiányzó nyelv {lg}")
 
+# videos.json: exactly 16 slots, id is "" or an 11-char YouTube id, t is [line1, line2]
+VIDEO_ID = re.compile(r"^[A-Za-z0-9_-]{11}$")
+if not isinstance(videos, list) or len(videos) != 16:
+    problems.append(f"videos: must be a list of exactly 16 items "
+                    f"(got {len(videos) if isinstance(videos, list) else type(videos).__name__})")
+    videos = videos if isinstance(videos, list) else []
+for n, v in enumerate(videos, 1):
+    if not isinstance(v, dict):
+        problems.append(f"videos {n}: not an object")
+        continue
+    vid = v.get("id")
+    if not isinstance(vid, str) or (vid != "" and not VIDEO_ID.match(vid)):
+        problems.append(f"videos {n}: invalid id {vid!r}")
+    vt = v.get("t")
+    if not isinstance(vt, list) or len(vt) != 2 or not all(isinstance(x, str) for x in vt):
+        problems.append(f"videos {n}: 't' must be a list of exactly 2 strings")
+
 link_count = sum(len(v) for v in links.values())
 no_link = [i for i in range(len(teas)) if not links.get(str(i))]
 
@@ -90,6 +112,7 @@ data = {
     "sourcesTr": sources_tr,
     "ui": ui,
     "links": links,
+    "videos": videos,
 }
 
 payload = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
@@ -108,6 +131,7 @@ with open(OUT, "w", encoding="utf-8") as fh:
 print(f"KÉSZ: {OUT}  ({len(html)/1024:.0f} KB)")
 print(f"teák: {len(teas)} · nyelvek: hu, ro, en, de · linkek: {link_count} db, "
       f"{len(teas)-len(no_link)}/{len(teas)} teához")
+print(f"videók: {sum(1 for v in videos if isinstance(v, dict) and v.get('id'))}/16 kitöltve")
 if no_link:
     print("link nélküli teák:", no_link)
 if missing_parts:

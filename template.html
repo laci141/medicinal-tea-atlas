@@ -32,6 +32,8 @@
     backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);
     box-shadow:0 18px 50px -18px rgba(0,0,0,.75);color:var(--ink);}
 
+  .modal.glass,.sidebar.glass{background:linear-gradient(160deg, rgba(20,28,48,.94), rgba(14,20,38,.92));}
+
   button,input{font-family:inherit;}
   a{color:#7dd3fc;}
 
@@ -44,7 +46,7 @@
     background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);flex:0 0 auto;}
   .menu-toggle:active{background:rgba(255,255,255,.14);}
   .brand{flex:1;min-width:0;font-size:15px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-  .langs{display:flex;gap:4px;flex:0 0 auto;padding:3px;border-radius:12px;
+  .langs{display:flex;gap:4px;flex:0 0 auto;margin-left:auto;padding:3px;border-radius:12px;
     background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);}
   .lang{min-width:38px;min-height:34px;padding:6px 8px;border-radius:9px;cursor:pointer;
     font-size:12.5px;font-weight:700;letter-spacing:.4px;color:var(--muted);
@@ -95,20 +97,20 @@
   body.menu-closed .main{margin-left:0;}
   @media(max-width:900px){ .main{margin-left:0;} }
 
-  .head{max-width:1080px;margin:0 auto 18px;padding:22px 20px;text-align:center;}
+  .head{max-width:1400px;margin:0 auto 18px;padding:22px 20px;text-align:center;}
   .head h1{margin:0 0 6px;font-size:clamp(20px,4.4vw,29px);line-height:1.25;}
   .head p{margin:0;color:var(--muted);font-size:14.5px;}
   .head .hint{margin-top:12px;font-size:13px;color:var(--muted);}
   .head .hint b{color:var(--ink);}
 
-  .goals{max-width:1080px;margin:0 auto 16px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;}
+  .goals{max-width:1400px;margin:0 auto 16px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;}
   .chip{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:8px 13px;border-radius:999px;
     cursor:pointer;font-size:13.5px;color:var(--ink);background:rgba(255,255,255,.06);
     border:1px solid rgba(255,255,255,.12);transition:background .15s,border-color .15s;}
   .chip:hover{background:rgba(255,255,255,.1);}
   .chip.active{background:rgba(52,211,153,.16);border-color:rgba(52,211,153,.5);}
 
-  .grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:18px;align-items:stretch;}
+  .grid{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:18px;align-items:stretch;}
 
   /* ---------- kártya (automatikus magasság: mindkét oldal ugyanabban a rácscellában) ---------- */
   .card{perspective:1400px;cursor:pointer;}
@@ -196,8 +198,8 @@
   .st-empty{font-size:13px;color:var(--muted);}
 
   /* ---------- források oldal ---------- */
-  .disclaimer{max-width:1080px;margin:26px auto 0;font-size:12.5px;color:var(--muted);text-align:center;padding:16px 18px;}
-  .src-note{max-width:1080px;margin:0 auto 16px;font-size:13px;color:var(--muted);text-align:center;}
+  .disclaimer{max-width:1400px;margin:26px auto 0;font-size:12.5px;color:var(--muted);text-align:center;padding:16px 18px;}
+  .src-note{max-width:1400px;margin:0 auto 16px;font-size:13px;color:var(--muted);text-align:center;}
   .src-list{max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:10px;}
   .src-item{padding:14px 15px;font-size:13.5px;}
   .src-item b{display:block;margin-bottom:3px;}
@@ -207,6 +209,18 @@
     border-radius:999px;font-size:12px;text-decoration:none;color:#5eead4;
     background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.3);}
   .src-item .src-links a:hover{background:rgba(52,211,153,.16);}
+
+  /* ---------- videos page ---------- */
+  .vid-grid{max-width:1400px;margin:0 auto;display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));}
+  .vid-card{padding:14px;}
+  .vid-wrap{position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;
+    background:radial-gradient(circle at 30% 30%, rgba(52,211,153,.25), transparent 65%), rgba(0,0,0,.35);}
+  .vid-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+  .vid-ph{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-size:.8rem;letter-spacing:.3em;text-transform:uppercase;}
+  .vid-title{margin:11px 4px 2px;display:flex;flex-direction:column;gap:2px;min-height:2.8em;font-weight:600;font-size:15px;}
+  .vid-line{display:block;line-height:1.32;overflow-wrap:anywhere;}
+  .vid-line.second{font-weight:400;color:var(--muted);font-size:13px;}
+  .vid-line.placeholder{color:var(--muted);}
 
   /* ---------- nyomtatás ---------- */
   #printArea{display:none;}
@@ -241,12 +255,18 @@
     .head .hint{font-size:12.5px;}
     .face{padding:18px 16px;}
     .grid{gap:14px;grid-template-columns:1fr;}
-    .goals{gap:7px;}
-    .chip{font-size:13px;padding:8px 11px;}
+    .goals{gap:7px;flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;-webkit-overflow-scrolling:touch;
+      scrollbar-width:none;padding-right:28px;
+      -webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 36px),transparent);
+      mask-image:linear-gradient(90deg,#000 calc(100% - 36px),transparent);}
+    .goals::-webkit-scrollbar{display:none;}
+    .chip{font-size:13px;padding:8px 11px;flex:0 0 auto;}
     .modal{padding:20px 16px;max-height:100%;}
     .modal h2{font-size:19.5px;}
     .modal p{font-size:14.5px;}
     .src-list{gap:9px;}
+    .vid-grid{grid-template-columns:1fr;gap:14px;}
+    .vid-card{padding:10px;}
   }
   @media(min-width:601px) and (max-width:900px){
     .grid{grid-template-columns:repeat(auto-fill,minmax(240px,1fr));}
@@ -297,6 +317,7 @@
 
 var DATA = JSON.parse(document.getElementById('appdata').textContent);
 var TEAS = DATA.teas, SOURCES = DATA.sources, TR = DATA.tr, SRC_TR = DATA.sourcesTr, UI = DATA.ui, LINKS = DATA.links;
+var VIDEOS = DATA.videos || [];
 var LANGS = [{k:'hu',n:'HU'},{k:'ro',n:'RO'},{k:'en',n:'EN'},{k:'de',n:'DE'}];
 
 function pickLang(){
@@ -339,7 +360,7 @@ var goalDefs = [
   {key:'glucose',   emoji:'🩸', match:['glucose']}
 ];
 var groups = [
-  { g:0, items:[{special:'all', emoji:'🗂️'},{special:'sources', emoji:'📚'}] },
+  { g:0, items:[{special:'all', emoji:'🗂️'},{special:'videos', emoji:'▶'},{special:'sources', emoji:'📚'}] },
   { g:1, idx:[1,2,3] },
   { g:2, idx:[8,13,6,28,29,30] },
   { g:3, idx:[0,4,5,7,9,10,15,20,21,23,24,25,32,33,11,12] },
@@ -410,22 +431,12 @@ function applyStatic(){
 function buildMenu(){
   var t = T();
   menu.innerHTML = '';
-  var gl = document.createElement('div'); gl.className = 'group-label'; gl.textContent = t.byGoal; menu.appendChild(gl);
-  goalDefs.forEach(function(g, gi){
-    var b = document.createElement('button'); b.type = 'button';
-    b.className = 'm-item goal-item'; b.dataset.goal = g.key || '';
-    b.innerHTML = '<span class="em">' + g.emoji + '</span><span class="nm">' + esc(g.key ? t.goals[gi] : t.clearFilter) + '</span>';
-    b.addEventListener('click', function(){
-      goalKey = g.key || null; select('all'); if(isMobile()) closeMenu();
-    });
-    menu.appendChild(b);
-  });
   groups.forEach(function(gr){
     var lbl = document.createElement('div'); lbl.className = 'group-label'; lbl.textContent = t.groups[gr.g]; menu.appendChild(lbl);
     if(gr.items){
       gr.items.forEach(function(it){
         var b = document.createElement('button'); b.type = 'button'; b.className = 'm-item'; b.dataset.key = it.special;
-        var nm = it.special === 'all' ? t.allTeas : t.sourcesNav;
+        var nm = it.special === 'all' ? t.allTeas : it.special === 'videos' ? t.videosNav : t.sourcesNav;
         b.innerHTML = '<span class="em">' + it.emoji + '</span><span class="nm">' + esc(nm) + '</span>';
         b.addEventListener('click', function(){ select(it.special); if(isMobile()) closeMenu(); });
         menu.appendChild(b);
@@ -507,6 +518,8 @@ function render(){
       '</div>' +
       '<div class="goals">' + chips + '</div>' +
       '<div class="grid">' + idxs.map(cardHTML).join('') + '</div>';
+  } else if(selected === 'videos'){
+    renderVideos();
   } else if(selected === 'sources'){
     renderSources();
   } else {
@@ -535,6 +548,30 @@ function renderSources(){
     '<div class="head glass"><h1>📚 ' + esc(t.srcTitle) + '</h1><p>' + esc(t.srcSub) + '</p></div>' +
     '<div class="src-note">' + esc(t.srcNote) + '</div>' +
     '<div class="src-list">' + items + '</div>';
+}
+
+/* videos page: one card per videos.json slot; an empty or invalid id shows a placeholder */
+function renderVideos(){
+  var t = T();
+  var cards = VIDEOS.map(function(v, i){
+    var tl = (v && v.t) || [];
+    var l1 = String(tl[0] || ''), l2 = String(tl[1] || '');
+    var ph = String(t.videoPh || '').replace('{n}', i + 1);
+    var id = String((v && v.id) || '');
+    var title = (l1 + ' ' + l2).trim() || ph;
+    var player = /^[A-Za-z0-9_-]{11}$/.test(id)
+      ? '<iframe src="https://www.youtube-nocookie.com/embed/' + esc(id) + '?rel=0" title="' + esc(title) + '" loading="lazy"' +
+        ' allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin"></iframe>'
+      : '<span class="vid-ph">' + esc(t.videoSoon) + '</span>';
+    return '<article class="vid-card glass"><div class="vid-wrap">' + player + '</div>' +
+      '<p class="vid-title">' +
+        (l1 ? '<span class="vid-line">' + esc(l1) + '</span>' : '<span class="vid-line placeholder">' + esc(ph) + '</span>') +
+        '<span class="vid-line second">' + esc(l2) + '&nbsp;</span>' +
+      '</p></article>';
+  }).join('');
+  mainContent.innerHTML =
+    '<div class="head glass"><h1>▶ ' + esc(t.videosTitle) + '</h1><p>' + esc(t.videosSub) + '</p></div>' +
+    '<div class="vid-grid">' + cards + '</div>';
 }
 
 function select(key){

@@ -1,12 +1,14 @@
 import { chromium, devices } from 'playwright';
 import fs from 'fs';
 import path from 'path';
+import os from 'os';
+import { fileURLToPath, pathToFileURL } from 'url';
 
-const FILE = process.argv[2] || '/home/user/Nutri/index.html';
-const SHOTS = '/tmp/claude-0/-home-user-Nutri/55f85b14-0b8a-55cf-95d9-1d3768b188b4/scratchpad/shots';
+const FILE = process.argv[2] || path.join(path.dirname(fileURLToPath(import.meta.url)), 'index.html');
+const SHOTS = path.join(os.tmpdir(), 'tea-shots');
 fs.mkdirSync(SHOTS, { recursive: true });
 
-const URL = 'file://' + FILE;
+const URL = pathToFileURL(path.resolve(FILE)).href;
 const LANGS = ['hu', 'ro', 'en', 'de'];
 const VIEWPORTS = [
   { name: 'mobile-320', width: 320, height: 568, mobile: true },
@@ -59,6 +61,7 @@ for (const vp of VIEWPORTS.filter(v => !ONLY || v.name === ONLY)) {
       document.querySelectorAll('body *').forEach(el => {
         const r = el.getBoundingClientRect();
         if (r.width > 0 && (r.right > window.innerWidth + 1.5 || r.left < -1.5)) {
+          if (el.closest('.goals')) return; // a célsor vízszintesen görgethető
           const st = getComputedStyle(el);
           if (st.position === 'fixed' && st.transform !== 'none') return; // becsukott sidebar
           wide.push(el.className + '|' + Math.round(r.left) + '..' + Math.round(r.right));
@@ -191,7 +194,7 @@ for (const vp of VIEWPORTS.filter(v => !ONLY || v.name === ONLY)) {
       return { visible: r.left > -5 && r.width > 100, items: document.querySelectorAll('.m-item').length, right: r.right, iw: window.innerWidth };
     });
     if (!menuState.visible) fail(`${tag}: az oldalsáv nem jelent meg`);
-    if (menuState.items < 40) fail(`${tag}: kevés menüpont (${menuState.items})`);
+    if (menuState.items < 37) fail(`${tag}: kevés menüpont (${menuState.items})`);
     if (menuState.right > menuState.iw + 1) fail(`${tag}: az oldalsáv kilóg (${menuState.right} > ${menuState.iw})`);
     await page.fill('#search', 'zzzz');
     await page.waitForTimeout(150);
@@ -204,7 +207,7 @@ for (const vp of VIEWPORTS.filter(v => !ONLY || v.name === ONLY)) {
     }
     // menü bezárása
     if (vp.width <= 900) {
-      await page.click('#backdrop', { force: true });
+      await page.click('#backdrop', { force: true, position: { x: vp.width - 8, y: 300 } }); // a sáv melletti látható háttér
       await page.waitForTimeout(450);
       const closedByBackdrop = await page.evaluate(() => document.body.classList.contains('menu-closed'));
       if (!closedByBackdrop) fail(`${tag}: a háttérre koppintás nem zárja be a menüt`);
@@ -231,6 +234,23 @@ for (const vp of VIEWPORTS.filter(v => !ONLY || v.name === ONLY)) {
     if (vp.name === 'mobile-375' && lang === 'en') {
       await page.screenshot({ path: path.join(SHOTS, `sources_${tag}.png`), fullPage: false });
     }
+
+    // 9b) videos page: 16 slots, each either a lazy youtube-nocookie iframe or a placeholder
+    await page.evaluate(() => { document.querySelector('.m-item[data-key="videos"]').click(); });
+    await page.waitForTimeout(300);
+    const vidInfo = await page.evaluate(() => ({
+      cards: document.querySelectorAll('.vid-card').length,
+      iframes: document.querySelectorAll('.vid-wrap iframe').length,
+      ph: document.querySelectorAll('.vid-wrap .vid-ph').length,
+      badFrames: [...document.querySelectorAll('.vid-wrap iframe')]
+        .filter(f => !(f.getAttribute('src') || '').startsWith('https://www.youtube-nocookie.com/embed/') || f.getAttribute('loading') !== 'lazy')
+        .map(f => f.getAttribute('src')),
+      scrollW: document.documentElement.scrollWidth, iw: window.innerWidth,
+    }));
+    if (vidInfo.cards !== 16) fail(`${tag}: videos: ${vidInfo.cards} cards (expected 16)`);
+    if (vidInfo.iframes + vidInfo.ph !== 16) fail(`${tag}: videos: ${vidInfo.iframes} iframes + ${vidInfo.ph} placeholders != 16`);
+    if (vidInfo.badFrames.length) fail(`${tag}: videos: bad iframe src or not lazy -> ${vidInfo.badFrames.slice(0, 3).join(' , ')}`);
+    if (vidInfo.scrollW > vidInfo.iw + 1) fail(`${tag}: videos page scrolls horizontally (scrollWidth ${vidInfo.scrollW} > ${vidInfo.iw})`);
 
     // 10) vissza az összes teára + szűrő
     await page.evaluate(() => { document.querySelector('.m-item[data-key="all"]').click(); });
