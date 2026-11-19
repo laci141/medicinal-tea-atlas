@@ -28,6 +28,7 @@ Négy nyelv, a jobb felső sarokban váltható: **HU · RO · EN · DE**
   nő-egészség, immunitás, vércukor.
 - **Keresés** az oldalsávban, tea-név szerint.
 - **Források oldal** – a hivatkozott vizsgálatok tömör összefoglalói, linkkel.
+- **Videók** – a menüben a ▶ Videók oldal: 16 hely rácsban, mindegyik egy lustán betöltődő `youtube-nocookie.com` lejátszó két soros címmel. A helyek a `videos.json` fájlban tölthetők ki.
 - **Nyomtatás / PDF** – az összes tea teljes szöveggel, az aktuális nyelven, a linkekkel együtt.
 
 ## Mobil
@@ -51,6 +52,10 @@ node check.mjs /abszolút/út/index.html
 ## Build
 
 Szerkeszd a `template.html` fájlt és a JSON-fájlokat, majd futtasd a `python build.py` parancsot, végül a `node check.mjs "<abszolút út>/index.html"` parancsot.
+
+## Videók
+
+A videók a `videos.json` fájlban vannak: 16 hely, mindegyik `{ "id": "abcDEF12345", "t": ["cím", "csatorna"] }` alakú. Az `id` a YouTube-link `watch?v=` utáni 11 karaktere. Üres `id` esetén a kártyán a „Hamarosan…” felirat látszik. Módosítás után: `python build.py`, majd `node check.mjs "<abszolút út>/index.html"`.
 
 ## Megjelenés
 

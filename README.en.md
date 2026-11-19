@@ -29,6 +29,7 @@ Four languages, switchable in the top-right corner: **HU · RO · EN · DE**
   immunity, blood sugar.
 - **Search** in the sidebar, by tea name.
 - **Sources page** — brief summaries of the referenced studies, with links.
+- **Videos** – the ▶ Videos page in the menu: 16 slots in a grid, each a lazy-loaded `youtube-nocookie.com` player with a two-line title. The slots are filled in `videos.json`.
 - **Print / PDF** — all teas with full text, in the current language, including the links.
 
 ## Mobile
@@ -52,6 +53,10 @@ node check.mjs /absolute/path/index.html
 ## Build
 
 Edit `template.html` and the JSON files, run `python build.py`, then `node check.mjs "<absolute path>/index.html"`.
+
+## Videos
+
+The videos live in `videos.json`: 16 slots, each shaped like `{ "id": "abcDEF12345", "t": ["title", "channel"] }`. The `id` is the 11 characters after `watch?v=` in a YouTube link. An empty `id` shows a "Coming soon…" placeholder. After editing, run `python build.py`, then `node check.mjs "<absolute path>/index.html"`.
 
 ## Look
 

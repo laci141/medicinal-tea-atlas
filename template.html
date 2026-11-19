@@ -210,6 +210,18 @@
     background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.3);}
   .src-item .src-links a:hover{background:rgba(52,211,153,.16);}
 
+  /* ---------- videos page ---------- */
+  .vid-grid{max-width:1400px;margin:0 auto;display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));}
+  .vid-card{padding:14px;}
+  .vid-wrap{position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;
+    background:radial-gradient(circle at 30% 30%, rgba(52,211,153,.25), transparent 65%), rgba(0,0,0,.35);}
+  .vid-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+  .vid-ph{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-size:.8rem;letter-spacing:.3em;text-transform:uppercase;}
+  .vid-title{margin:11px 4px 2px;display:flex;flex-direction:column;gap:2px;min-height:2.8em;font-weight:600;font-size:15px;}
+  .vid-line{display:block;line-height:1.32;overflow-wrap:anywhere;}
+  .vid-line.second{font-weight:400;color:var(--muted);font-size:13px;}
+  .vid-line.placeholder{color:var(--muted);}
+
   /* ---------- nyomtatás ---------- */
   #printArea{display:none;}
   @media print{
@@ -253,6 +265,8 @@
     .modal h2{font-size:19.5px;}
     .modal p{font-size:14.5px;}
     .src-list{gap:9px;}
+    .vid-grid{grid-template-columns:1fr;gap:14px;}
+    .vid-card{padding:10px;}
   }
   @media(min-width:601px) and (max-width:900px){
     .grid{grid-template-columns:repeat(auto-fill,minmax(240px,1fr));}
@@ -303,6 +317,7 @@
 
 var DATA = JSON.parse(document.getElementById('appdata').textContent);
 var TEAS = DATA.teas, SOURCES = DATA.sources, TR = DATA.tr, SRC_TR = DATA.sourcesTr, UI = DATA.ui, LINKS = DATA.links;
+var VIDEOS = DATA.videos || [];
 var LANGS = [{k:'hu',n:'HU'},{k:'ro',n:'RO'},{k:'en',n:'EN'},{k:'de',n:'DE'}];
 
 function pickLang(){
@@ -345,7 +360,7 @@ var goalDefs = [
   {key:'glucose',   emoji:'🩸', match:['glucose']}
 ];
 var groups = [
-  { g:0, items:[{special:'all', emoji:'🗂️'},{special:'sources', emoji:'📚'}] },
+  { g:0, items:[{special:'all', emoji:'🗂️'},{special:'videos', emoji:'▶'},{special:'sources', emoji:'📚'}] },
   { g:1, idx:[1,2,3] },
   { g:2, idx:[8,13,6,28,29,30] },
   { g:3, idx:[0,4,5,7,9,10,15,20,21,23,24,25,32,33,11,12] },
@@ -421,7 +436,7 @@ function buildMenu(){
     if(gr.items){
       gr.items.forEach(function(it){
         var b = document.createElement('button'); b.type = 'button'; b.className = 'm-item'; b.dataset.key = it.special;
-        var nm = it.special === 'all' ? t.allTeas : t.sourcesNav;
+        var nm = it.special === 'all' ? t.allTeas : it.special === 'videos' ? t.videosNav : t.sourcesNav;
         b.innerHTML = '<span class="em">' + it.emoji + '</span><span class="nm">' + esc(nm) + '</span>';
         b.addEventListener('click', function(){ select(it.special); if(isMobile()) closeMenu(); });
         menu.appendChild(b);
@@ -503,6 +518,8 @@ function render(){
       '</div>' +
       '<div class="goals">' + chips + '</div>' +
       '<div class="grid">' + idxs.map(cardHTML).join('') + '</div>';
+  } else if(selected === 'videos'){
+    renderVideos();
   } else if(selected === 'sources'){
     renderSources();
   } else {
@@ -531,6 +548,30 @@ function renderSources(){
     '<div class="head glass"><h1>📚 ' + esc(t.srcTitle) + '</h1><p>' + esc(t.srcSub) + '</p></div>' +
     '<div class="src-note">' + esc(t.srcNote) + '</div>' +
     '<div class="src-list">' + items + '</div>';
+}
+
+/* videos page: one card per videos.json slot; an empty or invalid id shows a placeholder */
+function renderVideos(){
+  var t = T();
+  var cards = VIDEOS.map(function(v, i){
+    var tl = (v && v.t) || [];
+    var l1 = String(tl[0] || ''), l2 = String(tl[1] || '');
+    var ph = String(t.videoPh || '').replace('{n}', i + 1);
+    var id = String((v && v.id) || '');
+    var title = (l1 + ' ' + l2).trim() || ph;
+    var player = /^[A-Za-z0-9_-]{11}$/.test(id)
+      ? '<iframe src="https://www.youtube-nocookie.com/embed/' + esc(id) + '?rel=0" title="' + esc(title) + '" loading="lazy"' +
+        ' allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin"></iframe>'
+      : '<span class="vid-ph">' + esc(t.videoSoon) + '</span>';
+    return '<article class="vid-card glass"><div class="vid-wrap">' + player + '</div>' +
+      '<p class="vid-title">' +
+        (l1 ? '<span class="vid-line">' + esc(l1) + '</span>' : '<span class="vid-line placeholder">' + esc(ph) + '</span>') +
+        '<span class="vid-line second">' + esc(l2) + '&nbsp;</span>' +
+      '</p></article>';
+  }).join('');
+  mainContent.innerHTML =
+    '<div class="head glass"><h1>▶ ' + esc(t.videosTitle) + '</h1><p>' + esc(t.videosSub) + '</p></div>' +
+    '<div class="vid-grid">' + cards + '</div>';
 }
 
 function select(key){

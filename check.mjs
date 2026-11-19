@@ -194,7 +194,7 @@ for (const vp of VIEWPORTS.filter(v => !ONLY || v.name === ONLY)) {
       return { visible: r.left > -5 && r.width > 100, items: document.querySelectorAll('.m-item').length, right: r.right, iw: window.innerWidth };
     });
     if (!menuState.visible) fail(`${tag}: az oldalsáv nem jelent meg`);
-    if (menuState.items < 36) fail(`${tag}: kevés menüpont (${menuState.items})`);
+    if (menuState.items < 37) fail(`${tag}: kevés menüpont (${menuState.items})`);
     if (menuState.right > menuState.iw + 1) fail(`${tag}: az oldalsáv kilóg (${menuState.right} > ${menuState.iw})`);
     await page.fill('#search', 'zzzz');
     await page.waitForTimeout(150);
@@ -234,6 +234,23 @@ for (const vp of VIEWPORTS.filter(v => !ONLY || v.name === ONLY)) {
     if (vp.name === 'mobile-375' && lang === 'en') {
       await page.screenshot({ path: path.join(SHOTS, `sources_${tag}.png`), fullPage: false });
     }
+
+    // 9b) videos page: 16 slots, each either a lazy youtube-nocookie iframe or a placeholder
+    await page.evaluate(() => { document.querySelector('.m-item[data-key="videos"]').click(); });
+    await page.waitForTimeout(300);
+    const vidInfo = await page.evaluate(() => ({
+      cards: document.querySelectorAll('.vid-card').length,
+      iframes: document.querySelectorAll('.vid-wrap iframe').length,
+      ph: document.querySelectorAll('.vid-wrap .vid-ph').length,
+      badFrames: [...document.querySelectorAll('.vid-wrap iframe')]
+        .filter(f => !(f.getAttribute('src') || '').startsWith('https://www.youtube-nocookie.com/embed/') || f.getAttribute('loading') !== 'lazy')
+        .map(f => f.getAttribute('src')),
+      scrollW: document.documentElement.scrollWidth, iw: window.innerWidth,
+    }));
+    if (vidInfo.cards !== 16) fail(`${tag}: videos: ${vidInfo.cards} cards (expected 16)`);
+    if (vidInfo.iframes + vidInfo.ph !== 16) fail(`${tag}: videos: ${vidInfo.iframes} iframes + ${vidInfo.ph} placeholders != 16`);
+    if (vidInfo.badFrames.length) fail(`${tag}: videos: bad iframe src or not lazy -> ${vidInfo.badFrames.slice(0, 3).join(' , ')}`);
+    if (vidInfo.scrollW > vidInfo.iw + 1) fail(`${tag}: videos page scrolls horizontally (scrollWidth ${vidInfo.scrollW} > ${vidInfo.iw})`);
 
     // 10) vissza az összes teára + szűrő
     await page.evaluate(() => { document.querySelector('.m-item[data-key="all"]').click(); });
