@@ -3,8 +3,8 @@
 import json, os, sys, re
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-DATA = os.path.join(HERE, "data")
-OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(HERE), "index.html")
+DATA = HERE
+OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, "index.html")
 
 def load(name, required=True):
     p = os.path.join(DATA, name)
