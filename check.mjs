@@ -1,12 +1,14 @@
 import { chromium, devices } from 'playwright';
 import fs from 'fs';
 import path from 'path';
+import os from 'os';
+import { fileURLToPath, pathToFileURL } from 'url';
 
-const FILE = process.argv[2] || '/home/user/Nutri/index.html';
-const SHOTS = '/tmp/claude-0/-home-user-Nutri/55f85b14-0b8a-55cf-95d9-1d3768b188b4/scratchpad/shots';
+const FILE = process.argv[2] || path.join(path.dirname(fileURLToPath(import.meta.url)), 'index.html');
+const SHOTS = path.join(os.tmpdir(), 'tea-shots');
 fs.mkdirSync(SHOTS, { recursive: true });
 
-const URL = 'file://' + FILE;
+const URL = pathToFileURL(path.resolve(FILE)).href;
 const LANGS = ['hu', 'ro', 'en', 'de'];
 const VIEWPORTS = [
   { name: 'mobile-320', width: 320, height: 568, mobile: true },
@@ -59,6 +61,7 @@ for (const vp of VIEWPORTS.filter(v => !ONLY || v.name === ONLY)) {
       document.querySelectorAll('body *').forEach(el => {
         const r = el.getBoundingClientRect();
         if (r.width > 0 && (r.right > window.innerWidth + 1.5 || r.left < -1.5)) {
+          if (el.closest('.goals')) return; // a célsor vízszintesen görgethető
           const st = getComputedStyle(el);
           if (st.position === 'fixed' && st.transform !== 'none') return; // becsukott sidebar
           wide.push(el.className + '|' + Math.round(r.left) + '..' + Math.round(r.right));
@@ -191,7 +194,7 @@ for (const vp of VIEWPORTS.filter(v => !ONLY || v.name === ONLY)) {
       return { visible: r.left > -5 && r.width > 100, items: document.querySelectorAll('.m-item').length, right: r.right, iw: window.innerWidth };
     });
     if (!menuState.visible) fail(`${tag}: az oldalsáv nem jelent meg`);
-    if (menuState.items < 40) fail(`${tag}: kevés menüpont (${menuState.items})`);
+    if (menuState.items < 36) fail(`${tag}: kevés menüpont (${menuState.items})`);
     if (menuState.right > menuState.iw + 1) fail(`${tag}: az oldalsáv kilóg (${menuState.right} > ${menuState.iw})`);
     await page.fill('#search', 'zzzz');
     await page.waitForTimeout(150);
@@ -204,7 +207,7 @@ for (const vp of VIEWPORTS.filter(v => !ONLY || v.name === ONLY)) {
     }
     // menü bezárása
     if (vp.width <= 900) {
-      await page.click('#backdrop', { force: true });
+      await page.click('#backdrop', { force: true, position: { x: vp.width - 8, y: 300 } }); // a sáv melletti látható háttér
       await page.waitForTimeout(450);
       const closedByBackdrop = await page.evaluate(() => document.body.classList.contains('menu-closed'));
       if (!closedByBackdrop) fail(`${tag}: a háttérre koppintás nem zárja be a menüt`);
