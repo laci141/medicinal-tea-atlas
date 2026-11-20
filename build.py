@@ -73,12 +73,20 @@ for lg in ("hu",) + LANGS:
     if lg not in ui:
         problems.append(f"ui: hiányzó nyelv {lg}")
 
-# videos.json: exactly 16 slots, id is "" or an 11-char YouTube id, t is [line1, line2]
+# videos.json: 1 to 48 slots, id is "" or a unique 11-char YouTube id, t is [line1, line2]
 VIDEO_ID = re.compile(r"^[A-Za-z0-9_-]{11}$")
-if not isinstance(videos, list) or len(videos) != 16:
-    problems.append(f"videos: must be a list of exactly 16 items "
+MAX_VIDEOS = 48
+if not isinstance(videos, list) or not 1 <= len(videos) <= MAX_VIDEOS:
+    problems.append(f"videos: must be a list of 1 to {MAX_VIDEOS} items "
                     f"(got {len(videos) if isinstance(videos, list) else type(videos).__name__})")
     videos = videos if isinstance(videos, list) else []
+seen_ids = {}
+for n, v in enumerate(videos, 1):
+    vid = v.get("id") if isinstance(v, dict) else None
+    if isinstance(vid, str) and vid:
+        if vid in seen_ids:
+            raise SystemExit(f"videos: duplicate id {vid!r} (entries {seen_ids[vid]} and {n})")
+        seen_ids[vid] = n
 for n, v in enumerate(videos, 1):
     if not isinstance(v, dict):
         problems.append(f"videos {n}: not an object")
@@ -131,7 +139,7 @@ with open(OUT, "w", encoding="utf-8") as fh:
 print(f"KÉSZ: {OUT}  ({len(html)/1024:.0f} KB)")
 print(f"teák: {len(teas)} · nyelvek: hu, ro, en, de · linkek: {link_count} db, "
       f"{len(teas)-len(no_link)}/{len(teas)} teához")
-print(f"videók: {sum(1 for v in videos if isinstance(v, dict) and v.get('id'))}/16 kitöltve")
+print(f"videók: {sum(1 for v in videos if isinstance(v, dict) and v.get('id'))}/{len(videos)} kitöltve")
 if no_link:
     print("link nélküli teák:", no_link)
 if missing_parts:

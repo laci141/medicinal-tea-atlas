@@ -9,6 +9,17 @@ const SHOTS = path.join(os.tmpdir(), 'tea-shots');
 fs.mkdirSync(SHOTS, { recursive: true });
 
 const URL = pathToFileURL(path.resolve(FILE)).href;
+// number of video slots = entries of videos.json next to index.html
+const VIDEOS_FILE = path.join(path.dirname(path.resolve(FILE)), 'videos.json');
+let VIDEO_COUNT;
+try {
+  const vids = JSON.parse(fs.readFileSync(VIDEOS_FILE, 'utf8'));
+  if (!Array.isArray(vids)) throw new Error('not a JSON array');
+  VIDEO_COUNT = vids.length;
+} catch (e) {
+  console.error(`Cannot read video count from ${VIDEOS_FILE}: ${e.message}`);
+  process.exit(1);
+}
 const LANGS = ['hu', 'ro', 'en', 'de'];
 const VIEWPORTS = [
   { name: 'mobile-320', width: 320, height: 568, mobile: true },
@@ -235,7 +246,7 @@ for (const vp of VIEWPORTS.filter(v => !ONLY || v.name === ONLY)) {
       await page.screenshot({ path: path.join(SHOTS, `sources_${tag}.png`), fullPage: false });
     }
 
-    // 9b) videos page: 16 slots, each either a lazy youtube-nocookie iframe or a placeholder
+    // 9b) videos page: one slot per videos.json entry, each either a lazy youtube-nocookie iframe or a placeholder
     await page.evaluate(() => { document.querySelector('.m-item[data-key="videos"]').click(); });
     await page.waitForTimeout(300);
     const vidInfo = await page.evaluate(() => ({
@@ -247,8 +258,8 @@ for (const vp of VIEWPORTS.filter(v => !ONLY || v.name === ONLY)) {
         .map(f => f.getAttribute('src')),
       scrollW: document.documentElement.scrollWidth, iw: window.innerWidth,
     }));
-    if (vidInfo.cards !== 16) fail(`${tag}: videos: ${vidInfo.cards} cards (expected 16)`);
-    if (vidInfo.iframes + vidInfo.ph !== 16) fail(`${tag}: videos: ${vidInfo.iframes} iframes + ${vidInfo.ph} placeholders != 16`);
+    if (vidInfo.cards !== VIDEO_COUNT) fail(`${tag}: videos: ${vidInfo.cards} cards (expected ${VIDEO_COUNT})`);
+    if (vidInfo.iframes + vidInfo.ph !== VIDEO_COUNT) fail(`${tag}: videos: ${vidInfo.iframes} iframes + ${vidInfo.ph} placeholders != ${VIDEO_COUNT}`);
     if (vidInfo.badFrames.length) fail(`${tag}: videos: bad iframe src or not lazy -> ${vidInfo.badFrames.slice(0, 3).join(' , ')}`);
     if (vidInfo.scrollW > vidInfo.iw + 1) fail(`${tag}: videos page scrolls horizontally (scrollWidth ${vidInfo.scrollW} > ${vidInfo.iw})`);
 
